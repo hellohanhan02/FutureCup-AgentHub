@@ -70,4 +70,4 @@ Mock 输出只证明执行链，不证明真实模型推理质量。来源存在
 
 公开前必须由团队确认项目自身许可。根 NOTICE 不是新的开源授权；不能由依赖的 MIT/Apache 推导本项目许可。此前 122 条缺少本地许可证原文的记录，本次从同名同版本新安装包补齐 4 条，剩余 118 条详见 acceptance/license-pending.csv。跨版本记录不等于独立库数量。
 
-GitHub/Gitee 操作见 [PUBLISHING.md](PUBLISHING.md)。本次只建立独立本地仓库，不创建远程或 push。**本地 localhost 不是官方要求的公网部署链接；负责人仍需创建可供评委访问的源码仓库并授权上传。**
+GitHub/Gitee 操作见 [PUBLISHING.md](PUBLISHING.md)。目标为团队创建的私有仓库：[FutureCup-AgentHub](https://github.com/hellohanhan02/FutureCup-AgentHub)。源码发布已由团队授权；评委须获得仓库读取权限。**本地 localhost 不是官方要求的公网部署链接；负责人仍需创建可供评委访问的源码仓库并授权上传。**

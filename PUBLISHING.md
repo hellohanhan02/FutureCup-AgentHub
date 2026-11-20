@@ -12,11 +12,14 @@ git log -1 --oneline
 $repoUrl=Read-Host '不含用户名或Token的GitHub/Gitee HTTPS仓库地址'
 $u=[Uri]$repoUrl
 if($u.Scheme -ne 'https' -or $u.Host -notin @('github.com','gitee.com') -or $u.UserInfo -or $u.Query -or $u.Fragment){throw '仓库URL不安全'}
-git remote add origin $repoUrl
+$existing=git remote get-url origin 2>$null
+if($LASTEXITCODE -eq 0){
+    if($existing -ne $repoUrl){throw '已有origin不一致，不覆盖或推送'}
+}else{git remote add origin $repoUrl}
 if($LASTEXITCODE -ne 0){throw '先检查已有remote，不要覆盖后继续push'}
 git push -u origin main
 ```
 
-不要把Token嵌入URL，使用平台凭据管理器。上述命令是用户后续步骤，本次没有执行，没有建立任何远程或公开链接。用无登录窗口核对公开仓库可读；若私有，逐个确认评委访问权限。将实际URL填入报名系统，不能将 localhost 当成公网部署链接。
+不要把Token嵌入URL，使用平台凭据管理器。目标私有仓库为 https://github.com/hellohanhan02/FutureCup-AgentHub.git，origin 已配置。发布由团队授权执行；上传结果以该仓库 main 提交与发布报告为准，不把私有仓库描述为无需授权即可公开访问。用无登录窗口核对公开仓库可读；若私有，逐个确认评委访问权限。将实际URL填入报名系统，不能将 localhost 当成公网部署链接。
 
 public-source/.gitignore 排除 .venv、node_modules、.runtime、.validation、.env、SQLite及缓存。以后若有真实运行，不得将未脱敏请求响应或账本数据库提交。ZIP没有Git内部文件；需保留最新源码包SHA256进行核对。

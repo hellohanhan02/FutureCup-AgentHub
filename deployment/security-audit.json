@@ -1,7 +1,7 @@
 {
   "scope": "Selected public copies including PDF text, Office XML, gzip experiment data and frozen baseline archive; no original secret files read",
   "files": 960,
-  "bytes": 99733477,
+  "bytes": 99733908,
   "prohibited_paths": [],
   "pattern_findings_without_matched_contents": [
     {
