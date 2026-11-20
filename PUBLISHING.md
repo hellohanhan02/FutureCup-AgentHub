@@ -1,4 +1,4 @@
-﻿# GitHub / Gitee 发布步骤（本次不执行）
+﻿# GitHub / Gitee 私有仓库发布与评委访问
 
 **应该上传 public-source 独立目录，不是上级 FutureCup-Submission。** 上级包含正式比赛文档和内部整理历史，不适合全部公开。当前目录有独立本地仓库，不含旧研发历史或参赛材料仓库历史。
 
