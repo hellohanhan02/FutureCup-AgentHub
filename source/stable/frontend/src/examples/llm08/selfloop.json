@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "repair",
+      "kind": "task",
+      "config": {
+        "candidate_agents": ["llm08-repair"],
+        "required_skills": ["repair"],
+        "output_mode": "json",
+        "input": {
+          "case": {
+            "$literal": "C"
+          },
+          "stage": {
+            "$literal": "repair"
+          },
+          "original": {
+            "$ref": "input"
+          }
+        },
+        "verification": {
+          "id": "llm08-invoice",
+          "version": "1"
+        },
+        "limits": {
+          "max_model_calls": 3,
+          "max_calls": 4,
+          "max_output_tokens": 1024
+        },
+        "recovery": {
+          "max_attempts": 3,
+          "max_feedback_loops": 2,
+          "max_replans": 0,
+          "timeout_seconds": 30,
+          "on_failure": "prompt_retry"
+        }
+      }
+    }
+  ],
+  "edges": [],
+  "id": "llm08-selfloop",
+  "name": "Task 08 selfloop",
+  "version": "1",
+  "scheduling_strategy": "caas",
+  "max_concurrency": 2,
+  "timeout_seconds": 90,
+  "resource_limits": {
+    "max_calls": 12,
+    "max_attempts": 6,
+    "max_feedback_loops": 3
+  }
+}

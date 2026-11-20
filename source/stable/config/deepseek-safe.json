@@ -1,0 +1,22 @@
+[
+  {
+    "id": "deepseek",
+    "kind": "deepseek",
+    "base_url": "https://api.deepseek.com",
+    "key_env": "DEEPSEEK_API_KEY",
+    "enabled": false,
+    "models": [
+      {
+        "id": "deepseek-flash",
+        "supports_tools": false,
+        "response_formats": ["text", "prompt_json", "json_object"],
+        "thinking_disabled": true,
+        "max_context_bytes": 32768,
+        "max_output_tokens": 1024
+      }
+    ],
+    "timeout_seconds": 15,
+    "retry": {"max_retries": 0, "initial_delay": 0.5, "max_delay": 4},
+    "revision": "08b-safe-1"
+  }
+]

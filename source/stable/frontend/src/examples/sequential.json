@@ -1,0 +1,35 @@
+{
+  "id": "fc-demo-sequential",
+  "name": "多 Agent 顺序协作 · Mock",
+  "version": "1",
+  "scheduling_strategy": "caas",
+  "nodes": [
+    {
+      "id": "research",
+      "kind": "task",
+      "config": { "agent_id": "fc-researcher", "output_mode": "text", "input": { "$ref": "input" } }
+    },
+    {
+      "id": "draft",
+      "kind": "task",
+      "config": {
+        "agent_id": "fc-writer",
+        "output_mode": "text",
+        "input": { "$ref": "nodes.research.output" }
+      }
+    },
+    {
+      "id": "review",
+      "kind": "task",
+      "config": {
+        "agent_id": "fc-reviewer",
+        "output_mode": "text",
+        "input": { "$ref": "nodes.draft.output" }
+      }
+    }
+  ],
+  "edges": [
+    { "source": "research", "target": "draft" },
+    { "source": "draft", "target": "review" }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "scope": "FRESH_INSTALL_ACTUAL_MOCK_NOT_REAL_LLM",
+  "real_requests_sent": 0,
+  "checks": [
+    "Agent role registration",
+    "Existing workflow definitions registered",
+    "Three structured agents and independent verification",
+    "Parallel and join",
+    "Conditional branch and skipped-path join",
+    "Actual Mock FAILED -> feedback -> PASSED, two attempts",
+    "Chinese keyword retrieval from newly imported synthetic document",
+    "Actual safe calculator tool call",
+    "User confirmation, knowledge binding, actual generated delivery",
+    "Actual structured delivery exported",
+    "Backend health, frontend and Vite proxy",
+    "Actual CAAS decisions recorded"
+  ],
+  "workflow_runs": [
+    {
+      "workflow": "llm08-requirements",
+      "run_id": "213a045c02ef47eeaf1ffec5c0358020",
+      "state": "succeeded",
+      "verified": true,
+      "nodes": [
+        {
+          "key": "plan",
+          "state": "succeeded"
+        },
+        {
+          "key": "design",
+          "state": "succeeded"
+        },
+        {
+          "key": "review",
+          "state": "succeeded"
+        }
+      ],
+      "model_calls": 3
+    },
+    {
+      "workflow": "fc-demo-parallel",
+      "run_id": "02bc3ee1d1164f68b6569eaf47465970",
+      "state": "succeeded",
+      "verified": false,
+      "nodes": [
+        {
+          "key": "research",
+          "state": "succeeded"
+        },
+        {
+          "key": "analysis",
+          "state": "succeeded"
+        },
+        {
+          "key": "join",
+          "state": "succeeded"
+        },
+        {
+          "key": "review",
+          "state": "succeeded"
+        }
+      ],
+      "model_calls": 3
+    },
+    {
+      "workflow": "fc-demo-branch-10b",
+      "run_id": "21962f7fca8e45e4a0506aba8ab98f94",
+      "state": "succeeded",
+      "verified": false,
+      "nodes": [
+        {
+          "key": "pick",
+          "state": "succeeded"
+        },
+        {
+          "key": "yes",
+          "state": "succeeded"
+        },
+        {
+          "key": "no",
+          "state": "skipped"
+        },
+        {
+          "key": "join",
+          "state": "succeeded"
+        }
+      ],
+      "model_calls": 1
+    },
+    {
+      "workflow": "fc-demo-selfloop",
+      "run_id": "b34faf1b4d8e4cf4b9c5df95d81a924f",
+      "state": "succeeded",
+      "verified": true,
+      "nodes": [
+        {
+          "key": "repair",
+          "state": "succeeded"
+        }
+      ],
+      "model_calls": 2,
+      "attempts": 2,
+      "feedback_records": 1
+    }
+  ],
+  "workspace": {
+    "id": "ws-ea633b5709b441db9f715c23fb1a6121",
+    "run_id": "453194ad048a4f7c850b34e6570fb590",
+    "state": "succeeded",
+    "verified": true,
+    "nodes": 3,
+    "usage": {
+      "calls": 3,
+      "model_calls": 3,
+      "tool_calls": 0,
+      "resource_units": 13697,
+      "checks": 6,
+      "attempts": 3,
+      "feedback_loops": 0,
+      "replans": 0,
+      "reported_tokens": 0,
+      "unknown_usage_calls": 3
+    }
+  },
+  "calculator": {
+    "execution_id": "db5237d985914698a4acbd679c85079f",
+    "tools": 1
+  },
+  "knowledge_base_id": "8ed7c6a4e0db4d2bad72e88557f9db93",
+  "search_hits": 1
+}

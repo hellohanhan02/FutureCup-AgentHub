@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "futurecup-platform"
+version = "0.1.0"
+description = "FutureCup multi-agent orchestration architecture skeleton"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "fastapi>=0.115,<1.0",
+  "uvicorn>=0.30,<1.0",
+  "httpx>=0.27,<1.0",
+  "jsonschema>=4.23,<5",
+  "pypdf>=7.1,<8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

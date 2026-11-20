@@ -1,0 +1,329 @@
+[
+  {
+    "id": "llm08-plan",
+    "version": "1",
+    "name": "Task 08 independent plan",
+    "checks": [
+      {
+        "kind": "json_schema",
+        "config": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "requirements": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "constraints": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "acceptance": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              }
+            },
+            "required": ["requirements", "constraints", "acceptance"],
+            "additionalProperties": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "llm08-design",
+    "version": "1",
+    "name": "Task 08 independent design",
+    "checks": [
+      {
+        "kind": "json_schema",
+        "config": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "components": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "interfaces": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "risks": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              }
+            },
+            "required": ["components", "interfaces", "risks"],
+            "additionalProperties": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "llm08-review",
+    "version": "1",
+    "name": "Task 08 independent review",
+    "checks": [
+      {
+        "kind": "json_schema",
+        "config": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "findings": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "summary": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": ["findings", "summary"],
+            "additionalProperties": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "llm08-check",
+    "version": "1",
+    "name": "Task 08 independent check",
+    "checks": [
+      {
+        "kind": "json_schema",
+        "config": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "row_count": {
+                "type": "integer"
+              },
+              "missing_count": {
+                "type": "integer"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              }
+            },
+            "required": ["row_count", "missing_count", "values"],
+            "additionalProperties": false
+          }
+        }
+      },
+      {
+        "kind": "numeric",
+        "config": {
+          "path": "row_count",
+          "expected": 3,
+          "tolerance": 0
+        }
+      },
+      {
+        "kind": "numeric",
+        "config": {
+          "path": "missing_count",
+          "expected": 0,
+          "tolerance": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "llm08-analysis",
+    "version": "1",
+    "name": "Task 08 independent analysis",
+    "checks": [
+      {
+        "kind": "json_schema",
+        "config": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "count": {
+                "type": "integer"
+              },
+              "sum": {
+                "type": "number"
+              },
+              "mean": {
+                "type": "number"
+              },
+              "interpretation": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": ["count", "sum", "mean", "interpretation"],
+            "additionalProperties": false
+          }
+        }
+      },
+      {
+        "kind": "numeric",
+        "config": {
+          "path": "count",
+          "expected": 3,
+          "tolerance": 0
+        }
+      },
+      {
+        "kind": "numeric",
+        "config": {
+          "path": "sum",
+          "expected": 60,
+          "tolerance": 0
+        }
+      },
+      {
+        "kind": "numeric",
+        "config": {
+          "path": "mean",
+          "expected": 20,
+          "tolerance": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "llm08-report",
+    "version": "1",
+    "name": "Task 08 independent report",
+    "checks": [
+      {
+        "kind": "json_schema",
+        "config": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "statistics": {
+                "type": "object",
+                "properties": {
+                  "count": {
+                    "type": "integer"
+                  },
+                  "sum": {
+                    "type": "number"
+                  },
+                  "mean": {
+                    "type": "number"
+                  }
+                },
+                "required": ["count", "sum", "mean"],
+                "additionalProperties": false
+              },
+              "report": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": ["statistics", "report"],
+            "additionalProperties": false
+          }
+        }
+      },
+      {
+        "kind": "numeric",
+        "config": {
+          "path": "statistics.count",
+          "expected": 3,
+          "tolerance": 0
+        }
+      },
+      {
+        "kind": "numeric",
+        "config": {
+          "path": "statistics.sum",
+          "expected": 60,
+          "tolerance": 0
+        }
+      },
+      {
+        "kind": "numeric",
+        "config": {
+          "path": "statistics.mean",
+          "expected": 20,
+          "tolerance": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "llm08-invoice",
+    "version": "1",
+    "name": "Task 08 independent invoice",
+    "checks": [
+      {
+        "kind": "json_schema",
+        "config": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "total": {
+                "type": "number"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              }
+            },
+            "required": ["total", "currency", "status"],
+            "additionalProperties": false
+          }
+        }
+      },
+      {
+        "kind": "numeric",
+        "config": {
+          "path": "total",
+          "expected": 60,
+          "tolerance": 0
+        }
+      },
+      {
+        "kind": "assertion",
+        "config": {
+          "path": "currency",
+          "op": "eq",
+          "value": "CNY"
+        }
+      },
+      {
+        "kind": "assertion",
+        "config": {
+          "path": "status",
+          "op": "eq",
+          "value": "checked"
+        }
+      }
+    ]
+  }
+]

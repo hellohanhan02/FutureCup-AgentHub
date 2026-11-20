@@ -1,0 +1,36 @@
+{
+  "base_commit": "14f801946a01773b71e78b5c2533103bc705e975",
+  "final_directory": "final-certified",
+  "synthetic_only": true,
+  "real_requests_sent": 0,
+  "repeat_semantic_comparisons": 64,
+  "repeat_metrics_equal": true,
+  "current_source_hashes_match_configuration": true,
+  "file_sha256": {
+    "scripts/bench_selfloop_14c.py": "dcfe721cb5b32be33c609878ddc4a209ef1380e8354c68da7ec0db3d3505c29f",
+    "scripts/check_local_recovery_14c.py": "87aaf09c52d207b991d833b45e8c6b5581f82dbd3a3cad80395d705fb2b4b9f1",
+    "backend/tests/runtime_support.py": "7076e898901951e3d524e59fff95c176cbcc35845b4dd580cea5135971bc9783",
+    "backend/tests/verification_support.py": "1f0084f9dea3ac9ec542666d6bdc945df09fba6fdad47dc6994593834b5f2973",
+    "backend/tests/workflow_support.py": "63c4eaf640cc9f0d4b09b73e9f04b6efdc550c6d8812ae326ff375fbae30b4b0",
+    "backend/tests/test_precise_recovery_14c.py": "7db93fb8e200743da1dc23110e404f90e3b1592c2c0855416f5fe6afd31853c8"
+  },
+  "local_trace_parameters": {
+    "cases": [
+      "sequential",
+      "parallel",
+      "branch",
+      "subworkflow",
+      "loop",
+      "invalidated"
+    ],
+    "base": 17,
+    "max_calls": 6,
+    "max_repairs": 1,
+    "database": ":memory:",
+    "mode": "Mock-only"
+  },
+  "notes": [
+    "Initial and intermediate data preserved without rewriting; see documentation for protocol limitations.",
+    "No claim of exact billing, real-model performance, crash-durable tool replay, or general diagnosis accuracy."
+  ]
+}

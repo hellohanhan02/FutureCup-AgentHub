@@ -1,0 +1,470 @@
+{
+  "agents": [
+    {
+      "id": "serial09a-analyse",
+      "version": "1",
+      "name": "requirements-analyst",
+      "role": "requirements-analyst",
+      "responsibilities": "Extract two constraints. Assign R1 to authenticated booking and R2 to non-overlap. Return JSON {request_id,requirements:[{id,text},{id,text}]}. Copy request_id exactly; each text <=64 characters.",
+      "system_prompt": "Extract two constraints. Assign R1 to authenticated booking and R2 to non-overlap. Return JSON {request_id,requirements:[{id,text},{id,text}]}. Copy request_id exactly; each text <=64 characters.",
+      "skills": [
+        "analyse"
+      ],
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "response_format": "json_object",
+      "tools": [],
+      "max_concurrency": 1
+    },
+    {
+      "id": "serial09a-design",
+      "version": "1",
+      "name": "solution-designer",
+      "role": "solution-designer",
+      "responsibilities": "Read the actual analysis object in your input. Return JSON {request_id,requirements,components}. Copy request_id and the entire analysis.requirements unchanged. Propose 1-3 components, each <=32 characters.",
+      "system_prompt": "Read the actual analysis object in your input. Return JSON {request_id,requirements,components}. Copy request_id and the entire analysis.requirements unchanged. Propose 1-3 components, each <=32 characters.",
+      "skills": [
+        "design"
+      ],
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "response_format": "json_object",
+      "tools": [],
+      "max_concurrency": 1
+    },
+    {
+      "id": "serial09a-review",
+      "version": "1",
+      "name": "solution-reviewer",
+      "role": "solution-reviewer",
+      "responsibilities": "Read both actual analysis and design in your input. Return JSON {request_id,requirements,components,issues,summary}. Copy analysis.requirements and design.components unchanged. List up to 2 issues, each <=64 characters; summary <=64 characters. Do not claim objective proof.",
+      "system_prompt": "Read both actual analysis and design in your input. Return JSON {request_id,requirements,components,issues,summary}. Copy analysis.requirements and design.components unchanged. List up to 2 issues, each <=64 characters; summary <=64 characters. Do not claim objective proof.",
+      "skills": [
+        "review"
+      ],
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "response_format": "json_object",
+      "tools": [],
+      "max_concurrency": 1
+    }
+  ],
+  "policies": [
+    {
+      "id": "serial09a-analyse-rule",
+      "version": "1",
+      "name": "Independent analyse checks",
+      "checks": [
+        {
+          "kind": "json_schema",
+          "config": {
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "request_id",
+                "requirements"
+              ],
+              "properties": {
+                "request_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 64
+                },
+                "requirements": {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "prefixItems": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "id",
+                        "text"
+                      ],
+                      "properties": {
+                        "id": {
+                          "const": "R1"
+                        },
+                        "text": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 64
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "id",
+                        "text"
+                      ],
+                      "properties": {
+                        "id": {
+                          "const": "R2"
+                        },
+                        "text": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 64
+                        }
+                      }
+                    }
+                  ],
+                  "items": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "kind": "external_tests",
+          "config": {
+            "test_id": "serial09a-analysis-v1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "serial09a-design-rule",
+      "version": "1",
+      "name": "Independent design checks",
+      "checks": [
+        {
+          "kind": "json_schema",
+          "config": {
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "request_id",
+                "requirements",
+                "components"
+              ],
+              "properties": {
+                "request_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 64
+                },
+                "requirements": {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "prefixItems": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "id",
+                        "text"
+                      ],
+                      "properties": {
+                        "id": {
+                          "const": "R1"
+                        },
+                        "text": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 64
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "id",
+                        "text"
+                      ],
+                      "properties": {
+                        "id": {
+                          "const": "R2"
+                        },
+                        "text": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 64
+                        }
+                      }
+                    }
+                  ],
+                  "items": false
+                },
+                "components": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 32
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "kind": "external_tests",
+          "config": {
+            "test_id": "serial09a-design-v1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "serial09a-review-rule",
+      "version": "1",
+      "name": "Independent review checks",
+      "checks": [
+        {
+          "kind": "json_schema",
+          "config": {
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "request_id",
+                "requirements",
+                "components",
+                "issues",
+                "summary"
+              ],
+              "properties": {
+                "request_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 64
+                },
+                "requirements": {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "prefixItems": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "id",
+                        "text"
+                      ],
+                      "properties": {
+                        "id": {
+                          "const": "R1"
+                        },
+                        "text": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 64
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "id",
+                        "text"
+                      ],
+                      "properties": {
+                        "id": {
+                          "const": "R2"
+                        },
+                        "text": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 64
+                        }
+                      }
+                    }
+                  ],
+                  "items": false
+                },
+                "components": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 32
+                  }
+                },
+                "issues": {
+                  "type": "array",
+                  "maxItems": 2,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 64
+                  }
+                },
+                "summary": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 64
+                }
+              }
+            }
+          }
+        },
+        {
+          "kind": "external_tests",
+          "config": {
+            "test_id": "serial09a-review-v1"
+          }
+        }
+      ]
+    }
+  ],
+  "workflow": {
+    "id": "serial09a-template",
+    "version": "1",
+    "name": "DeepSeek three-role serial collaboration",
+    "scheduling_strategy": "caas",
+    "max_concurrency": 1,
+    "timeout_seconds": 90,
+    "resource_limits": {
+      "max_calls": 3,
+      "max_attempts": 3,
+      "max_feedback_loops": 0,
+      "max_replans": 0,
+      "max_checks": 6
+    },
+    "nodes": [
+      {
+        "id": "analyse",
+        "kind": "task",
+        "config": {
+          "agent_id": "serial09a-analyse",
+          "output_mode": "json",
+          "input": {
+            "request_id": {
+              "$ref": "input.request_id"
+            },
+            "task": {
+              "$ref": "input.task"
+            }
+          },
+          "verification": {
+            "id": "serial09a-analyse-rule",
+            "version": "1"
+          },
+          "limits": {
+            "max_calls": 1,
+            "max_model_calls": 1,
+            "max_output_tokens": 256,
+            "timeout_seconds": 25,
+            "model_timeout_seconds": 15
+          },
+          "recovery": {
+            "max_attempts": 1,
+            "max_feedback_loops": 0,
+            "max_replans": 0,
+            "timeout_seconds": 25,
+            "on_failure": "abort"
+          }
+        }
+      },
+      {
+        "id": "design",
+        "kind": "task",
+        "config": {
+          "agent_id": "serial09a-design",
+          "output_mode": "json",
+          "input": {
+            "request_id": {
+              "$ref": "input.request_id"
+            },
+            "analysis": {
+              "$ref": "nodes.analyse.output"
+            }
+          },
+          "verification": {
+            "id": "serial09a-design-rule",
+            "version": "1"
+          },
+          "limits": {
+            "max_calls": 1,
+            "max_model_calls": 1,
+            "max_output_tokens": 256,
+            "timeout_seconds": 25,
+            "model_timeout_seconds": 15
+          },
+          "recovery": {
+            "max_attempts": 1,
+            "max_feedback_loops": 0,
+            "max_replans": 0,
+            "timeout_seconds": 25,
+            "on_failure": "abort"
+          }
+        }
+      },
+      {
+        "id": "review",
+        "kind": "task",
+        "config": {
+          "agent_id": "serial09a-review",
+          "output_mode": "json",
+          "input": {
+            "request_id": {
+              "$ref": "input.request_id"
+            },
+            "analysis": {
+              "$ref": "nodes.analyse.output"
+            },
+            "design": {
+              "$ref": "nodes.design.output"
+            }
+          },
+          "verification": {
+            "id": "serial09a-review-rule",
+            "version": "1"
+          },
+          "limits": {
+            "max_calls": 1,
+            "max_model_calls": 1,
+            "max_output_tokens": 256,
+            "timeout_seconds": 25,
+            "model_timeout_seconds": 15
+          },
+          "recovery": {
+            "max_attempts": 1,
+            "max_feedback_loops": 0,
+            "max_replans": 0,
+            "timeout_seconds": 25,
+            "on_failure": "abort"
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "analyse",
+        "target": "design"
+      },
+      {
+        "source": "design",
+        "target": "review"
+      }
+    ],
+    "output_mapping": {
+      "analysis": {
+        "$ref": "nodes.analyse.output"
+      },
+      "design": {
+        "$ref": "nodes.design.output"
+      },
+      "review": {
+        "$ref": "nodes.review.output"
+      }
+    }
+  },
+  "input": {
+    "request_id": "assigned-at-launch",
+    "task": "Design a minimal library seat booking service: require authenticated bookings; prevent overlapping bookings for the same seat and time slot."
+  }
+}

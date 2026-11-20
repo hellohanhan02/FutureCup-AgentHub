@@ -1,0 +1,97 @@
+{
+  "scope": "LOCAL_HTTP_FIXTURE_NOT_REAL_LLM",
+  "version": "stable",
+  "external_requests_sent": 0,
+  "loopback_requests": 5,
+  "authorization_values_logged": false,
+  "configuration_loaded_through_server_parser": true,
+  "checks": [
+    {
+      "case": "success",
+      "passed": true,
+      "usage_reported": true
+    },
+    {
+      "case": "tool",
+      "passed": true,
+      "usage_reported": true
+    },
+    {
+      "case": "auth_error",
+      "passed": true,
+      "error_code": "provider_auth_error",
+      "http_status": 401
+    },
+    {
+      "case": "rate_limit",
+      "passed": true,
+      "error_code": "provider_rate_limited",
+      "http_status": 429
+    },
+    {
+      "case": "bad_json",
+      "passed": true,
+      "error_code": "provider_response_invalid",
+      "http_status": null
+    },
+    {
+      "case": "timeout",
+      "passed": true,
+      "error_code": "model_timeout",
+      "http_status": null
+    },
+    {
+      "case": "unsafe_endpoint_rejected",
+      "passed": true
+    },
+    {
+      "case": "unsafe_endpoint_rejected",
+      "passed": true
+    },
+    {
+      "case": "unsafe_endpoint_rejected",
+      "passed": true
+    },
+    {
+      "case": "unsafe_endpoint_rejected",
+      "passed": true
+    }
+  ],
+  "observations": [
+    {
+      "path": "/custom/v1/chat/completions",
+      "model": "judge-protocol-model",
+      "max_tokens": 64,
+      "authorization_exact": true,
+      "case": "success"
+    },
+    {
+      "path": "/custom/v1/chat/completions",
+      "model": "judge-protocol-model",
+      "max_tokens": 64,
+      "authorization_exact": true,
+      "case": "tool"
+    },
+    {
+      "path": "/custom/v1/chat/completions",
+      "model": "judge-protocol-model",
+      "max_tokens": 64,
+      "authorization_exact": true,
+      "case": "auth_error"
+    },
+    {
+      "path": "/custom/v1/chat/completions",
+      "model": "judge-protocol-model",
+      "max_tokens": 64,
+      "authorization_exact": true,
+      "case": "rate_limit"
+    },
+    {
+      "path": "/custom/v1/chat/completions",
+      "model": "judge-protocol-model",
+      "max_tokens": 64,
+      "authorization_exact": true,
+      "case": "bad_json"
+    }
+  ]
+}

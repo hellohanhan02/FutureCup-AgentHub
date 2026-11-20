@@ -1,0 +1,14 @@
+{
+  "configuration.json": "bfbfdf3b7f296030ffb56f9ff6d916c487917b4411c86d0f284b12748bbe98fd",
+  "mean-latency.svg": "fd8712e3154265b0c5670ccbac22e2a20c73f4e85cd2c9f35a1d904f532c4d31",
+  "p95-latency.svg": "e5434eef33ba872547f08fdc6698ecd13350587a5baccae4347b9c523eac8328",
+  "paired-comparisons.csv": "2455b568c538dbac051904c9d6b31d1f1b2d99624cb82b64f516c9d37ba52b6e",
+  "raw-tasks.csv": "9327f8d65af2689f0e25e8e5c154c9bd846f7815d99ed0d00dc4bccb68df4c4d",
+  "raw-trials.json": "4aecd19e0b00972e2a782ba7af71c2c8b963f0f298b93014abfbc64161e20102",
+  "reference-05.json": "4a876681886e52425fcc2e97249b8afd11026e612e73fbee38e3d0f3662ace08",
+  "report.md": "f359fbafb0e45e3bc8b4116e235a5477561d7e865078a4f5a8f0c0bf250c205b",
+  "success-rate.svg": "7eef1f44c4ef7b458d316139116850571ac8b91dc7a4c69c34b0e498cb3ff966",
+  "summary.json": "17c628448141bb07ceb819c5c8b77602c8b40902429bfa9b5fb08fbd98554cb6",
+  "trial-metrics.csv": "ff9837e4c3e70db5bb86b089dc391c114bc14970a74e276b4bf9b218fdd5a3c0",
+  "workloads.json": "34de2ffa8adcbfb73dc0db54a433d709efb47b7368271f706fa7849ebb7ab36c"
+}

@@ -1,0 +1,193 @@
+[
+  {
+    "case": "three-agent",
+    "run_id": "ec09d758f81641f1a6c0f656c305a713",
+    "state": "succeeded",
+    "verified": true,
+    "simulated": false,
+    "resource_usage": {
+      "calls": 3,
+      "model_calls": 3,
+      "tool_calls": 0,
+      "resource_units": 3183,
+      "checks": 6,
+      "attempts": 3,
+      "feedback_loops": 0,
+      "replans": 0,
+      "reported_tokens": 966,
+      "unknown_usage_calls": 0
+    },
+    "historical_runtime_git_version": null,
+    "nodes": [
+      {
+        "node_id": "analyse",
+        "state": "succeeded",
+        "verified": true,
+        "model": "deepseek-flash",
+        "attempt_count": 1,
+        "verification_verdicts": [
+          "pass"
+        ],
+        "retrieval_hits": [
+          0
+        ],
+        "citation_counts": [
+          0
+        ]
+      },
+      {
+        "node_id": "design",
+        "state": "succeeded",
+        "verified": true,
+        "model": "deepseek-flash",
+        "attempt_count": 1,
+        "verification_verdicts": [
+          "pass"
+        ],
+        "retrieval_hits": [
+          0
+        ],
+        "citation_counts": [
+          0
+        ]
+      },
+      {
+        "node_id": "review",
+        "state": "succeeded",
+        "verified": true,
+        "model": "deepseek-flash",
+        "attempt_count": 1,
+        "verification_verdicts": [
+          "pass"
+        ],
+        "retrieval_hits": [
+          0
+        ],
+        "citation_counts": [
+          0
+        ]
+      }
+    ],
+    "snapshot_sha256": "af5a7e51e7c168d7d05fbe569cf20513b681f275f6daf52747f60b84e81f5b6f",
+    "audit_sha256": "690834f91f5043d2da21c1f42b4f1d5b643a989adbd6b2719ddcd0373b2747bd"
+  },
+  {
+    "case": "self-loop",
+    "run_id": "d2c530342bff47908a44a28505306ce7",
+    "state": "succeeded",
+    "verified": true,
+    "simulated": false,
+    "resource_usage": {
+      "calls": 2,
+      "model_calls": 2,
+      "tool_calls": 0,
+      "resource_units": 7886,
+      "checks": 18,
+      "attempts": 2,
+      "feedback_loops": 1,
+      "replans": 0,
+      "reported_tokens": 2119,
+      "unknown_usage_calls": 0
+    },
+    "historical_runtime_git_version": null,
+    "nodes": [
+      {
+        "node_id": "schedule",
+        "state": "succeeded",
+        "verified": true,
+        "model": "deepseek-flash",
+        "attempt_count": 2,
+        "verification_verdicts": [
+          "fail",
+          "pass"
+        ],
+        "retrieval_hits": [
+          0,
+          0
+        ],
+        "citation_counts": [
+          0,
+          0
+        ]
+      }
+    ],
+    "snapshot_sha256": "9ec091a04a03f8381706cf3f51e4df4982c50b2695d0697afce233b2806e3b70",
+    "audit_sha256": "2eac7d27b8fe05a717eedfd2f6d9a94825f830fffe638dd3cab52c13288dbe01"
+  },
+  {
+    "case": "knowledge",
+    "run_id": "31cdba8fc5e44242a7f707d0d13d5d8c",
+    "state": "succeeded",
+    "verified": true,
+    "simulated": false,
+    "resource_usage": {
+      "calls": 4,
+      "model_calls": 4,
+      "tool_calls": 0,
+      "resource_units": 41654,
+      "checks": 8,
+      "attempts": 4,
+      "feedback_loops": 0,
+      "replans": 0,
+      "reported_tokens": 12718,
+      "unknown_usage_calls": 0
+    },
+    "historical_runtime_git_version": null,
+    "nodes": [
+      {
+        "node_id": "s1",
+        "state": "succeeded",
+        "verified": true,
+        "model": "deepseek-flash",
+        "attempt_count": 1,
+        "verification_verdicts": [
+          "pass"
+        ],
+        "retrieval_hits": [
+          4
+        ],
+        "citation_counts": [
+          3
+        ]
+      },
+      {
+        "node_id": "s2",
+        "state": "succeeded",
+        "verified": true,
+        "model": "deepseek-flash",
+        "attempt_count": 1,
+        "verification_verdicts": [
+          "pass"
+        ],
+        "retrieval_hits": [
+          4
+        ],
+        "citation_counts": [
+          3
+        ]
+      },
+      {
+        "node_id": "s3",
+        "state": "succeeded",
+        "verified": true,
+        "model": "deepseek-flash",
+        "attempt_count": 1,
+        "verification_verdicts": [
+          "pass"
+        ],
+        "retrieval_hits": [
+          4
+        ],
+        "citation_counts": [
+          3
+        ]
+      }
+    ],
+    "snapshot_sha256": "ebf7c3fafdd9e515b052c6ef22839f1362b79cf5db3f253837341172cf2a9ab5",
+    "audit_sha256": "92b797394f1e3e5d96ed64da1e5ff0e5a966043feeeeb07f434cdf62f1fc9a34",
+    "task_id": "ws-503317d980434ff084a64810e019c401",
+    "knowledge_base_ids": [
+      "13ebda9f3819484e8f18b92c20438489"
+    ]
+  }
+]

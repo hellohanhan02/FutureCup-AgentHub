@@ -1,0 +1,25 @@
+{
+  "id": "fc-demo-selfloop",
+  "name": "验证与反馈修复 · Mock",
+  "version": "1",
+  "scheduling_strategy": "caas",
+  "nodes": [
+    {
+      "id": "repair",
+      "kind": "task",
+      "config": {
+        "agent_id": "fc-repair",
+        "output_mode": "json",
+        "verification": { "id": "fc-demo-answer", "version": "1" },
+        "recovery": {
+          "max_attempts": 2,
+          "max_feedback_loops": 1,
+          "max_replans": 0,
+          "timeout_seconds": 30,
+          "on_failure": "prompt_retry"
+        }
+      }
+    }
+  ],
+  "edges": []
+}

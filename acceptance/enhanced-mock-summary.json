@@ -1,0 +1,66 @@
+{
+  "mode": "MOCK_ONLY_ACTUAL_ENGINE",
+  "source_run_id": "5e5a733acd614cd38bb9e5a7f40dae43",
+  "recovered_run_id": "cbd647eb7e2247f29118e57ed1acbdd2",
+  "source_state": "failed",
+  "source_verified": false,
+  "final_state": "succeeded",
+  "final_verified": true,
+  "reused_nodes": [
+    "analyse"
+  ],
+  "reexecuted_nodes": [
+    "review"
+  ],
+  "usage": {
+    "calls": 5,
+    "model_calls": 4,
+    "tool_calls": 1,
+    "resource_units": 15086,
+    "checks": 9,
+    "attempts": 3,
+    "feedback_loops": 1,
+    "replans": 0,
+    "reported_tokens": 0,
+    "unknown_usage_calls": 4
+  },
+  "ledger": {
+    "available": true,
+    "account_id": "p14d-fd071a235afe4d8f8d3fc0a9053fc232-budget",
+    "unit": "resource_units",
+    "max_calls": 12,
+    "max_units": 200000,
+    "occupied_calls": 5,
+    "confirmed_calls": 5,
+    "unknown_calls": 0,
+    "reserved_calls": 0,
+    "confirmed_units": 15086,
+    "reserved_units": 0,
+    "unknown_units": 0,
+    "remaining_calls": 7,
+    "remaining_units": 184914,
+    "tools": [
+      {
+        "id": "3d5277520dcc45b1a7aeea644342f32f",
+        "tool_call_id": "platform-calculation",
+        "run_id": "5e5a733acd614cd38bb9e5a7f40dae43",
+        "node_id": "d2255ce8ab72408095785d740a51737b",
+        "tool_name": "calculator",
+        "tool_version": "1",
+        "side_effect_class": "none",
+        "state": "SUCCEEDED",
+        "result_digest": "a66672a4dc2940f9dd51e20b5d16d1dba890d0f6b7fbf7102bdeeae3a94fff24",
+        "replay_count": 0,
+        "input_hash_summary": "fb2217fd63ae4b6d",
+        "idempotency_summary": "ab3496cd5f884c9f"
+      }
+    ],
+    "findings": [],
+    "truncated": false,
+    "scope": "shared_account_including_source_and_recovery",
+    "reconciliation_scope": "ledger_internal_only; full execution inventory not supplied",
+    "cost_basis": "resource_quota_or_configured_estimate_not_supplier_invoice"
+  },
+  "real_requests_sent": 0,
+  "note": "Injected Mock rule omission; independent verifier and actual feedback/recovery. Token usage unreported, quota units are not CNY billing."
+}

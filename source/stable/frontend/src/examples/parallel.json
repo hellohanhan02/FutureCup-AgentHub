@@ -1,0 +1,34 @@
+{
+  "id": "fc-demo-parallel",
+  "name": "多 Agent 并行协作 · Mock",
+  "version": "1",
+  "scheduling_strategy": "caas",
+  "max_concurrency": 4,
+  "nodes": [
+    {
+      "id": "research",
+      "kind": "task",
+      "config": { "agent_id": "fc-researcher", "output_mode": "text", "input": { "$ref": "input" } }
+    },
+    {
+      "id": "analysis",
+      "kind": "task",
+      "config": { "agent_id": "fc-writer", "output_mode": "text", "input": { "$ref": "input" } }
+    },
+    { "id": "join", "kind": "parallel", "config": { "join": "all" } },
+    {
+      "id": "review",
+      "kind": "task",
+      "config": {
+        "agent_id": "fc-reviewer",
+        "output_mode": "text",
+        "input": { "$ref": "nodes.join.output" }
+      }
+    }
+  ],
+  "edges": [
+    { "source": "research", "target": "join" },
+    { "source": "analysis", "target": "join" },
+    { "source": "join", "target": "review" }
+  ]
+}

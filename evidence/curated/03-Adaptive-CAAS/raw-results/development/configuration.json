@@ -1,0 +1,130 @@
+{
+  "split": "development",
+  "seeds": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "tasks": 64,
+  "scenarios": [
+    "A_uniform",
+    "B_heterogeneous",
+    "C_dynamic_fault",
+    "D_bursty",
+    "E_mixed_types",
+    "F_cost_latency",
+    "G_cold_start",
+    "H_long_recovery"
+  ],
+  "variants": {
+    "fixed": {
+      "dynamic_weights": true,
+      "recency": true,
+      "health": true,
+      "attribution": true,
+      "recency_seconds": 60,
+      "cooldown_seconds": 1,
+      "failure_threshold": 2,
+      "weight_floor": 0.05,
+      "revision": "adaptive-caas-v1"
+    },
+    "round_robin": {
+      "dynamic_weights": true,
+      "recency": true,
+      "health": true,
+      "attribution": true,
+      "recency_seconds": 60,
+      "cooldown_seconds": 1,
+      "failure_threshold": 2,
+      "weight_floor": 0.05,
+      "revision": "adaptive-caas-v1"
+    },
+    "caas": {
+      "dynamic_weights": true,
+      "recency": true,
+      "health": true,
+      "attribution": true,
+      "recency_seconds": 60,
+      "cooldown_seconds": 1,
+      "failure_threshold": 2,
+      "weight_floor": 0.05,
+      "revision": "adaptive-caas-v1"
+    },
+    "adaptive_caas": {
+      "dynamic_weights": true,
+      "recency": true,
+      "health": true,
+      "attribution": true,
+      "recency_seconds": 60,
+      "cooldown_seconds": 1,
+      "failure_threshold": 2,
+      "weight_floor": 0.05,
+      "revision": "adaptive-caas-v1"
+    },
+    "no_weights": {
+      "dynamic_weights": false,
+      "recency": true,
+      "health": true,
+      "attribution": true,
+      "recency_seconds": 60,
+      "cooldown_seconds": 1,
+      "failure_threshold": 2,
+      "weight_floor": 0.05,
+      "revision": "adaptive-caas-v1"
+    },
+    "no_recency": {
+      "dynamic_weights": true,
+      "recency": false,
+      "health": true,
+      "attribution": true,
+      "recency_seconds": 60,
+      "cooldown_seconds": 1,
+      "failure_threshold": 2,
+      "weight_floor": 0.05,
+      "revision": "adaptive-caas-v1"
+    },
+    "no_health": {
+      "dynamic_weights": true,
+      "recency": true,
+      "health": false,
+      "attribution": true,
+      "recency_seconds": 60,
+      "cooldown_seconds": 1,
+      "failure_threshold": 2,
+      "weight_floor": 0.05,
+      "revision": "adaptive-caas-v1"
+    },
+    "no_attribution": {
+      "dynamic_weights": true,
+      "recency": true,
+      "health": true,
+      "attribution": false,
+      "recency_seconds": 60,
+      "cooldown_seconds": 1,
+      "failure_threshold": 2,
+      "weight_floor": 0.05,
+      "revision": "adaptive-caas-v1"
+    }
+  },
+  "caas": {
+    "match_weight": 0.3,
+    "reliability_weight": 0.25,
+    "load_weight": 0.2,
+    "cost_weight": 0.1,
+    "latency_weight": 0.15,
+    "cost_scale": 1,
+    "latency_scale_ms": 1000,
+    "prior_samples": 5,
+    "aging_points_per_second": 5,
+    "revision": "caas-v1"
+  },
+  "tuning": "No parameter search; development and final seed sets disjoint. Constants fixed before final evaluation.",
+  "starvation_threshold_logical_ms": 1000,
+  "primary": [
+    "success_rate",
+    "mean_latency_ms"
+  ],
+  "cost": "Artificial relative rate * service_ms/50, NOT currency. Task budget constrains declared nominal cost, not real invoices."
+}

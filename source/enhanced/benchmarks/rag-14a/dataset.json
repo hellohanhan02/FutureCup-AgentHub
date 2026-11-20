@@ -1,0 +1,577 @@
+{
+  "kind": "SYNTHETIC_OFFLINE_ONLY",
+  "documents": [
+    {
+      "domain": "operations",
+      "name": "rule-0.md",
+      "text": "订单锁定必须在15分钟后自动解除."
+    },
+    {
+      "domain": "operations",
+      "name": "rule-1.md",
+      "text": "身份验证必须核对员工工号."
+    },
+    {
+      "domain": "operations",
+      "name": "rule-2.md",
+      "text": "订单取消必须立即释放库存."
+    },
+    {
+      "domain": "operations",
+      "name": "rule-3.md",
+      "text": "信用评价必须在7天内提交."
+    },
+    {
+      "domain": "operations",
+      "name": "rule-4.md",
+      "text": "申诉处理必须保留审核记录."
+    },
+    {
+      "domain": "operations",
+      "name": "rule-5.md",
+      "text": "隐私保护必须隐藏联系电话."
+    },
+    {
+      "domain": "operations",
+      "name": "rule-6.md",
+      "text": "商品限制不得允许危险物品."
+    },
+    {
+      "domain": "operations",
+      "name": "rule-7.md",
+      "text": "支付确认必须核对订单金额."
+    },
+    {
+      "domain": "operations",
+      "name": "overview-0.md",
+      "text": "Synthetic background overview: 订单锁定 身份验证 订单取消 信用评价. This is an overview, with no binding rule."
+    },
+    {
+      "domain": "operations",
+      "name": "overview-1.md",
+      "text": "Synthetic background overview: 订单锁定 身份验证 订单取消 信用评价. This is an overview, with no binding rule."
+    },
+    {
+      "domain": "library",
+      "name": "rule-0.md",
+      "text": "图书借阅必须在30天内归还."
+    },
+    {
+      "domain": "library",
+      "name": "rule-1.md",
+      "text": "预约取书必须保留2天."
+    },
+    {
+      "domain": "library",
+      "name": "rule-2.md",
+      "text": "逾期处理必须发送提醒."
+    },
+    {
+      "domain": "library",
+      "name": "rule-3.md",
+      "text": "续借申请必须在到期前提出."
+    },
+    {
+      "domain": "library",
+      "name": "rule-4.md",
+      "text": "访问认证必须验证读者证件."
+    },
+    {
+      "domain": "library",
+      "name": "rule-5.md",
+      "text": "数据备份必须每天完成."
+    },
+    {
+      "domain": "library",
+      "name": "rule-6.md",
+      "text": "损坏报告必须管理员审核."
+    },
+    {
+      "domain": "library",
+      "name": "rule-7.md",
+      "text": "借阅配额不得超过5本."
+    },
+    {
+      "domain": "library",
+      "name": "overview-0.md",
+      "text": "Synthetic background overview: 图书借阅 预约取书 逾期处理 续借申请. This is an overview, with no binding rule."
+    },
+    {
+      "domain": "library",
+      "name": "overview-1.md",
+      "text": "Synthetic background overview: 图书借阅 预约取书 逾期处理 续借申请. This is an overview, with no binding rule."
+    },
+    {
+      "domain": "laboratory",
+      "name": "rule-0.md",
+      "text": "Signed consent must be recorded before enrollment."
+    },
+    {
+      "domain": "laboratory",
+      "name": "rule-1.md",
+      "text": "Sample storage must have a temperature audit."
+    },
+    {
+      "domain": "laboratory",
+      "name": "rule-2.md",
+      "text": "Batch export must require supervisor approval."
+    },
+    {
+      "domain": "laboratory",
+      "name": "rule-3.md",
+      "text": "Access audit must retain the operator identifier."
+    },
+    {
+      "domain": "laboratory",
+      "name": "rule-4.md",
+      "text": "Incident review must finish within 2 days."
+    },
+    {
+      "domain": "laboratory",
+      "name": "rule-5.md",
+      "text": "Backup retention must last 7 days."
+    },
+    {
+      "domain": "laboratory",
+      "name": "rule-6.md",
+      "text": "Key rotation must require two reviewers."
+    },
+    {
+      "domain": "laboratory",
+      "name": "rule-7.md",
+      "text": "Account removal must disable access immediately."
+    },
+    {
+      "domain": "laboratory",
+      "name": "overview-0.md",
+      "text": "Synthetic background overview: signed consent sample storage batch export access audit. This is an overview, with no binding rule."
+    },
+    {
+      "domain": "laboratory",
+      "name": "overview-1.md",
+      "text": "Synthetic background overview: signed consent sample storage batch export access audit. This is an overview, with no binding rule."
+    }
+  ],
+  "cases": [
+    {
+      "id": "operations-single",
+      "scope": [
+        "operations"
+      ],
+      "query": "订单锁定",
+      "reference_rules": [
+        "订单锁定必须在15分钟后自动解除"
+      ],
+      "reference_topics": [
+        {
+          "query": "订单锁定",
+          "rules": [
+            "订单锁定必须在15分钟后自动解除"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operations-four",
+      "scope": [
+        "operations"
+      ],
+      "query": "订单锁定; 身份验证; 订单取消; 信用评价",
+      "reference_rules": [
+        "订单锁定必须在15分钟后自动解除",
+        "身份验证必须核对员工工号",
+        "订单取消必须立即释放库存",
+        "信用评价必须在7天内提交"
+      ],
+      "reference_topics": [
+        {
+          "query": "订单锁定",
+          "rules": [
+            "订单锁定必须在15分钟后自动解除"
+          ]
+        },
+        {
+          "query": "身份验证",
+          "rules": [
+            "身份验证必须核对员工工号"
+          ]
+        },
+        {
+          "query": "订单取消",
+          "rules": [
+            "订单取消必须立即释放库存"
+          ]
+        },
+        {
+          "query": "信用评价",
+          "rules": [
+            "信用评价必须在7天内提交"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operations-eight",
+      "scope": [
+        "operations"
+      ],
+      "query": "订单锁定; 身份验证; 订单取消; 信用评价; 申诉处理; 隐私保护; 商品限制; 支付确认",
+      "reference_rules": [
+        "订单锁定必须在15分钟后自动解除",
+        "身份验证必须核对员工工号",
+        "订单取消必须立即释放库存",
+        "信用评价必须在7天内提交",
+        "申诉处理必须保留审核记录",
+        "隐私保护必须隐藏联系电话",
+        "商品限制不得允许危险物品",
+        "支付确认必须核对订单金额"
+      ],
+      "reference_topics": [
+        {
+          "query": "订单锁定",
+          "rules": [
+            "订单锁定必须在15分钟后自动解除"
+          ]
+        },
+        {
+          "query": "身份验证",
+          "rules": [
+            "身份验证必须核对员工工号"
+          ]
+        },
+        {
+          "query": "订单取消",
+          "rules": [
+            "订单取消必须立即释放库存"
+          ]
+        },
+        {
+          "query": "信用评价",
+          "rules": [
+            "信用评价必须在7天内提交"
+          ]
+        },
+        {
+          "query": "申诉处理",
+          "rules": [
+            "申诉处理必须保留审核记录"
+          ]
+        },
+        {
+          "query": "隐私保护",
+          "rules": [
+            "隐私保护必须隐藏联系电话"
+          ]
+        },
+        {
+          "query": "商品限制",
+          "rules": [
+            "商品限制不得允许危险物品"
+          ]
+        },
+        {
+          "query": "支付确认",
+          "rules": [
+            "支付确认必须核对订单金额"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "library-single",
+      "scope": [
+        "library"
+      ],
+      "query": "图书借阅",
+      "reference_rules": [
+        "图书借阅必须在30天内归还"
+      ],
+      "reference_topics": [
+        {
+          "query": "图书借阅",
+          "rules": [
+            "图书借阅必须在30天内归还"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "library-four",
+      "scope": [
+        "library"
+      ],
+      "query": "图书借阅; 预约取书; 逾期处理; 续借申请",
+      "reference_rules": [
+        "图书借阅必须在30天内归还",
+        "预约取书必须保留2天",
+        "逾期处理必须发送提醒",
+        "续借申请必须在到期前提出"
+      ],
+      "reference_topics": [
+        {
+          "query": "图书借阅",
+          "rules": [
+            "图书借阅必须在30天内归还"
+          ]
+        },
+        {
+          "query": "预约取书",
+          "rules": [
+            "预约取书必须保留2天"
+          ]
+        },
+        {
+          "query": "逾期处理",
+          "rules": [
+            "逾期处理必须发送提醒"
+          ]
+        },
+        {
+          "query": "续借申请",
+          "rules": [
+            "续借申请必须在到期前提出"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "library-eight",
+      "scope": [
+        "library"
+      ],
+      "query": "图书借阅; 预约取书; 逾期处理; 续借申请; 访问认证; 数据备份; 损坏报告; 借阅配额",
+      "reference_rules": [
+        "图书借阅必须在30天内归还",
+        "预约取书必须保留2天",
+        "逾期处理必须发送提醒",
+        "续借申请必须在到期前提出",
+        "访问认证必须验证读者证件",
+        "数据备份必须每天完成",
+        "损坏报告必须管理员审核",
+        "借阅配额不得超过5本"
+      ],
+      "reference_topics": [
+        {
+          "query": "图书借阅",
+          "rules": [
+            "图书借阅必须在30天内归还"
+          ]
+        },
+        {
+          "query": "预约取书",
+          "rules": [
+            "预约取书必须保留2天"
+          ]
+        },
+        {
+          "query": "逾期处理",
+          "rules": [
+            "逾期处理必须发送提醒"
+          ]
+        },
+        {
+          "query": "续借申请",
+          "rules": [
+            "续借申请必须在到期前提出"
+          ]
+        },
+        {
+          "query": "访问认证",
+          "rules": [
+            "访问认证必须验证读者证件"
+          ]
+        },
+        {
+          "query": "数据备份",
+          "rules": [
+            "数据备份必须每天完成"
+          ]
+        },
+        {
+          "query": "损坏报告",
+          "rules": [
+            "损坏报告必须管理员审核"
+          ]
+        },
+        {
+          "query": "借阅配额",
+          "rules": [
+            "借阅配额不得超过5本"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "laboratory-single",
+      "scope": [
+        "laboratory"
+      ],
+      "query": "signed consent",
+      "reference_rules": [
+        "Signed consent must be recorded before enrollment"
+      ],
+      "reference_topics": [
+        {
+          "query": "signed consent",
+          "rules": [
+            "Signed consent must be recorded before enrollment"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "laboratory-four",
+      "scope": [
+        "laboratory"
+      ],
+      "query": "signed consent; sample storage; batch export; access audit",
+      "reference_rules": [
+        "Signed consent must be recorded before enrollment",
+        "Sample storage must have a temperature audit",
+        "Batch export must require supervisor approval",
+        "Access audit must retain the operator identifier"
+      ],
+      "reference_topics": [
+        {
+          "query": "signed consent",
+          "rules": [
+            "Signed consent must be recorded before enrollment"
+          ]
+        },
+        {
+          "query": "sample storage",
+          "rules": [
+            "Sample storage must have a temperature audit"
+          ]
+        },
+        {
+          "query": "batch export",
+          "rules": [
+            "Batch export must require supervisor approval"
+          ]
+        },
+        {
+          "query": "access audit",
+          "rules": [
+            "Access audit must retain the operator identifier"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "laboratory-eight",
+      "scope": [
+        "laboratory"
+      ],
+      "query": "signed consent; sample storage; batch export; access audit; incident review; backup retention; key rotation; account removal",
+      "reference_rules": [
+        "Signed consent must be recorded before enrollment",
+        "Sample storage must have a temperature audit",
+        "Batch export must require supervisor approval",
+        "Access audit must retain the operator identifier",
+        "Incident review must finish within 2 days",
+        "Backup retention must last 7 days",
+        "Key rotation must require two reviewers",
+        "Account removal must disable access immediately"
+      ],
+      "reference_topics": [
+        {
+          "query": "signed consent",
+          "rules": [
+            "Signed consent must be recorded before enrollment"
+          ]
+        },
+        {
+          "query": "sample storage",
+          "rules": [
+            "Sample storage must have a temperature audit"
+          ]
+        },
+        {
+          "query": "batch export",
+          "rules": [
+            "Batch export must require supervisor approval"
+          ]
+        },
+        {
+          "query": "access audit",
+          "rules": [
+            "Access audit must retain the operator identifier"
+          ]
+        },
+        {
+          "query": "incident review",
+          "rules": [
+            "Incident review must finish within 2 days"
+          ]
+        },
+        {
+          "query": "backup retention",
+          "rules": [
+            "Backup retention must last 7 days"
+          ]
+        },
+        {
+          "query": "key rotation",
+          "rules": [
+            "Key rotation must require two reviewers"
+          ]
+        },
+        {
+          "query": "account removal",
+          "rules": [
+            "Account removal must disable access immediately"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "no-match",
+      "scope": [
+        "operations"
+      ],
+      "query": "zzzxxy_unknown_topic",
+      "reference_rules": [],
+      "reference_topics": []
+    },
+    {
+      "id": "operations-natural",
+      "scope": [
+        "operations"
+      ],
+      "query": "请为一个系统设计订单锁定和订单取消的处理流程，并说明隐私保护与信用评价的要求",
+      "reference_rules": [
+        "订单锁定必须在15分钟后自动解除",
+        "订单取消必须立即释放库存",
+        "信用评价必须在7天内提交",
+        "隐私保护必须隐藏联系电话"
+      ],
+      "reference_topics": [
+        {
+          "query": "订单锁定",
+          "rules": [
+            "订单锁定必须在15分钟后自动解除"
+          ]
+        },
+        {
+          "query": "订单取消",
+          "rules": [
+            "订单取消必须立即释放库存"
+          ]
+        },
+        {
+          "query": "信用评价",
+          "rules": [
+            "信用评价必须在7天内提交"
+          ]
+        },
+        {
+          "query": "隐私保护",
+          "rules": [
+            "隐私保护必须隐藏联系电话"
+          ]
+        }
+      ]
+    }
+  ]
+}

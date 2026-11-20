@@ -1,0 +1,21 @@
+{
+  "provenance": "Synthetic Chinese model-like protocol fixtures for offline tests only; not historical DeepSeek outputs or new real inference evidence.",
+  "s1": {
+    "title": "校园二手交易需求规格",
+    "summary": "以在校学生为买卖双方，覆盖发布、检索、沟通、订单和评价，并明确交易与隐私边界。",
+    "items": ["五类核心功能与订单状态边界", "学生身份、内容审核和隐私约束"],
+    "markdown": "## 用户与范围\n学生可以同时作为买家和卖家，管理员负责违规内容处置。校园身份通过学校邮箱或人工审核确认，具体接入条件需与学校确认；不宣称已接入真实统一认证。首版支持校内当面交付，支付方式作为待确认项，不自行保管交易资金。\n## 功能需求\n1. 发布：卖家维护标题、分类、成色、价格、图片和交易校区，支持下架。已锁定商品不能再次成交。\n2. 搜索：按关键词、分类、价格区间及校区筛选，仅返回有效上架商品，分页展示。\n3. 沟通：买家围绕商品与卖家建立会话，仅参与双方可查看消息，支持未读提示和举报。\n4. 订单：记录下单时商品及价格快照，状态包括待确认、待交付、已完成、已取消；转换需检查操作者权限和当前状态。\n5. 评价：完成订单的交易双方可各提交一次评价，保留订单关联，禁止本人评价自己。\n## 非功能需求\n个人联系信息默认不公开。写接口要求身份鉴别、对象级授权、参数验证和限流。聊天内容及图片设置保存期限，具体时长由负责人确认。性能目标需通过压测制定，当前不声称任何吞吐或可用性指标。"
+  },
+  "s2": {
+    "title": "系统架构与数据设计",
+    "summary": "依据上游五项需求采用模块化单体，使用事务及唯一约束保护商品成交和订单评价。",
+    "items": ["Vue 3、FastAPI、PostgreSQL 的候选技术方案", "实体主外键与订单并发控制设计"],
+    "markdown": "## 架构与接口\n采用 Vue 3 客户端、FastAPI 服务端和 PostgreSQL 数据库的模块化单体。模块分为身份、商品、检索、会话、订单、评价和管理。接口示例为 POST /items、GET /items、POST /conversations、POST /orders、POST /orders/{id}/complete、POST /orders/{id}/reviews。服务端始终从认证上下文取用户身份，不信任客户端提交的 owner_id。首版不引入微服务或向量检索。\n## 数据模型\n| 表 | 主键与关键字段 | 关系与约束 |\n|---|---|---|\n| users | id PK, campus_email UNIQUE, status | 账号状态需检查 |\n| items | id PK, seller_id FK users, title, price, status, version | price 为非负定点数 |\n| conversations | id PK, item_id FK items, buyer_id FK users | 参与人不能等于卖家 |\n| messages | id PK, conversation_id FK, sender_id FK, body, created_at | 查询需验证会话成员 |\n| orders | id PK, item_id FK, buyer_id FK, status, price_snapshot, request_key UNIQUE | 保存商品标题和价格快照 |\n| reviews | id PK, order_id FK, author_id FK, score, comment | UNIQUE(order_id, author_id) |\n订单创建事务条件更新商品状态和 version，更新零行即冲突；取消和超时释放商品的规则需产品确认。数据库唯一约束及事务测试共同防止重复下单，不仅依靠前端按钮禁用。\n## 技术取舍\nPostgreSQL 适合事务和关系约束，初期关键词查询可用数据库索引，量级变化后再评估搜索组件。聊天首版可轮询，后续按实际连接规模引入 WebSocket。图片采用受限对象存储，限制类型和大小，并设计审核及删除流程。以上为设计建议，尚未部署或执行真实压测。"
+  },
+  "s3": {
+    "title": "校园二手交易平台系统设计方案",
+    "summary": "整合需求和架构产物，给出模块、数据实体、事务边界、技术取舍和审查风险。",
+    "items": ["五项核心功能与关系数据设计", "订单并发、成员权限及评价一致性审查"],
+    "markdown": "## 需求分析\n本系统面向大学生校内闲置物品交易，学生既可买入也可卖出，管理员负责内容处置。核心范围为物品发布、商品搜索、在线沟通、订单管理及信用评价。发布包含分类、成色、价格、图片和校区，允许编辑、下架，已成交物品不能再次成交。搜索提供关键词、分类及价格筛选和分页。买家可围绕某件商品建立会话，消息仅会话双方可见。订单记录商品及价格快照，并在待确认、待交付、已完成、已取消之间按授权规则转换。仅完成订单的交易双方各允许一次评价。支付托管和跨校物流不属于首版承诺能力，学生身份接入条件尚需确认。\n## 系统架构设计\n首版采用模块化单体：Vue 3 客户端通过 HTTPS 调用 FastAPI 接口，服务端拆分身份、商品、检索、会话、订单、评价及管理模块，共用关系数据库。所有写请求验证身份和对象级权限，服务端从认证上下文取得用户，不接受客户端自行指定所有者。接口示例包括 POST /items、GET /items、POST /conversations、POST /orders 和 POST /orders/{id}/reviews。下单以数据库事务条件更新商品状态及版本号，冲突返回明确提示；幂等请求键避免网络重发造成重复订单。会话读取和消息发送均检查参与人身份。\n## 数据库设计\n| 实体 | 主键及主要字段 | 约束与关系 |\n|---|---|---|\n| users | id PK, campus_email, status | 邮箱唯一，账号可禁用 |\n| items | id PK, seller_id FK, title, price, status, version | 卖家引用 users，金额使用定点数 |\n| conversations | id PK, item_id FK, buyer_id FK | 关联物品及参与者 |\n| messages | id PK, conversation_id FK, sender_id FK, body | 按会话及时间建立索引 |\n| orders | id PK, item_id FK, buyer_id FK, status, price_snapshot, request_key | 幂等键唯一，保存商品快照 |\n| reviews | id PK, order_id FK, author_id FK, score | UNIQUE(order_id, author_id)，评分范围约束 |\n订单状态变更需检查当前状态、商品归属及操作者。取消后释放锁定商品需在事务中完成，并定义超时订单的释放规则。评价接口验证订单完成、作者为交易参与方且不重复；信用汇总需能由原始评价追溯，不直接采信客户端统计。消息和图片设立保留期限及删除策略，具体期限待管理方确认。\n## 技术选型\n候选前端 Vue 3 支持表单、列表与会话交互；FastAPI 便于接口校验和异步 I/O；PostgreSQL 提供事务、外键、唯一约束及可扩展的检索索引。初期优先数据库关键词索引，依据真实负载再评估独立搜索引擎。聊天先使用轮询保持实现可控，后续验证连接规模再选择 WebSocket。图片存储采用受限对象存储，限定大小、格式和访问权限；不引入无依据的大型分布式基础设施。技术方案仅为设计，未声称已完成部署或性能验证。\n## 方案审查\n需求与模块、实体之间形成对应：发布/搜索使用 items，沟通使用 conversations/messages，订单使用 orders，评价使用 reviews。主要风险为重复成交、越权读取会话、虚假评价、内容违规及隐私保存超期。控制措施分别为事务条件更新与幂等键、成员权限检查、订单状态与唯一约束、举报审核和保留期限。后续应编写并发下单、状态转换、取消释放、越权访问和重复评价测试；当前没有执行这些测试，不能称为验证通过。学生认证接口、支付边界、评分汇总规则及数据保存期限需由负责人确认后再实施。"
+  }
+}

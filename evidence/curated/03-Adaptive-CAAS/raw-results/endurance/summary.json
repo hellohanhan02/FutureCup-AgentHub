@@ -1,0 +1,758 @@
+[
+  {
+    "seed": 90001,
+    "strategy": "fixed",
+    "workload_sha256": "83df5afa9cea84d0e5cf6cb56128de5c5a724f9a5d967b462ff9d9a9e6dde36c",
+    "metrics": {
+      "tasks": 192,
+      "success_rate": 0.9114583333333334,
+      "mean_latency_ms": 100.44879158333333,
+      "p95_latency_ms": 270.483358,
+      "mean_waiting_ms": 0.0,
+      "failure_rate": 0.08854166666666667,
+      "throughput_per_second": 0.003350782157575458,
+      "makespan_ms": 57300054.426375,
+      "assignment_counts": {
+        "agent-0": 192,
+        "agent-1": 0,
+        "agent-2": 0
+      },
+      "peak_active": {
+        "agent-0": 1,
+        "agent-1": 0,
+        "agent-2": 0
+      },
+      "peak_total_active": 1,
+      "capacity_violations": 0,
+      "busy_ms": {
+        "agent-0": 19286.167984000007,
+        "agent-1": 0,
+        "agent-2": 0
+      },
+      "post_fault_tasks": 156,
+      "post_fault_success_rate": 0.9038461538461539,
+      "fault_agent_recovery_delay_ms": null,
+      "unassigned_tasks": 0,
+      "total_simulated_cost": 385.7233596800002,
+      "max_waiting_ms": 0.0,
+      "starvation_count": 0,
+      "remaining_capacity_claims": 0,
+      "latency_target_violations": 0,
+      "by_task_type": {
+        "analysis": {
+          "tasks": 73,
+          "success_rate": 0.9315068493150684,
+          "mean_latency_ms": 50.70966202739726
+        },
+        "design": {
+          "tasks": 70,
+          "success_rate": 0.8857142857142857,
+          "mean_latency_ms": 49.41944838571429
+        },
+        "review": {
+          "tasks": 49,
+          "success_rate": 0.9183673469387755,
+          "mean_latency_ms": 247.44900548979592
+        }
+      }
+    },
+    "wall_clock": {
+      "planning_total_ms": 4.6414,
+      "planning_passes": 192,
+      "mean_scheduling_pass_ms": 0.024173958333333332
+    }
+  },
+  {
+    "seed": 90001,
+    "strategy": "round_robin",
+    "workload_sha256": "83df5afa9cea84d0e5cf6cb56128de5c5a724f9a5d967b462ff9d9a9e6dde36c",
+    "metrics": {
+      "tasks": 192,
+      "success_rate": 0.9010416666666666,
+      "mean_latency_ms": 102.30143421354167,
+      "p95_latency_ms": 287.181749,
+      "mean_waiting_ms": 0.0,
+      "failure_rate": 0.09895833333333333,
+      "throughput_per_second": 0.003350782157575458,
+      "makespan_ms": 57300054.426375,
+      "assignment_counts": {
+        "agent-0": 65,
+        "agent-1": 64,
+        "agent-2": 63
+      },
+      "peak_active": {
+        "agent-0": 1,
+        "agent-1": 1,
+        "agent-2": 1
+      },
+      "peak_total_active": 1,
+      "capacity_violations": 0,
+      "busy_ms": {
+        "agent-0": 5812.445575000002,
+        "agent-1": 6498.6004159999975,
+        "agent-2": 7330.829377999997
+      },
+      "post_fault_tasks": 156,
+      "post_fault_success_rate": 0.9166666666666666,
+      "fault_agent_recovery_delay_ms": 1200054.0822570007,
+      "unassigned_tasks": 0,
+      "total_simulated_cost": 392.83750738,
+      "max_waiting_ms": 0.0,
+      "starvation_count": 0,
+      "remaining_capacity_claims": 0,
+      "latency_target_violations": 0,
+      "by_task_type": {
+        "analysis": {
+          "tasks": 73,
+          "success_rate": 0.8767123287671232,
+          "mean_latency_ms": 49.59529671232877
+        },
+        "design": {
+          "tasks": 70,
+          "success_rate": 0.9142857142857143,
+          "mean_latency_ms": 49.91380162857143
+        },
+        "review": {
+          "tasks": 49,
+          "success_rate": 0.9183673469387755,
+          "mean_latency_ms": 255.66229785714287
+        }
+      }
+    },
+    "wall_clock": {
+      "planning_total_ms": 4.143,
+      "planning_passes": 192,
+      "mean_scheduling_pass_ms": 0.021578125
+    }
+  },
+  {
+    "seed": 90001,
+    "strategy": "caas",
+    "workload_sha256": "83df5afa9cea84d0e5cf6cb56128de5c5a724f9a5d967b462ff9d9a9e6dde36c",
+    "metrics": {
+      "tasks": 192,
+      "success_rate": 0.9375,
+      "mean_latency_ms": 99.89089209895833,
+      "p95_latency_ms": 284.327855,
+      "mean_waiting_ms": 0.0,
+      "failure_rate": 0.0625,
+      "throughput_per_second": 0.00335078250056158,
+      "makespan_ms": 57300048.561141,
+      "assignment_counts": {
+        "agent-0": 0,
+        "agent-1": 191,
+        "agent-2": 1
+      },
+      "peak_active": {
+        "agent-0": 0,
+        "agent-1": 1,
+        "agent-2": 1
+      },
+      "peak_total_active": 1,
+      "capacity_violations": 0,
+      "busy_ms": {
+        "agent-0": 0,
+        "agent-1": 18889.875507000004,
+        "agent-2": 289.175776
+      },
+      "post_fault_tasks": 156,
+      "post_fault_success_rate": 0.9551282051282052,
+      "fault_agent_recovery_delay_ms": null,
+      "unassigned_tasks": 0,
+      "total_simulated_cost": 383.58102566,
+      "max_waiting_ms": 0.0,
+      "starvation_count": 0,
+      "remaining_capacity_claims": 0,
+      "latency_target_violations": 0,
+      "by_task_type": {
+        "analysis": {
+          "tasks": 73,
+          "success_rate": 0.9452054794520548,
+          "mean_latency_ms": 49.09545569863014
+        },
+        "design": {
+          "tasks": 70,
+          "success_rate": 0.9428571428571428,
+          "mean_latency_ms": 49.69628602857143
+        },
+        "review": {
+          "tasks": 49,
+          "success_rate": 0.9183673469387755,
+          "mean_latency_ms": 247.27230602040817
+        }
+      }
+    },
+    "wall_clock": {
+      "planning_total_ms": 4.1995,
+      "planning_passes": 192,
+      "mean_scheduling_pass_ms": 0.021872395833333332
+    }
+  },
+  {
+    "seed": 90001,
+    "strategy": "adaptive_caas",
+    "workload_sha256": "83df5afa9cea84d0e5cf6cb56128de5c5a724f9a5d967b462ff9d9a9e6dde36c",
+    "metrics": {
+      "tasks": 192,
+      "success_rate": 0.8958333333333334,
+      "mean_latency_ms": 99.32205898958334,
+      "p95_latency_ms": 282.618435,
+      "mean_waiting_ms": 0.0,
+      "failure_rate": 0.10416666666666667,
+      "throughput_per_second": 0.00335078250056158,
+      "makespan_ms": 57300048.561141,
+      "assignment_counts": {
+        "agent-0": 91,
+        "agent-1": 101,
+        "agent-2": 0
+      },
+      "peak_active": {
+        "agent-0": 1,
+        "agent-1": 1,
+        "agent-2": 0
+      },
+      "peak_total_active": 1,
+      "capacity_violations": 0,
+      "busy_ms": {
+        "agent-0": 9450.063900999998,
+        "agent-1": 9619.771425,
+        "agent-2": 0
+      },
+      "post_fault_tasks": 156,
+      "post_fault_success_rate": 0.9038461538461539,
+      "fault_agent_recovery_delay_ms": null,
+      "unassigned_tasks": 0,
+      "total_simulated_cost": 381.3967065200001,
+      "max_waiting_ms": 0.0,
+      "starvation_count": 0,
+      "remaining_capacity_claims": 0,
+      "latency_target_violations": 0,
+      "by_task_type": {
+        "analysis": {
+          "tasks": 73,
+          "success_rate": 0.9041095890410958,
+          "mean_latency_ms": 49.48526731506849
+        },
+        "design": {
+          "tasks": 70,
+          "success_rate": 0.9,
+          "mean_latency_ms": 49.24062557142857
+        },
+        "review": {
+          "tasks": 49,
+          "success_rate": 0.8775510204081632,
+          "mean_latency_ms": 245.11361269387754
+        }
+      }
+    },
+    "wall_clock": {
+      "planning_total_ms": 18.2596,
+      "planning_passes": 192,
+      "mean_scheduling_pass_ms": 0.09510208333333332
+    }
+  },
+  {
+    "seed": 90002,
+    "strategy": "fixed",
+    "workload_sha256": "56d97be61fedafc45c74e4a7c3326e7000f31c9e133ad244ad9b7a243b343861",
+    "metrics": {
+      "tasks": 192,
+      "success_rate": 0.9375,
+      "mean_latency_ms": 116.75894868229167,
+      "p95_latency_ms": 286.736549,
+      "mean_waiting_ms": 0.0,
+      "failure_rate": 0.0625,
+      "throughput_per_second": 0.0033507819529018205,
+      "makespan_ms": 57300057.926397,
+      "assignment_counts": {
+        "agent-0": 192,
+        "agent-1": 0,
+        "agent-2": 0
+      },
+      "peak_active": {
+        "agent-0": 1,
+        "agent-1": 0,
+        "agent-2": 0
+      },
+      "peak_total_active": 1,
+      "capacity_violations": 0,
+      "busy_ms": {
+        "agent-0": 22417.718147000014,
+        "agent-1": 0,
+        "agent-2": 0
+      },
+      "post_fault_tasks": 156,
+      "post_fault_success_rate": 0.9423076923076923,
+      "fault_agent_recovery_delay_ms": null,
+      "unassigned_tasks": 0,
+      "total_simulated_cost": 448.35436294,
+      "max_waiting_ms": 0.0,
+      "starvation_count": 0,
+      "remaining_capacity_claims": 0,
+      "latency_target_violations": 0,
+      "by_task_type": {
+        "analysis": {
+          "tasks": 59,
+          "success_rate": 0.9491525423728814,
+          "mean_latency_ms": 50.81389162711864
+        },
+        "design": {
+          "tasks": 69,
+          "success_rate": 0.9420289855072463,
+          "mean_latency_ms": 49.40006568115942
+        },
+        "review": {
+          "tasks": 64,
+          "success_rate": 0.921875,
+          "mean_latency_ms": 250.173343890625
+        }
+      }
+    },
+    "wall_clock": {
+      "planning_total_ms": 4.0623,
+      "planning_passes": 192,
+      "mean_scheduling_pass_ms": 0.021157812499999998
+    }
+  },
+  {
+    "seed": 90002,
+    "strategy": "round_robin",
+    "workload_sha256": "56d97be61fedafc45c74e4a7c3326e7000f31c9e133ad244ad9b7a243b343861",
+    "metrics": {
+      "tasks": 192,
+      "success_rate": 0.8958333333333334,
+      "mean_latency_ms": 119.4209600625,
+      "p95_latency_ms": 286.835948,
+      "mean_waiting_ms": 0.0,
+      "failure_rate": 0.10416666666666667,
+      "throughput_per_second": 0.0033507819529018205,
+      "makespan_ms": 57300057.926397,
+      "assignment_counts": {
+        "agent-0": 65,
+        "agent-1": 64,
+        "agent-2": 63
+      },
+      "peak_active": {
+        "agent-0": 1,
+        "agent-1": 1,
+        "agent-2": 1
+      },
+      "peak_total_active": 1,
+      "capacity_violations": 0,
+      "busy_ms": {
+        "agent-0": 7884.257302,
+        "agent-1": 7257.575186000001,
+        "agent-2": 7786.991844000003
+      },
+      "post_fault_tasks": 156,
+      "post_fault_success_rate": 0.9230769230769231,
+      "fault_agent_recovery_delay_ms": 300277.93447699957,
+      "unassigned_tasks": 0,
+      "total_simulated_cost": 458.5764866399998,
+      "max_waiting_ms": 0.0,
+      "starvation_count": 0,
+      "remaining_capacity_claims": 0,
+      "latency_target_violations": 0,
+      "by_task_type": {
+        "analysis": {
+          "tasks": 59,
+          "success_rate": 0.9152542372881356,
+          "mean_latency_ms": 52.743195830508476
+        },
+        "design": {
+          "tasks": 69,
+          "success_rate": 0.855072463768116,
+          "mean_latency_ms": 50.16896608695652
+        },
+        "review": {
+          "tasks": 64,
+          "success_rate": 0.921875,
+          "mean_latency_ms": 255.55182996874998
+        }
+      }
+    },
+    "wall_clock": {
+      "planning_total_ms": 4.1268,
+      "planning_passes": 192,
+      "mean_scheduling_pass_ms": 0.021493750000000002
+    }
+  },
+  {
+    "seed": 90002,
+    "strategy": "caas",
+    "workload_sha256": "56d97be61fedafc45c74e4a7c3326e7000f31c9e133ad244ad9b7a243b343861",
+    "metrics": {
+      "tasks": 192,
+      "success_rate": 0.9010416666666666,
+      "mean_latency_ms": 119.84381903645833,
+      "p95_latency_ms": 282.641381,
+      "mean_waiting_ms": 0.0,
+      "failure_rate": 0.09895833333333333,
+      "throughput_per_second": 0.0033507819529018205,
+      "makespan_ms": 57300057.926397,
+      "assignment_counts": {
+        "agent-0": 59,
+        "agent-1": 62,
+        "agent-2": 71
+      },
+      "peak_active": {
+        "agent-0": 1,
+        "agent-1": 1,
+        "agent-2": 1
+      },
+      "peak_total_active": 1,
+      "capacity_violations": 0,
+      "busy_ms": {
+        "agent-0": 2998.019605999999,
+        "agent-1": 3025.7459939999994,
+        "agent-2": 16986.247654999996
+      },
+      "post_fault_tasks": 156,
+      "post_fault_success_rate": 0.9166666666666666,
+      "fault_agent_recovery_delay_ms": 203.2617680002004,
+      "unassigned_tasks": 0,
+      "total_simulated_cost": 460.2002651,
+      "max_waiting_ms": 0.0,
+      "starvation_count": 0,
+      "remaining_capacity_claims": 0,
+      "latency_target_violations": 0,
+      "by_task_type": {
+        "analysis": {
+          "tasks": 59,
+          "success_rate": 0.9491525423728814,
+          "mean_latency_ms": 50.81389162711864
+        },
+        "design": {
+          "tasks": 69,
+          "success_rate": 0.8695652173913043,
+          "mean_latency_ms": 49.01127475362319
+        },
+        "review": {
+          "tasks": 64,
+          "success_rate": 0.890625,
+          "mean_latency_ms": 259.847120171875
+        }
+      }
+    },
+    "wall_clock": {
+      "planning_total_ms": 4.3334,
+      "planning_passes": 192,
+      "mean_scheduling_pass_ms": 0.02256979166666667
+    }
+  },
+  {
+    "seed": 90002,
+    "strategy": "adaptive_caas",
+    "workload_sha256": "56d97be61fedafc45c74e4a7c3326e7000f31c9e133ad244ad9b7a243b343861",
+    "metrics": {
+      "tasks": 192,
+      "success_rate": 0.9114583333333334,
+      "mean_latency_ms": 116.50967916666667,
+      "p95_latency_ms": 286.640092,
+      "mean_waiting_ms": 0.0,
+      "failure_rate": 0.08854166666666667,
+      "throughput_per_second": 0.003350782179390257,
+      "makespan_ms": 57300054.053331,
+      "assignment_counts": {
+        "agent-0": 121,
+        "agent-1": 53,
+        "agent-2": 18
+      },
+      "peak_active": {
+        "agent-0": 1,
+        "agent-1": 1,
+        "agent-2": 1
+      },
+      "peak_total_active": 1,
+      "capacity_violations": 0,
+      "busy_ms": {
+        "agent-0": 12814.675570000005,
+        "agent-1": 6716.11098,
+        "agent-2": 2839.07185
+      },
+      "post_fault_tasks": 156,
+      "post_fault_success_rate": 0.9166666666666666,
+      "fault_agent_recovery_delay_ms": 13500041.751883,
+      "unassigned_tasks": 0,
+      "total_simulated_cost": 447.3971679999999,
+      "max_waiting_ms": 0.0,
+      "starvation_count": 0,
+      "remaining_capacity_claims": 0,
+      "latency_target_violations": 0,
+      "by_task_type": {
+        "analysis": {
+          "tasks": 59,
+          "success_rate": 0.9322033898305084,
+          "mean_latency_ms": 49.35113461016949
+        },
+        "design": {
+          "tasks": 69,
+          "success_rate": 0.8840579710144928,
+          "mean_latency_ms": 48.80725395652174
+        },
+        "review": {
+          "tasks": 64,
+          "success_rate": 0.921875,
+          "mean_latency_ms": 251.413139609375
+        }
+      }
+    },
+    "wall_clock": {
+      "planning_total_ms": 18.4106,
+      "planning_passes": 192,
+      "mean_scheduling_pass_ms": 0.09588854166666666
+    }
+  },
+  {
+    "seed": 90003,
+    "strategy": "fixed",
+    "workload_sha256": "c1d0f9dda02fc005ffd59db543ae0d94bfa827e4c9697db50176c50097dabd54",
+    "metrics": {
+      "tasks": 192,
+      "success_rate": 0.9375,
+      "mean_latency_ms": 116.993448375,
+      "p95_latency_ms": 282.035619,
+      "mean_waiting_ms": 0.0,
+      "failure_rate": 0.0625,
+      "throughput_per_second": 0.0033507825948117047,
+      "makespan_ms": 57300046.949417,
+      "assignment_counts": {
+        "agent-0": 192,
+        "agent-1": 0,
+        "agent-2": 0
+      },
+      "peak_active": {
+        "agent-0": 1,
+        "agent-1": 0,
+        "agent-2": 0
+      },
+      "peak_total_active": 1,
+      "capacity_violations": 0,
+      "busy_ms": {
+        "agent-0": 22462.742088000006,
+        "agent-1": 0,
+        "agent-2": 0
+      },
+      "post_fault_tasks": 156,
+      "post_fault_success_rate": 0.9294871794871795,
+      "fault_agent_recovery_delay_ms": null,
+      "unassigned_tasks": 0,
+      "total_simulated_cost": 449.25484176000015,
+      "max_waiting_ms": 0.0,
+      "starvation_count": 0,
+      "remaining_capacity_claims": 0,
+      "latency_target_violations": 0,
+      "by_task_type": {
+        "analysis": {
+          "tasks": 69,
+          "success_rate": 0.927536231884058,
+          "mean_latency_ms": 49.920515188405794
+        },
+        "design": {
+          "tasks": 59,
+          "success_rate": 0.9491525423728814,
+          "mean_latency_ms": 50.89797549152542
+        },
+        "review": {
+          "tasks": 64,
+          "success_rate": 0.9375,
+          "mean_latency_ms": 250.23821853125
+        }
+      }
+    },
+    "wall_clock": {
+      "planning_total_ms": 3.9339,
+      "planning_passes": 192,
+      "mean_scheduling_pass_ms": 0.0204890625
+    }
+  },
+  {
+    "seed": 90003,
+    "strategy": "round_robin",
+    "workload_sha256": "c1d0f9dda02fc005ffd59db543ae0d94bfa827e4c9697db50176c50097dabd54",
+    "metrics": {
+      "tasks": 192,
+      "success_rate": 0.9322916666666666,
+      "mean_latency_ms": 116.66661241666667,
+      "p95_latency_ms": 287.095653,
+      "mean_waiting_ms": 0.0,
+      "failure_rate": 0.06770833333333333,
+      "throughput_per_second": 0.0033507825948117047,
+      "makespan_ms": 57300046.949417,
+      "assignment_counts": {
+        "agent-0": 65,
+        "agent-1": 64,
+        "agent-2": 63
+      },
+      "peak_active": {
+        "agent-0": 1,
+        "agent-1": 1,
+        "agent-2": 1
+      },
+      "peak_total_active": 1,
+      "capacity_violations": 0,
+      "busy_ms": {
+        "agent-0": 7862.581991999999,
+        "agent-1": 6310.111073,
+        "agent-2": 8227.296519000001
+      },
+      "post_fault_tasks": 156,
+      "post_fault_success_rate": 0.9423076923076923,
+      "fault_agent_recovery_delay_ms": 300237.3663439993,
+      "unassigned_tasks": 0,
+      "total_simulated_cost": 447.99979168000004,
+      "max_waiting_ms": 0.0,
+      "starvation_count": 0,
+      "remaining_capacity_claims": 0,
+      "latency_target_violations": 0,
+      "by_task_type": {
+        "analysis": {
+          "tasks": 69,
+          "success_rate": 0.9420289855072463,
+          "mean_latency_ms": 50.12698784057971
+        },
+        "design": {
+          "tasks": 59,
+          "success_rate": 0.9322033898305084,
+          "mean_latency_ms": 50.47209759322034
+        },
+        "review": {
+          "tasks": 64,
+          "success_rate": 0.921875,
+          "mean_latency_ms": 249.427713515625
+        }
+      }
+    },
+    "wall_clock": {
+      "planning_total_ms": 4.1105,
+      "planning_passes": 192,
+      "mean_scheduling_pass_ms": 0.021408854166666668
+    }
+  },
+  {
+    "seed": 90003,
+    "strategy": "caas",
+    "workload_sha256": "c1d0f9dda02fc005ffd59db543ae0d94bfa827e4c9697db50176c50097dabd54",
+    "metrics": {
+      "tasks": 192,
+      "success_rate": 0.9375,
+      "mean_latency_ms": 117.85664488541667,
+      "p95_latency_ms": 288.123037,
+      "mean_waiting_ms": 0.0,
+      "failure_rate": 0.0625,
+      "throughput_per_second": 0.0033507825948117047,
+      "makespan_ms": 57300046.949417,
+      "assignment_counts": {
+        "agent-0": 58,
+        "agent-1": 119,
+        "agent-2": 15
+      },
+      "peak_active": {
+        "agent-0": 1,
+        "agent-1": 1,
+        "agent-2": 1
+      },
+      "peak_total_active": 1,
+      "capacity_violations": 0,
+      "busy_ms": {
+        "agent-0": 2908.655549999999,
+        "agent-1": 18149.382021000005,
+        "agent-2": 1570.438247
+      },
+      "post_fault_tasks": 156,
+      "post_fault_success_rate": 0.9487179487179487,
+      "fault_agent_recovery_delay_ms": null,
+      "unassigned_tasks": 0,
+      "total_simulated_cost": 452.56951636,
+      "max_waiting_ms": 0.0,
+      "starvation_count": 0,
+      "remaining_capacity_claims": 0,
+      "latency_target_violations": 0,
+      "by_task_type": {
+        "analysis": {
+          "tasks": 69,
+          "success_rate": 0.8985507246376812,
+          "mean_latency_ms": 50.92645376811594
+        },
+        "design": {
+          "tasks": 59,
+          "success_rate": 0.9830508474576272,
+          "mean_latency_ms": 50.19926218644068
+        },
+        "review": {
+          "tasks": 64,
+          "success_rate": 0.9375,
+          "mean_latency_ms": 252.387406859375
+        }
+      }
+    },
+    "wall_clock": {
+      "planning_total_ms": 4.0286,
+      "planning_passes": 192,
+      "mean_scheduling_pass_ms": 0.020982291666666666
+    }
+  },
+  {
+    "seed": 90003,
+    "strategy": "adaptive_caas",
+    "workload_sha256": "c1d0f9dda02fc005ffd59db543ae0d94bfa827e4c9697db50176c50097dabd54",
+    "metrics": {
+      "tasks": 192,
+      "success_rate": 0.9322916666666666,
+      "mean_latency_ms": 117.45839213020834,
+      "p95_latency_ms": 288.123037,
+      "mean_waiting_ms": 0.0,
+      "failure_rate": 0.06770833333333333,
+      "throughput_per_second": 0.0033507818635635173,
+      "makespan_ms": 57300059.454127,
+      "assignment_counts": {
+        "agent-0": 74,
+        "agent-1": 109,
+        "agent-2": 9
+      },
+      "peak_active": {
+        "agent-0": 1,
+        "agent-1": 1,
+        "agent-2": 1
+      },
+      "peak_total_active": 1,
+      "capacity_violations": 0,
+      "busy_ms": {
+        "agent-0": 5614.065301,
+        "agent-1": 15735.319888,
+        "agent-2": 1202.6261
+      },
+      "post_fault_tasks": 156,
+      "post_fault_success_rate": 0.9294871794871795,
+      "fault_agent_recovery_delay_ms": null,
+      "unassigned_tasks": 0,
+      "total_simulated_cost": 451.04022578000007,
+      "max_waiting_ms": 0.0,
+      "starvation_count": 0,
+      "remaining_capacity_claims": 0,
+      "latency_target_violations": 0,
+      "by_task_type": {
+        "analysis": {
+          "tasks": 69,
+          "success_rate": 0.9130434782608695,
+          "mean_latency_ms": 50.18452391304348
+        },
+        "design": {
+          "tasks": 59,
+          "success_rate": 0.9661016949152542,
+          "mean_latency_ms": 50.5901189661017
+        },
+        "review": {
+          "tasks": 64,
+          "success_rate": 0.921875,
+          "mean_latency_ms": 251.632220625
+        }
+      }
+    },
+    "wall_clock": {
+      "planning_total_ms": 20.6329,
+      "planning_passes": 192,
+      "mean_scheduling_pass_ms": 0.10746302083333333
+    }
+  }
+]

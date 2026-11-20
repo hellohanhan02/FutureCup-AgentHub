@@ -1,0 +1,7 @@
+{
+  "powershell_syntax": "PASS",
+  "python_wrapper_syntax": "PASS",
+  "fresh_lockfiles_match_release": true,
+  "remote_push": false,
+  "project_license_grant": "Not added"
+}

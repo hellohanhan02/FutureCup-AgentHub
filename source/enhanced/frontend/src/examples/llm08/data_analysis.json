@@ -1,0 +1,134 @@
+{
+  "nodes": [
+    {
+      "id": "check",
+      "kind": "task",
+      "config": {
+        "candidate_agents": ["llm08-data-checker"],
+        "required_skills": ["data_check"],
+        "output_mode": "json",
+        "input": {
+          "case": {
+            "$literal": "B"
+          },
+          "stage": {
+            "$literal": "check"
+          },
+          "original": {
+            "$ref": "input"
+          }
+        },
+        "verification": {
+          "id": "llm08-check",
+          "version": "1"
+        },
+        "limits": {
+          "max_model_calls": 3,
+          "max_calls": 4,
+          "max_output_tokens": 1024
+        },
+        "recovery": {
+          "max_attempts": 1,
+          "max_feedback_loops": 0
+        }
+      }
+    },
+    {
+      "id": "analysis",
+      "kind": "task",
+      "config": {
+        "candidate_agents": ["llm08-analyst"],
+        "required_skills": ["analysis"],
+        "output_mode": "json",
+        "input": {
+          "case": {
+            "$literal": "B"
+          },
+          "stage": {
+            "$literal": "analysis"
+          },
+          "original": {
+            "$ref": "input"
+          },
+          "upstream": {
+            "check": {
+              "$ref": "nodes.check.output"
+            }
+          }
+        },
+        "verification": {
+          "id": "llm08-analysis",
+          "version": "1"
+        },
+        "limits": {
+          "max_model_calls": 3,
+          "max_calls": 4,
+          "max_output_tokens": 1024
+        },
+        "recovery": {
+          "max_attempts": 1,
+          "max_feedback_loops": 0
+        }
+      }
+    },
+    {
+      "id": "report",
+      "kind": "task",
+      "config": {
+        "candidate_agents": ["llm08-reporter"],
+        "required_skills": ["report"],
+        "output_mode": "json",
+        "input": {
+          "case": {
+            "$literal": "B"
+          },
+          "stage": {
+            "$literal": "report"
+          },
+          "original": {
+            "$ref": "input"
+          },
+          "upstream": {
+            "analysis": {
+              "$ref": "nodes.analysis.output"
+            }
+          }
+        },
+        "verification": {
+          "id": "llm08-report",
+          "version": "1"
+        },
+        "limits": {
+          "max_model_calls": 3,
+          "max_calls": 4,
+          "max_output_tokens": 1024
+        },
+        "recovery": {
+          "max_attempts": 1,
+          "max_feedback_loops": 0
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "check",
+      "target": "analysis"
+    },
+    {
+      "source": "analysis",
+      "target": "report"
+    }
+  ],
+  "id": "llm08-data_analysis",
+  "name": "Task 08 data_analysis",
+  "version": "1",
+  "scheduling_strategy": "caas",
+  "max_concurrency": 2,
+  "timeout_seconds": 90,
+  "resource_limits": {
+    "max_calls": 12,
+    "max_attempts": 6,
+    "max_feedback_loops": 3
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "agent": {
+    "id": "selfloop09b-agent",
+    "version": "1",
+    "name": "Priority plan constraint solver",
+    "role": "bounded-priority-planner",
+    "responsibilities": "Produce a compact priority plan; repair only when independent verification supplies actual errors.",
+    "system_prompt": "Return only a compact JSON object for the requested plan. Respect all constraints. If input contains recovery, inspect its previous_artifact.content and verification.evidence, then fix those errors without changing the rules. Never request tools or add commentary.",
+    "skills": [
+      "priority-plan"
+    ],
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "response_format": "text",
+    "tools": [],
+    "max_concurrency": 1
+  },
+  "policy": {
+    "id": "selfloop09b-rule",
+    "version": "1",
+    "name": "Frozen priority plan schema and independent business rules",
+    "checks": [
+      {
+        "kind": "json_schema",
+        "config": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "task",
+              "items",
+              "total"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "task": {
+                "type": "string",
+                "const": "priority_plan"
+              },
+              "items": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "priority"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "enum": [
+                        "A",
+                        "B",
+                        "C"
+                      ]
+                    },
+                    "priority": {
+                      "type": "integer",
+                      "enum": [
+                        1,
+                        2,
+                        3
+                      ]
+                    }
+                  }
+                }
+              },
+              "total": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      {
+        "kind": "external_tests",
+        "config": {
+          "test_id": "priority-plan09b-v1"
+        }
+      }
+    ]
+  },
+  "workflow": {
+    "id": "selfloop09b-template",
+    "version": "1",
+    "name": "DeepSeek bounded priority-plan feedback",
+    "scheduling_strategy": "caas",
+    "max_concurrency": 1,
+    "timeout_seconds": 60,
+    "resource_limits": {
+      "max_calls": 2,
+      "max_attempts": 2,
+      "max_feedback_loops": 1,
+      "max_replans": 0,
+      "max_checks": 4,
+      "max_resource_units": 16384
+    },
+    "nodes": [
+      {
+        "id": "plan",
+        "kind": "task",
+        "config": {
+          "agent_id": "selfloop09b-agent",
+          "output_mode": "json",
+          "verification": {
+            "id": "selfloop09b-rule",
+            "version": "1"
+          },
+          "limits": {
+            "max_calls": 1,
+            "max_model_calls": 1,
+            "max_output_tokens": 256,
+            "timeout_seconds": 25,
+            "model_timeout_seconds": 15
+          },
+          "recovery": {
+            "max_attempts": 2,
+            "max_feedback_loops": 1,
+            "max_replans": 0,
+            "timeout_seconds": 55,
+            "on_failure": "prompt_retry",
+            "on_uncertain": "abort",
+            "retry_execution_errors": false
+          }
+        }
+      }
+    ],
+    "edges": [],
+    "output_mapping": {
+      "plan": {
+        "$ref": "nodes.plan.output"
+      }
+    }
+  },
+  "input": {
+    "request": "Return JSON with exactly task, items, total. task is priority_plan. items contains exactly A, B, C, each with only id and priority. Each priority must be an integer; use the ranks 1, 2, 3 exactly once. Listing order is flexible and does not mean assigning a shared rank. total equals the actual item count. No extra fields or commentary."
+  }
+}

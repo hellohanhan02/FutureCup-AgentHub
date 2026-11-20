@@ -1,0 +1,68 @@
+[
+  {
+    "case": "sequential",
+    "metrics": {
+      "verified": true,
+      "reused_root_nodes": 1,
+      "new_model_calls": 1,
+      "cumulative_model_calls": 3,
+      "upstream_invocations": 1,
+      "residual_capacity": 0
+    }
+  },
+  {
+    "case": "parallel",
+    "metrics": {
+      "verified": true,
+      "reused_root_nodes": 1,
+      "new_model_calls": 1,
+      "cumulative_model_calls": 3,
+      "upstream_invocations": 1,
+      "residual_capacity": 0
+    }
+  },
+  {
+    "case": "branch",
+    "metrics": {
+      "verified": true,
+      "reused_root_nodes": 1,
+      "new_model_calls": 1,
+      "cumulative_model_calls": 3,
+      "upstream_invocations": 1,
+      "residual_capacity": 0
+    }
+  },
+  {
+    "case": "subworkflow",
+    "metrics": {
+      "verified": true,
+      "reused_root_nodes": 1,
+      "new_model_calls": 1,
+      "cumulative_model_calls": 3,
+      "upstream_invocations": 1,
+      "residual_capacity": 0
+    }
+  },
+  {
+    "case": "loop",
+    "metrics": {
+      "verified": true,
+      "reused_root_nodes": 1,
+      "new_model_calls": 1,
+      "cumulative_model_calls": 3,
+      "upstream_invocations": 1,
+      "residual_capacity": 0
+    }
+  },
+  {
+    "case": "invalidated",
+    "metrics": {
+      "verified": true,
+      "reused_root_nodes": 0,
+      "new_model_calls": 2,
+      "cumulative_model_calls": 4,
+      "upstream_invocations": 2,
+      "residual_capacity": 0
+    }
+  }
+]

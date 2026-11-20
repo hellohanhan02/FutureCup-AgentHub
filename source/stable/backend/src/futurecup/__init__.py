@@ -1,0 +1,1 @@
+"""FutureCup orchestration platform skeleton."""

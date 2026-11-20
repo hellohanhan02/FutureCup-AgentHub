@@ -1,0 +1,53 @@
+{
+  "version": "v1.0.0",
+  "backend_pytest": {
+    "passed": 671,
+    "failed": 0,
+    "warning": "Existing Starlette TestClient deprecation",
+    "source": "Actual 13-A full execution"
+  },
+  "frontend_vitest": {
+    "passed": 57,
+    "failed": 0
+  },
+  "typescript": "passed",
+  "production_build": "passed",
+  "npm_ls": "passed",
+  "npm_audit_offline": {
+    "vulnerabilities": 0,
+    "limitation": "Local cache only, not current online vulnerability assurance"
+  },
+  "checks": {
+    "pip_check": {
+      "exit_code": 0,
+      "stdout": "No broken requirements found.",
+      "stderr": ""
+    },
+    "python_compile": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "python": {
+      "exit_code": 0,
+      "stdout": "Python 3.11.9",
+      "stderr": ""
+    },
+    "node": {
+      "exit_code": 0,
+      "stdout": "v24.11.0",
+      "stderr": ""
+    },
+    "npm": {
+      "exit_code": 0,
+      "stdout": "11.6.1",
+      "stderr": ""
+    },
+    "git": {
+      "exit_code": 0,
+      "stdout": "git version 2.56.0.windows.4",
+      "stderr": ""
+    }
+  },
+  "real_model_requests_this_stage": 0
+}

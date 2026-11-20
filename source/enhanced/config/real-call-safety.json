@@ -1,0 +1,8 @@
+{
+  "max_output_tokens": 1024,
+  "max_task_model_calls": 3,
+  "max_workflow_model_calls": 10,
+  "max_feedback_loops": 2,
+  "max_concurrency": 1,
+  "estimated_workflow_cny": 0.50
+}

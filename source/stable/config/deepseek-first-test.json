@@ -1,0 +1,28 @@
+{
+  "agent": {
+    "id": "deepseek-08b-smoke", "version": "1", "name": "DeepSeek first authorized smoke test",
+    "role": "protocol-check", "responsibilities": "Return a small JSON object for independent schema validation.",
+    "system_prompt": "Return only a JSON object with status equal to ok. Do not call tools.",
+    "skills": ["protocol-check"], "provider": "deepseek", "model": "deepseek-flash",
+    "response_format": "json_object", "tools": [], "max_concurrency": 1
+  },
+  "policy": {
+    "id": "deepseek-08b-smoke-schema", "version": "1", "name": "Independent first-test schema",
+    "checks": [{"kind": "json_schema", "config": {"schema": {
+      "type": "object", "required": ["status"], "additionalProperties": false,
+      "properties": {"status": {"const": "ok"}}
+    }}}]
+  },
+  "workflow": {
+    "id": "deepseek-08b-smoke", "version": "1", "name": "First explicitly authorized DeepSeek test",
+    "scheduling_strategy": "caas", "max_concurrency": 1, "timeout_seconds": 30,
+    "resource_limits": {"max_calls": 1, "max_attempts": 1, "max_feedback_loops": 0, "max_replans": 0},
+    "nodes": [{"id": "check", "kind": "task", "config": {
+      "agent_id": "deepseek-08b-smoke", "output_mode": "json",
+      "verification": {"id": "deepseek-08b-smoke-schema", "version": "1"},
+      "limits": {"max_calls": 1, "max_model_calls": 1, "max_output_tokens": 128, "timeout_seconds": 20, "model_timeout_seconds": 15},
+      "recovery": {"max_attempts": 1, "max_feedback_loops": 0, "max_replans": 0, "on_failure": "abort"}
+    }}], "edges": []
+  },
+  "input": "Return JSON: status must equal ok. This is the first authorized protocol test."
+}

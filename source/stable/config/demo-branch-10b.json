@@ -1,0 +1,23 @@
+{
+  "id": "fc-demo-branch-10b",
+  "version": "1",
+  "name": "条件分支与安全汇合 · MOCK",
+  "scheduling_strategy": "caas",
+  "max_concurrency": 2,
+  "input_schema": {"type": "object", "required": ["flag"], "properties": {"flag": {"type": "boolean"}}},
+  "nodes": [
+    {"id": "pick", "kind": "condition", "config": {"predicate": {"left": {"$ref": "input.flag"}, "op": "eq", "right": true}}},
+    {"id": "yes", "kind": "task", "config": {"agent_id": "fc-researcher", "input": "MOCK SIMULATED: selected true branch"}},
+    {"id": "no", "kind": "task", "config": {"agent_id": "fc-writer", "input": "MOCK SIMULATED: selected false branch"}},
+    {"id": "join", "kind": "parallel", "config": {"join": "all_selected", "input": {
+      "yes": {"$ref": "nodes.yes.output", "default": null},
+      "no": {"$ref": "nodes.no.output", "default": null}
+    }}}
+  ],
+  "edges": [
+    {"source": "pick", "target": "yes", "branch": "true"},
+    {"source": "pick", "target": "no", "branch": "false"},
+    {"source": "yes", "target": "join"},
+    {"source": "no", "target": "join"}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "base_commit": "8bd2caf8c0d6c5f860287849a19d70412024562b",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "source_sha256": {
+    "backend/src/futurecup/application/scheduling.py": "5131a323be62d2c599b818563b1350133bd6f7f9a4e375b42fbe5cb91b253e8b",
+    "backend/src/futurecup/application/adaptive.py": "155a5881121e6f5debfa51fd59827c92fddb165e370e8cc36de055bc00932fc5",
+    "backend/src/futurecup/domain/scheduling.py": "7f6210bbe1d7a36390a1797ede54c895872a57811990896c7277e6a9ce87b909",
+    "scripts/bench_caas_14b.py": "ce2b9531b1e9de2dba0cf111f3e28b93c408fa6cf0add28f7b8afdccbd3f1fdd",
+    "scripts/bench_scheduler_10a.py": "a17b7ed15a842b09f2388db408a4475cfda5f953207385a95769243c39231b41"
+  },
+  "paired_inputs_verified": true,
+  "deterministic_repeat_verified": true,
+  "trials": 320,
+  "evaluated_tasks": 25600,
+  "scope": "Production decision kernels + virtual resources. Does not run async Coordinator/Runtime; separate Mock tests cover them."
+}

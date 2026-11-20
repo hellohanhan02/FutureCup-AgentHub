@@ -1,0 +1,137 @@
+{
+  "nodes": [
+    {
+      "id": "plan",
+      "kind": "task",
+      "config": {
+        "candidate_agents": ["llm08-planner"],
+        "required_skills": ["planning"],
+        "output_mode": "json",
+        "input": {
+          "case": {
+            "$literal": "A"
+          },
+          "stage": {
+            "$literal": "plan"
+          },
+          "original": {
+            "$ref": "input"
+          }
+        },
+        "verification": {
+          "id": "llm08-plan",
+          "version": "1"
+        },
+        "limits": {
+          "max_model_calls": 3,
+          "max_calls": 4,
+          "max_output_tokens": 1024
+        },
+        "recovery": {
+          "max_attempts": 1,
+          "max_feedback_loops": 0
+        }
+      }
+    },
+    {
+      "id": "design",
+      "kind": "task",
+      "config": {
+        "candidate_agents": ["llm08-designer"],
+        "required_skills": ["design"],
+        "output_mode": "json",
+        "input": {
+          "case": {
+            "$literal": "A"
+          },
+          "stage": {
+            "$literal": "design"
+          },
+          "original": {
+            "$ref": "input"
+          },
+          "upstream": {
+            "plan": {
+              "$ref": "nodes.plan.output"
+            }
+          }
+        },
+        "verification": {
+          "id": "llm08-design",
+          "version": "1"
+        },
+        "limits": {
+          "max_model_calls": 3,
+          "max_calls": 4,
+          "max_output_tokens": 1024
+        },
+        "recovery": {
+          "max_attempts": 1,
+          "max_feedback_loops": 0
+        }
+      }
+    },
+    {
+      "id": "review",
+      "kind": "task",
+      "config": {
+        "candidate_agents": ["llm08-reviewer"],
+        "required_skills": ["review"],
+        "output_mode": "json",
+        "input": {
+          "case": {
+            "$literal": "A"
+          },
+          "stage": {
+            "$literal": "review"
+          },
+          "original": {
+            "$ref": "input"
+          },
+          "upstream": {
+            "plan": {
+              "$ref": "nodes.plan.output"
+            },
+            "design": {
+              "$ref": "nodes.design.output"
+            }
+          }
+        },
+        "verification": {
+          "id": "llm08-review",
+          "version": "1"
+        },
+        "limits": {
+          "max_model_calls": 3,
+          "max_calls": 4,
+          "max_output_tokens": 1024
+        },
+        "recovery": {
+          "max_attempts": 1,
+          "max_feedback_loops": 0
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "plan",
+      "target": "design"
+    },
+    {
+      "source": "design",
+      "target": "review"
+    }
+  ],
+  "id": "llm08-requirements",
+  "name": "Task 08 requirements",
+  "version": "1",
+  "scheduling_strategy": "caas",
+  "max_concurrency": 2,
+  "timeout_seconds": 90,
+  "resource_limits": {
+    "max_calls": 12,
+    "max_attempts": 6,
+    "max_feedback_loops": 3
+  }
+}

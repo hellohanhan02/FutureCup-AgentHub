@@ -1,0 +1,19 @@
+{
+  "scope": "DYNAMIC_PLANNER_MOCK_NOT_REAL_INFERENCE",
+  "task_id": "ws-e1605db95a5a4fffbacab4f7c04c4e49",
+  "run_id": "6792fd8178204f9c9e31b39b3b7715de",
+  "state": "succeeded",
+  "plan_steps": 1,
+  "usage": {
+    "calls": 2,
+    "model_calls": 2,
+    "tool_calls": 0,
+    "resource_units": 5384,
+    "checks": 1,
+    "attempts": 1,
+    "feedback_loops": 0,
+    "replans": 0,
+    "reported_tokens": 0,
+    "unknown_usage_calls": 2
+  }
+}

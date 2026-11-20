@@ -1,0 +1,296 @@
+{
+  "format_version": "10b-v1",
+  "exported_at": "2026-11-12T16:08:47.129154+00:00",
+  "mode": "historical_read_only_replay",
+  "runs": [
+    {
+      "run_id": "ec09d758f81641f1a6c0f656c305a713",
+      "state": "succeeded",
+      "simulated": false,
+      "verified": true,
+      "started_at": "2026-11-11T16:45:15.887843+00:00",
+      "ended_at": "2026-11-11T16:45:21.703515+00:00",
+      "elapsed_ms": 5815.699899976607,
+      "resource_usage": {
+        "calls": 3,
+        "model_calls": 3,
+        "tool_calls": 0,
+        "resource_units": 3183,
+        "checks": 6,
+        "attempts": 3,
+        "feedback_loops": 0,
+        "replans": 0,
+        "reported_tokens": 966,
+        "unknown_usage_calls": 0
+      },
+      "definition_ref": {
+        "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-flow",
+        "version": "1"
+      },
+      "runtime_build_version": null,
+      "runtime_build_version_status": "unknown_not_recorded",
+      "execution_order": [
+        "analyse",
+        "design",
+        "review"
+      ],
+      "nodes": [
+        {
+          "node_id": "analyse",
+          "node_instance_id": "9db220af219940e6a250ec068a40ec05",
+          "agent_ref": {
+            "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-analyse",
+            "version": "1"
+          },
+          "state": "succeeded",
+          "started_at": "2026-11-11T16:45:15.930527+00:00",
+          "ended_at": "2026-11-11T16:45:17.896964+00:00",
+          "elapsed_ms": 1991.3150999927893,
+          "attempts": [
+            {
+              "id": "d0b24b95ef8f4f3b87b93fbfc60343a9",
+              "ordinal": 1,
+              "provider": "deepseek",
+              "model": "deepseek-flash",
+              "resolved_model": "deepseek-flash",
+              "agent_ref": {
+                "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-analyse",
+                "version": "1"
+              },
+              "policy_ref": {
+                "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-analyse-rule",
+                "version": "1"
+              },
+              "provider_config_ref": {
+                "id": "deepseek",
+                "version": "08b-safe-1"
+              },
+              "input_tokens": 154,
+              "output_tokens": 69,
+              "usage_complete": true,
+              "verdict": "pass",
+              "verification_id": "fe7aee5bf619437b95dbe80ebed45be3"
+            }
+          ],
+          "feedback_bindings": []
+        },
+        {
+          "node_id": "design",
+          "node_instance_id": "b941e201ee924e879685d8bde416bb30",
+          "agent_ref": {
+            "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-design",
+            "version": "1"
+          },
+          "state": "succeeded",
+          "started_at": "2026-11-11T16:45:17.944927+00:00",
+          "ended_at": "2026-11-11T16:45:19.580258+00:00",
+          "elapsed_ms": 1661.3893999601714,
+          "attempts": [
+            {
+              "id": "72cf54a680fb4384897d1d74d6419680",
+              "ordinal": 1,
+              "provider": "deepseek",
+              "model": "deepseek-flash",
+              "resolved_model": "deepseek-flash",
+              "agent_ref": {
+                "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-design",
+                "version": "1"
+              },
+              "policy_ref": {
+                "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-design-rule",
+                "version": "1"
+              },
+              "provider_config_ref": {
+                "id": "deepseek",
+                "version": "08b-safe-1"
+              },
+              "input_tokens": 203,
+              "output_tokens": 98,
+              "usage_complete": true,
+              "verdict": "pass",
+              "verification_id": "5781242321d24cf19e6dc75666186625"
+            }
+          ],
+          "feedback_bindings": []
+        },
+        {
+          "node_id": "review",
+          "node_instance_id": "7a7582dc59054b8e8873d8ffc3d94bd6",
+          "agent_ref": {
+            "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-review",
+            "version": "1"
+          },
+          "state": "succeeded",
+          "started_at": "2026-11-11T16:45:19.632692+00:00",
+          "ended_at": "2026-11-11T16:45:21.690515+00:00",
+          "elapsed_ms": 2089.187800011132,
+          "attempts": [
+            {
+              "id": "12fad2d2de314510b6bb54d2edf222ba",
+              "ordinal": 1,
+              "provider": "deepseek",
+              "model": "deepseek-flash",
+              "resolved_model": "deepseek-flash",
+              "agent_ref": {
+                "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-review",
+                "version": "1"
+              },
+              "policy_ref": {
+                "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-review-rule",
+                "version": "1"
+              },
+              "provider_config_ref": {
+                "id": "deepseek",
+                "version": "08b-safe-1"
+              },
+              "input_tokens": 318,
+              "output_tokens": 124,
+              "usage_complete": true,
+              "verdict": "pass",
+              "verification_id": "7c429a5fef4d4520813138d324d92c1b"
+            }
+          ],
+          "feedback_bindings": []
+        }
+      ],
+      "data_mappings": [
+        {
+          "from": "analyse",
+          "to": "design",
+          "input_field": "analysis",
+          "matches": true,
+          "source_content_sha256": "50b66944f6b850e31d73b2deef8f5ef4f6fc83fd31885d8902add476ca03f121"
+        },
+        {
+          "from": "analyse",
+          "to": "review",
+          "input_field": "analysis",
+          "matches": true,
+          "source_content_sha256": "50b66944f6b850e31d73b2deef8f5ef4f6fc83fd31885d8902add476ca03f121"
+        },
+        {
+          "from": "design",
+          "to": "review",
+          "input_field": "design",
+          "matches": true,
+          "source_content_sha256": "381818a34ca4d711f2eeceb87292ea808fdcbc83bbb5ab03024f7d52e876114d"
+        }
+      ],
+      "snapshot_sha256": "af5a7e51e7c168d7d05fbe569cf20513b681f275f6daf52747f60b84e81f5b6f"
+    },
+    {
+      "run_id": "d2c530342bff47908a44a28505306ce7",
+      "state": "succeeded",
+      "simulated": false,
+      "verified": true,
+      "started_at": "2026-11-12T14:03:33.286673+00:00",
+      "ended_at": "2026-11-12T14:03:36.538715+00:00",
+      "elapsed_ms": 3252.1222000359558,
+      "resource_usage": {
+        "calls": 2,
+        "model_calls": 2,
+        "tool_calls": 0,
+        "resource_units": 7886,
+        "checks": 18,
+        "attempts": 2,
+        "feedback_loops": 1,
+        "replans": 0,
+        "reported_tokens": 2119,
+        "unknown_usage_calls": 0
+      },
+      "definition_ref": {
+        "id": "ds09c-5399dc175fc74dff870500896d3dde94-flow",
+        "version": "1"
+      },
+      "runtime_build_version": null,
+      "runtime_build_version_status": "unknown_not_recorded",
+      "execution_order": [
+        "schedule"
+      ],
+      "nodes": [
+        {
+          "node_id": "schedule",
+          "node_instance_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "agent_ref": {
+            "id": "ds09c-5399dc175fc74dff870500896d3dde94-agent",
+            "version": "1"
+          },
+          "state": "succeeded",
+          "started_at": "2026-11-12T14:03:33.321672+00:00",
+          "ended_at": "2026-11-12T14:03:36.528773+00:00",
+          "elapsed_ms": 3228.097599989269,
+          "attempts": [
+            {
+              "id": "57bb80bea8c74b9abbf8cf284ba3f7cd",
+              "ordinal": 1,
+              "provider": "deepseek",
+              "model": "deepseek-flash",
+              "resolved_model": "deepseek-flash",
+              "agent_ref": {
+                "id": "ds09c-5399dc175fc74dff870500896d3dde94-agent",
+                "version": "1"
+              },
+              "policy_ref": {
+                "id": "ds09c-5399dc175fc74dff870500896d3dde94-rule",
+                "version": "2"
+              },
+              "provider_config_ref": {
+                "id": "deepseek",
+                "version": "08b-safe-1"
+              },
+              "input_tokens": 660,
+              "output_tokens": 31,
+              "usage_complete": true,
+              "verdict": "fail",
+              "verification_id": "4b85b00b41db4583a2fea4c87d74cf10"
+            },
+            {
+              "id": "22b6208da2e14cba9176b2ad9c2bc0d8",
+              "ordinal": 2,
+              "provider": "deepseek",
+              "model": "deepseek-flash",
+              "resolved_model": "deepseek-flash",
+              "agent_ref": {
+                "id": "ds09c-5399dc175fc74dff870500896d3dde94-agent",
+                "version": "1"
+              },
+              "policy_ref": {
+                "id": "ds09c-5399dc175fc74dff870500896d3dde94-rule",
+                "version": "2"
+              },
+              "provider_config_ref": {
+                "id": "deepseek",
+                "version": "08b-safe-1"
+              },
+              "input_tokens": 1397,
+              "output_tokens": 31,
+              "usage_complete": true,
+              "verdict": "pass",
+              "verification_id": "713143f81326470daba2b1fbc8cdbee4"
+            }
+          ],
+          "feedback_bindings": [
+            {
+              "attempt_id": "22b6208da2e14cba9176b2ad9c2bc0d8",
+              "previous_attempt_id": "57bb80bea8c74b9abbf8cf284ba3f7cd",
+              "verification_id": "4b85b00b41db4583a2fea4c87d74cf10",
+              "feedback_id": "3d2d02ea62aa4b009b8de43dcef55c74",
+              "confirmed": true
+            }
+          ]
+        }
+      ],
+      "data_mappings": [],
+      "snapshot_sha256": "9ec091a04a03f8381706cf3f51e4df4982c50b2695d0697afce233b2806e3b70"
+    }
+  ],
+  "redactions": {
+    "unlisted_fields": 94
+  },
+  "notice": "Sanitized views; digests refer to original source records. Runtime build versions are unknown. No model is invoked.",
+  "benchmark_available": true,
+  "benchmark_source": {
+    "path": "results/scheduler-10a/summary.json",
+    "sha256": "0df6f43f6c1fad1ca12a8991d3fce82a1c713b0d33dcb5ef7a913a441b183a43"
+  }
+}

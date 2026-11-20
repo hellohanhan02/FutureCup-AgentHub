@@ -1,0 +1,642 @@
+[
+  {
+    "case": "format",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 1595.0,
+      "simulated_cost_units": 0.001595,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "format",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 1595.0,
+      "simulated_cost_units": 0.001595,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "schema",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 1736.0,
+      "simulated_cost_units": 0.001736,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "schema",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 1724.0,
+      "simulated_cost_units": 0.001724,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "business",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 1605.0,
+      "simulated_cost_units": 0.001605,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "business",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 1611.0,
+      "simulated_cost_units": 0.001611,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "permanent",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 0.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 1723.0,
+      "simulated_cost_units": 0.001723,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "permanent",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 0.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 1711.0,
+      "simulated_cost_units": 0.001711,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "parallel_schema",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 1642.0,
+      "simulated_cost_units": 0.001642,
+      "logical_execution_latency_ms": 20.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "parallel_schema",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 1630.0,
+      "simulated_cost_units": 0.00163,
+      "logical_execution_latency_ms": 20.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "tool_switch",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 4.0,
+      "tool_calls": 2.0,
+      "simulated_token_units": 2925.0,
+      "simulated_cost_units": 0.002925,
+      "logical_execution_latency_ms": 40.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 1.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "tool_switch",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 4.0,
+      "tool_calls": 2.0,
+      "simulated_token_units": 2925.0,
+      "simulated_cost_units": 0.002925,
+      "logical_execution_latency_ms": 40.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 1.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "tool_timeout",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 0.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 2.0,
+      "simulated_token_units": 1449.0,
+      "simulated_cost_units": 0.001449,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 2.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "tool_timeout",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 0.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 2.0,
+      "simulated_token_units": 1449.0,
+      "simulated_cost_units": 0.001449,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 2.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "permission",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 0.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 1480.0,
+      "simulated_cost_units": 0.00148,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "permission",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 0.0,
+      "repeated_nodes": 0.0,
+      "repeat_attempts": 0.0,
+      "model_calls": 2.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 298.0,
+      "simulated_cost_units": 0.000298,
+      "logical_execution_latency_ms": 20.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": null
+    }
+  },
+  {
+    "case": "budget",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 0.0,
+      "repeated_nodes": 0.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 1.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 138.0,
+      "simulated_cost_units": 0.000138,
+      "logical_execution_latency_ms": 10.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": null
+    }
+  },
+  {
+    "case": "budget",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 0.0,
+      "repeated_nodes": 0.0,
+      "repeat_attempts": 0.0,
+      "model_calls": 1.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 138.0,
+      "simulated_cost_units": 0.000138,
+      "logical_execution_latency_ms": 10.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": null
+    }
+  },
+  {
+    "case": "service_unavailable",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 1483.0,
+      "simulated_cost_units": 0.001483,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "service_unavailable",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 1507.0,
+      "simulated_cost_units": 0.001507,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "verifier_error",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 0.0,
+      "repeated_nodes": 0.0,
+      "repeat_attempts": 0.0,
+      "model_calls": 1.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 138.0,
+      "simulated_cost_units": 0.000138,
+      "logical_execution_latency_ms": 10.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": null
+    }
+  },
+  {
+    "case": "verifier_error",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 0.0,
+      "repeated_nodes": 0.0,
+      "repeat_attempts": 0.0,
+      "model_calls": 1.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 138.0,
+      "simulated_cost_units": 0.000138,
+      "logical_execution_latency_ms": 10.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": null
+    }
+  },
+  {
+    "case": "knowledge_missing",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 0.0,
+      "repeated_nodes": 0.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 0.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 0.0,
+      "simulated_cost_units": 0.0,
+      "logical_execution_latency_ms": 0.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": null
+    }
+  },
+  {
+    "case": "knowledge_missing",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 0.0,
+      "repeated_nodes": 0.0,
+      "repeat_attempts": 0.0,
+      "model_calls": 0.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 0.0,
+      "simulated_cost_units": 0.0,
+      "logical_execution_latency_ms": 0.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": null
+    }
+  },
+  {
+    "case": "citation",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 7382.0,
+      "simulated_cost_units": 0.007382,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "citation",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 7382.0,
+      "simulated_cost_units": 0.007382,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "conflict",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 7591.0,
+      "simulated_cost_units": 0.007591,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "conflict",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 3.0,
+      "tool_calls": 0.0,
+      "simulated_token_units": 7585.0,
+      "simulated_cost_units": 0.007585,
+      "logical_execution_latency_ms": 30.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 0.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "idempotent_effect",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 4.0,
+      "tool_calls": 2.0,
+      "simulated_token_units": 3156.0,
+      "simulated_cost_units": 0.003156,
+      "logical_execution_latency_ms": 40.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 2.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "idempotent_effect",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 4.0,
+      "tool_calls": 2.0,
+      "simulated_token_units": 3168.0,
+      "simulated_cost_units": 0.003168,
+      "logical_execution_latency_ms": 40.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 1.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "unknown_effect",
+    "mode": "legacy",
+    "n": 2,
+    "metrics": {
+      "verified": 1.0,
+      "repeated_nodes": 1.0,
+      "repeat_attempts": 1.0,
+      "model_calls": 4.0,
+      "tool_calls": 2.0,
+      "simulated_token_units": 3156.0,
+      "simulated_cost_units": 0.003156,
+      "logical_execution_latency_ms": 40.0,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 1.0,
+      "actual_effect_executions": 2.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": 1.0
+    }
+  },
+  {
+    "case": "unknown_effect",
+    "mode": "precise",
+    "n": 2,
+    "metrics": {
+      "verified": 0.0,
+      "repeated_nodes": 0.0,
+      "repeat_attempts": 0.0,
+      "model_calls": 2.0,
+      "tool_calls": 1.0,
+      "simulated_token_units": 481.0,
+      "simulated_cost_units": 0.000481,
+      "logical_execution_latency_ms": null,
+      "state_inconsistencies": 0.0,
+      "unsafe_effect_retries": 0.0,
+      "actual_effect_executions": 1.0,
+      "termination_reason_accurate": 1.0,
+      "feedback_contains_actual_artifact_and_evidence": null
+    }
+  }
+]

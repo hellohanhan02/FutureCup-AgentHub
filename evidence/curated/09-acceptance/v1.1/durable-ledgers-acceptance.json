@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-18",
+  "branch": "feature/v1.1-ledgers",
+  "baseline_14c_commit": "bda37c96ee81b8db3155aa733a90571ccdfba13e",
+  "backend": {
+    "tests": 820,
+    "passed": 820,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "new_ledger_tests": 30,
+    "elapsed_seconds": 67.457,
+    "junit_path": ".data/durable-ledgers-complete.xml (local only)",
+    "junit_sha256": "9786477a4d13fec64cd3bc27f61168155a278706d0e6341d78fdacc0072907e3",
+    "warning": "Existing Starlette/httpx deprecation"
+  },
+  "frontend": {
+    "tests": 59,
+    "test_files": 10,
+    "passed": true,
+    "typescript": true,
+    "production_build": true,
+    "frontend_source_unchanged_since_validation": true
+  },
+  "checks": {
+    "python_compileall": true,
+    "pip_check": true,
+    "npm_ls": true,
+    "npm_audit_offline_findings": 0,
+    "new_dependencies": 0,
+    "browser_rechecked": false,
+    "python_static_typechecker": "not configured"
+  },
+  "crash_tests": "Actual os._exit(77), local SQLite reopen, controlled synthetic external file effects, concurrent connections and coordinators",
+  "real_requests_sent": 0,
+  "key_accessed": false,
+  "original_project_modified": false,
+  "real_cross_run_recovery": "blocked",
+  "historical_14c_evaluation": {
+    "source_commit": "bda37c96ee81b8db3155aa733a90571ccdfba13e",
+    "source_file_hashes_verified_against_git_with_windows_line_endings": 54,
+    "preserved_data_manifests_verified": 6,
+    "final_trials": 640,
+    "repeat_trials": 64,
+    "new_ledger_code_included_in_those_trials": false
+  },
+  "retained_intermediate_reports": [
+    ".data/durable-ledgers-final.xml (816 pass, one architecture failure; preserved)",
+    ".data/durable-ledgers-certified.xml (817 pass)",
+    ".data/durable-ledgers-release.xml (819 pass)"
+  ],
+  "source_file_sha256": {
+    "backend/src/futurecup/adapters/recovery_ledger.py": "9215ff5892eb7d1ae5e338684303bfcb3efc0508e28a99a7df9ce7a85f10f98d",
+    "backend/src/futurecup/adapters/tools.py": "3d0d407eb17c59b6b20fc345dac18d6c7ecaaff9a3093e76deeef97f7ab5a180",
+    "backend/src/futurecup/application/durability.py": "f5988ca597d2fd2d598b90196be7d2d43d3a291d818b9da9083979d8c85d5f4c",
+    "backend/src/futurecup/application/local_recovery.py": "42e3634d144c4074b076cbcab7101893efb3ffcaae14e23b71f0cc4e78000d01",
+    "backend/src/futurecup/application/ports.py": "44d7db78f7a22ddd9433a1582feca7454e9f2ec23e60ec31ad330e3789667099",
+    "backend/src/futurecup/application/runtime.py": "0001cee00cdf56fcbb9a227d366122437f4f0c1cfac7a3d5e828db853dc9c86a",
+    "backend/src/futurecup/application/selfloop.py": "8d7831673445df15a5bfe18cf15cf0bd446d8d06b702abc8d3cea28adc88153c",
+    "backend/src/futurecup/application/workflow.py": "c648fe8c07a9c674e243def3fd97debd03e6ed07c1f7841096030c9d837e656d",
+    "backend/src/futurecup/domain/ledger.py": "3bbaaf3ef47b74c31551b7110b4ac7a7f81ce7d3225d60c6be0a9f95105b2a8b",
+    "backend/src/futurecup/domain/models.py": "83f3787379cb2221c6981b356171da2e73a1c36b2ad8db9396c68115145df8e1",
+    "backend/src/futurecup/domain/verification.py": "434ca69daf1a57ae351317f1f40e3304490a14898317da33a6c634dd1adeadf1",
+    "backend/tests/ledger_crash_worker.py": "a5eedfa49642d9c66669869aa8d63647f7589e99e275e6629d3c3476710b23b9",
+    "backend/tests/test_durable_ledgers.py": "7c281855ad16146aff9a1ba932472583f2f30a342b7d834328eb9f5b4d124e35"
+  },
+  "limitations": [
+    "Integer resource/estimated-micro-CNY journal, not verified supplier billing.",
+    "Operator must confirm old worker is stopped before fencing; no external exactly-once guarantee.",
+    "No automatic full-process/workflow restart; inconsistent snapshots require manual reconciliation.",
+    "Default production construction does not automatically enable the journal."
+  ]
+}

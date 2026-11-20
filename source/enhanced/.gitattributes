@@ -1,0 +1,3 @@
+# Preserve experiment/evidence hashes across checkout platforms.
+competition-materials/** -text whitespace=cr-at-eol
+results/** -text whitespace=cr-at-eol

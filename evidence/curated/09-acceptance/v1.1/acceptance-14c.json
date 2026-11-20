@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-18",
+  "branch": "feature/v1.1-selfloop",
+  "base_commit": "14f801946a01773b71e78b5c2533103bc705e975",
+  "environment": {
+    "python": "3.11.9",
+    "node": "24.11.0",
+    "npm": "11.6.1",
+    "os": "Windows"
+  },
+  "backend": {
+    "command": ".venv/Scripts/python.exe -m pytest backend/tests -q",
+    "tests": 790,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 68.928,
+    "report_sha256": "c861a96f901b6e96b64c8fa3a39adbd5ad2d846ab0558607a981c14c0b26c190",
+    "report_location": ".data/14c-restored-final.xml (private local test report, not committed)",
+    "warning": "Existing Starlette/httpx deprecation warning"
+  },
+  "frontend": {
+    "command": "npm test -- --run; npm run typecheck; npm run build",
+    "tests": 59,
+    "test_files": 10,
+    "passed": true,
+    "typecheck_exit_code": 0,
+    "build_exit_code": 0
+  },
+  "focused_concurrency_cancel_regression": {
+    "tests_passed": 22,
+    "deselected": 97,
+    "files": [
+      "test_rag_14a.py",
+      "test_adaptive_caas_14b.py",
+      "test_precise_recovery_14c.py"
+    ],
+    "selection": "concurrent or cancel or capacity or claim or isolation or coverage or replay"
+  },
+  "compileall": {
+    "exit_code": 0,
+    "targets": [
+      "backend/src",
+      "backend/tests",
+      "scripts/bench_selfloop_14c.py",
+      "scripts/check_local_recovery_14c.py"
+    ]
+  },
+  "pip_check": {
+    "exit_code": 0,
+    "result": "No broken requirements found"
+  },
+  "npm_ls": {
+    "exit_code": 0
+  },
+  "npm_audit": {
+    "offline": true,
+    "total_findings": 0,
+    "fresh_advisory_database_verified": false
+  },
+  "evaluation": {
+    "final_trials": 640,
+    "repeat_trials": 64,
+    "local_recovery_cases": 6,
+    "configuration": "results/selfloop-14c/final-certified/configuration.json",
+    "provenance": "results/selfloop-14c/provenance.json"
+  },
+  "no_new_dependencies": true,
+  "real_requests_sent": 0,
+  "original_project_modified": false,
+  "cross_run_real_recovery": "refused; budget provenance unprovable",
+  "python_static_typechecker": "Not configured; compileall is not static type checking",
+  "browser_acceptance": "Not rerun; component regression and production build passed"
+}

@@ -1,0 +1,473 @@
+{
+  "agent": {
+    "id": "selfloop09c-agent",
+    "version": "1",
+    "name": "Constraint scheduling planner",
+    "role": "dependency-scheduling-planner",
+    "responsibilities": "Generate a feasible sequential schedule from explicit dependencies, priority pairs, windows, blocks and deadlines.",
+    "system_prompt": "Return only compact JSON with exactly task, order, total. task is dependency_schedule; order lists all given task IDs once. total is the number of task IDs (8), not cumulative duration or finish time. All tasks run on one machine from time zero with no idle time. Positions are one-based and completion is the cumulative duration including the task. Only the listed priority_before pairs impose priority order; do not assume global priority sorting. Treat every constraint as mandatory. If recovery is present, inspect the actual previous_artifact.content and verification.evidence details and fix the violations without changing the input constraints. Do not add explanations or tools.",
+    "skills": [
+      "priority-plan"
+    ],
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "response_format": "text",
+    "tools": [],
+    "max_concurrency": 1
+  },
+  "policy": {
+    "id": "selfloop09c-rule",
+    "version": "2",
+    "name": "Frozen dependency scheduling independent checks",
+    "checks": [
+      {
+        "kind": "json_schema",
+        "config": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "task",
+              "order",
+              "total"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "task": {
+                "const": "dependency_schedule"
+              },
+              "order": {
+                "type": "array",
+                "minItems": 8,
+                "maxItems": 8,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "A",
+                    "B",
+                    "C",
+                    "D",
+                    "E",
+                    "F",
+                    "G",
+                    "H"
+                  ]
+                }
+              },
+              "total": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      {
+        "kind": "external_tests",
+        "config": {
+          "test_id": "order09c-instance-v2"
+        }
+      },
+      {
+        "kind": "external_tests",
+        "config": {
+          "test_id": "order09c-membership-v2"
+        }
+      },
+      {
+        "kind": "external_tests",
+        "config": {
+          "test_id": "order09c-dependencies-v2"
+        }
+      },
+      {
+        "kind": "external_tests",
+        "config": {
+          "test_id": "order09c-priority-v2"
+        }
+      },
+      {
+        "kind": "external_tests",
+        "config": {
+          "test_id": "order09c-adjacency-v2"
+        }
+      },
+      {
+        "kind": "external_tests",
+        "config": {
+          "test_id": "order09c-windows-v2"
+        }
+      },
+      {
+        "kind": "external_tests",
+        "config": {
+          "test_id": "order09c-completion-v2"
+        }
+      },
+      {
+        "kind": "external_tests",
+        "config": {
+          "test_id": "order09c-gap-v2"
+        }
+      }
+    ]
+  },
+  "workflow": {
+    "id": "selfloop09c-template",
+    "version": "1",
+    "name": "DeepSeek eight-task bounded scheduling challenge",
+    "scheduling_strategy": "caas",
+    "max_concurrency": 1,
+    "timeout_seconds": 60,
+    "resource_limits": {
+      "max_calls": 2,
+      "max_attempts": 2,
+      "max_feedback_loops": 1,
+      "max_replans": 0,
+      "max_checks": 18,
+      "max_resource_units": 16384
+    },
+    "nodes": [
+      {
+        "id": "schedule",
+        "kind": "task",
+        "config": {
+          "agent_id": "selfloop09c-agent",
+          "output_mode": "json",
+          "verification": {
+            "id": "selfloop09c-rule",
+            "version": "2"
+          },
+          "limits": {
+            "max_calls": 1,
+            "max_model_calls": 1,
+            "max_output_tokens": 256,
+            "timeout_seconds": 25,
+            "model_timeout_seconds": 15
+          },
+          "recovery": {
+            "max_attempts": 2,
+            "max_feedback_loops": 1,
+            "max_replans": 0,
+            "timeout_seconds": 55,
+            "on_failure": "prompt_retry",
+            "on_uncertain": "abort",
+            "retry_execution_errors": false,
+            "feedback_mode": "errors_only"
+          },
+          "input": {
+            "$ref": "input"
+          }
+        }
+      }
+    ],
+    "edges": [],
+    "output_mapping": {
+      "schedule": {
+        "$ref": "nodes.schedule.output"
+      }
+    },
+    "input_schema": {
+      "type": "object",
+      "required": [
+        "task",
+        "instructions",
+        "spec"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "task": {
+          "const": "dependency_schedule"
+        },
+        "instructions": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024
+        },
+        "spec": {
+          "const": {
+            "constraints": {
+              "completion_deadlines": [
+                {
+                  "latest": 4,
+                  "task": "C"
+                },
+                {
+                  "latest": 12,
+                  "task": "F"
+                },
+                {
+                  "latest": 13,
+                  "task": "H"
+                }
+              ],
+              "dependencies": [
+                [
+                  "A",
+                  "D"
+                ],
+                [
+                  "C",
+                  "D"
+                ],
+                [
+                  "B",
+                  "E"
+                ],
+                [
+                  "D",
+                  "F"
+                ],
+                [
+                  "E",
+                  "F"
+                ],
+                [
+                  "C",
+                  "G"
+                ],
+                [
+                  "E",
+                  "G"
+                ],
+                [
+                  "F",
+                  "H"
+                ],
+                [
+                  "G",
+                  "H"
+                ]
+              ],
+              "immediately_before": [
+                [
+                  "E",
+                  "D"
+                ]
+              ],
+              "min_gaps": [
+                {
+                  "after": "F",
+                  "before": "D",
+                  "min_gap": 2
+                }
+              ],
+              "position_windows": [
+                {
+                  "max": 3,
+                  "min": 2,
+                  "task": "C"
+                },
+                {
+                  "max": 8,
+                  "min": 8,
+                  "task": "H"
+                }
+              ],
+              "priority_before": [
+                [
+                  "B",
+                  "A"
+                ],
+                [
+                  "G",
+                  "F"
+                ]
+              ]
+            },
+            "scenario_id": "dependency-schedule-09c-v1",
+            "semantics": {
+              "idle_allowed": false,
+              "position_base": 1,
+              "single_machine": true
+            },
+            "tasks": [
+              {
+                "duration": 2,
+                "id": "A",
+                "priority": 2
+              },
+              {
+                "duration": 1,
+                "id": "B",
+                "priority": 3
+              },
+              {
+                "duration": 3,
+                "id": "C",
+                "priority": 4
+              },
+              {
+                "duration": 2,
+                "id": "D",
+                "priority": 2
+              },
+              {
+                "duration": 1,
+                "id": "E",
+                "priority": 1
+              },
+              {
+                "duration": 2,
+                "id": "F",
+                "priority": 1
+              },
+              {
+                "duration": 1,
+                "id": "G",
+                "priority": 3
+              },
+              {
+                "duration": 1,
+                "id": "H",
+                "priority": 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "input": {
+    "task": "dependency_schedule",
+    "instructions": "Find any valid complete order satisfying every listed constraint. Durations are positive integer time units, execution is sequential with no idle time, positions start at 1, deadlines limit completion (not start) time. priority_before lists the only priority ordering requirements. immediately_before requires consecutive positions in that direction. min_gap means position(after)-position(before) is at least min_gap. Return only task, order, total; total is the number of task IDs (8), not the sum of durations; no extra fields.",
+    "spec": {
+      "scenario_id": "dependency-schedule-09c-v1",
+      "semantics": {
+        "position_base": 1,
+        "single_machine": true,
+        "idle_allowed": false
+      },
+      "tasks": [
+        {
+          "id": "A",
+          "duration": 2,
+          "priority": 2
+        },
+        {
+          "id": "B",
+          "duration": 1,
+          "priority": 3
+        },
+        {
+          "id": "C",
+          "duration": 3,
+          "priority": 4
+        },
+        {
+          "id": "D",
+          "duration": 2,
+          "priority": 2
+        },
+        {
+          "id": "E",
+          "duration": 1,
+          "priority": 1
+        },
+        {
+          "id": "F",
+          "duration": 2,
+          "priority": 1
+        },
+        {
+          "id": "G",
+          "duration": 1,
+          "priority": 3
+        },
+        {
+          "id": "H",
+          "duration": 1,
+          "priority": 0
+        }
+      ],
+      "constraints": {
+        "dependencies": [
+          [
+            "A",
+            "D"
+          ],
+          [
+            "C",
+            "D"
+          ],
+          [
+            "B",
+            "E"
+          ],
+          [
+            "D",
+            "F"
+          ],
+          [
+            "E",
+            "F"
+          ],
+          [
+            "C",
+            "G"
+          ],
+          [
+            "E",
+            "G"
+          ],
+          [
+            "F",
+            "H"
+          ],
+          [
+            "G",
+            "H"
+          ]
+        ],
+        "priority_before": [
+          [
+            "B",
+            "A"
+          ],
+          [
+            "G",
+            "F"
+          ]
+        ],
+        "immediately_before": [
+          [
+            "E",
+            "D"
+          ]
+        ],
+        "position_windows": [
+          {
+            "task": "C",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "task": "H",
+            "min": 8,
+            "max": 8
+          }
+        ],
+        "completion_deadlines": [
+          {
+            "task": "C",
+            "latest": 4
+          },
+          {
+            "task": "F",
+            "latest": 12
+          },
+          {
+            "task": "H",
+            "latest": 13
+          }
+        ],
+        "min_gaps": [
+          {
+            "before": "D",
+            "after": "F",
+            "min_gap": 2
+          }
+        ]
+      }
+    }
+  }
+}

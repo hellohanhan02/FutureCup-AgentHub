@@ -1,0 +1,17 @@
+[
+  {
+    "id": "deepseek", "kind": "deepseek", "base_url": "https://api.deepseek.com", "key_env": "DEEPSEEK_API_KEY", "enabled": false,
+    "models": [{"id": "deepseek-flash", "supports_tools": false, "response_formats": ["text", "prompt_json", "json_object"], "thinking_disabled": true, "max_context_bytes": 32768, "max_output_tokens": 1024}],
+    "timeout_seconds": 15, "retry": {"max_retries": 0, "initial_delay": 0.5, "max_delay": 4}, "revision": "1"
+  },
+  {
+    "id": "qwen", "kind": "qwen", "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1", "key_env": "DASHSCOPE_API_KEY", "enabled": false,
+    "models": [{"id": "qwen-plus", "supports_tools": false, "response_formats": ["text", "prompt_json"], "max_context_bytes": 32768, "max_output_tokens": 1024}],
+    "timeout_seconds": 15, "retry": {"max_retries": 0, "initial_delay": 0.5, "max_delay": 4}, "revision": "1"
+  },
+  {
+    "id": "openai_compatible", "kind": "openai_compatible", "base_url": "https://approved-service.example/v1", "allowed_hosts": ["approved-service.example"], "key_env": "FUTURECUP_LLM_API_KEY", "enabled": false,
+    "models": [{"id": "replace-with-approved-model", "supports_tools": false, "response_formats": ["text", "prompt_json"], "max_context_bytes": 32768, "max_output_tokens": 1024}],
+    "timeout_seconds": 15, "retry": {"max_retries": 0, "initial_delay": 0.5, "max_delay": 4}, "revision": "1"
+  }
+]

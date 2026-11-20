@@ -1,0 +1,80 @@
+{
+  "scope": "Selected public copies including PDF text, Office XML, gzip experiment data and frozen baseline archive; no original secret files read",
+  "files": 960,
+  "bytes": 99733477,
+  "prohibited_paths": [],
+  "pattern_findings_without_matched_contents": [
+    {
+      "path": "deployment/check-provider-local.py",
+      "part": "deployment/check-provider-local.py",
+      "line": 55,
+      "category": "credential_url",
+      "review": "manually confirmed synthetic rejection/redaction test fixture"
+    },
+    {
+      "path": "source/enhanced/backend/tests/test_competition_evidence_10b.py",
+      "part": "source/enhanced/backend/tests/test_competition_evidence_10b.py",
+      "line": 121,
+      "category": "bearer_value",
+      "review": "manually confirmed synthetic rejection/redaction test fixture"
+    },
+    {
+      "path": "source/enhanced/backend/tests/test_llm_provider.py",
+      "part": "source/enhanced/backend/tests/test_llm_provider.py",
+      "line": 115,
+      "category": "credential_url",
+      "review": "manually confirmed synthetic rejection/redaction test fixture"
+    },
+    {
+      "path": "source/enhanced/backend/tests/test_platform_14d.py",
+      "part": "source/enhanced/backend/tests/test_platform_14d.py",
+      "line": 116,
+      "category": "key_like",
+      "review": "manually confirmed synthetic rejection/redaction test fixture"
+    },
+    {
+      "path": "source/enhanced/backend/tests/test_real_llm_integration.py",
+      "part": "source/enhanced/backend/tests/test_real_llm_integration.py",
+      "line": 83,
+      "category": "credential_url",
+      "review": "manually confirmed synthetic rejection/redaction test fixture"
+    },
+    {
+      "path": "source/enhanced/backend/tests/test_workspace_11a.py",
+      "part": "source/enhanced/backend/tests/test_workspace_11a.py",
+      "line": 206,
+      "category": "bearer_value",
+      "review": "manually confirmed synthetic rejection/redaction test fixture"
+    },
+    {
+      "path": "source/stable/backend/tests/test_competition_evidence_10b.py",
+      "part": "source/stable/backend/tests/test_competition_evidence_10b.py",
+      "line": 121,
+      "category": "bearer_value",
+      "review": "manually confirmed synthetic rejection/redaction test fixture"
+    },
+    {
+      "path": "source/stable/backend/tests/test_llm_provider.py",
+      "part": "source/stable/backend/tests/test_llm_provider.py",
+      "line": 115,
+      "category": "credential_url",
+      "review": "manually confirmed synthetic rejection/redaction test fixture"
+    },
+    {
+      "path": "source/stable/backend/tests/test_real_llm_integration.py",
+      "part": "source/stable/backend/tests/test_real_llm_integration.py",
+      "line": 83,
+      "category": "credential_url",
+      "review": "manually confirmed synthetic rejection/redaction test fixture"
+    },
+    {
+      "path": "source/stable/backend/tests/test_workspace_11a.py",
+      "part": "source/stable/backend/tests/test_workspace_11a.py",
+      "line": 206,
+      "category": "bearer_value",
+      "review": "manually confirmed synthetic rejection/redaction test fixture"
+    }
+  ],
+  "unresolved_findings": 0,
+  "limitations": "Pattern and metadata checks are not a cryptographic guarantee; team must visually review document screenshots and confirm licenses before publication."
+}

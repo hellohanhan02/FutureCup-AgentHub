@@ -1,0 +1,36 @@
+{
+  "scope": "FRESH_INSTALL_NO_ORIGINAL_ENVIRONMENT",
+  "python": "3.11.9",
+  "steps": [
+    {
+      "step": "venv",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 10.09,
+      "log": ".validation/venv.log"
+    },
+    {
+      "step": "pip-install",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 109.77,
+      "log": ".validation/pip-install.log"
+    },
+    {
+      "step": "npm-ci-stable",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 22.11,
+      "log": ".validation/npm-ci-stable.log"
+    },
+    {
+      "step": "npm-ci-enhanced",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 17.83,
+      "log": ".validation/npm-ci-enhanced.log"
+    }
+  ],
+  "success": true,
+  "finished": true
+}

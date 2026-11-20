@@ -1,0 +1,16 @@
+{
+  "base_commit": "bb8c418baaa7e9dbf210d4aae6895f2e95bf9e3b",
+  "branch": "feature/v1.1-rag",
+  "python": "3.11.9",
+  "node": "24.11.0",
+  "npm": "11.6.1",
+  "backend_passed": 671,
+  "frontend_passed": 57,
+  "typecheck": "passed",
+  "build": "passed",
+  "compile": "passed",
+  "pip_check": "passed",
+  "source_changed": false,
+  "shared_git_objects": false,
+  "remotes": []
+}

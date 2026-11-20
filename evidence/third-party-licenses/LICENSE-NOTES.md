@@ -1,0 +1,3 @@
+# Existing license evidence only
+
+Installed Python METADATA and installed npm package manifests were read without importing packages. Lock-only optional packages are explicitly distinguished from installed packages. License texts are copied unchanged and may contain public copyright/author attribution required by their licenses, not user credentials. Missing declarations/files remain unresolved; this is not a legal clearance or a new license grant. No root project LICENSE was found during discovery; do not label the project MIT/Apache solely because dependencies use those licenses. Current installed versions are not evidence of historical runtime versions.

@@ -1,0 +1,60 @@
+{
+  "base_commit": "8bd2caf8c0d6c5f860287849a19d70412024562b",
+  "branch": "feature/v1.1-caas",
+  "backend": {
+    "baseline": {
+      "tests": 696,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "final": {
+      "tests": 745,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "frontend": {
+    "tests": 58,
+    "files": 10,
+    "typecheck": "PASS",
+    "production_build": "PASS"
+  },
+  "python": "3.11.9",
+  "checks": {
+    "compile": "PASS",
+    "pip_check": "PASS",
+    "npm_cached_audit_vulnerabilities": 0,
+    "git_diff_check": "PASS",
+    "preserved_result_manifests": "PASS"
+  },
+  "experiments": {
+    "trials": {
+      "development": 320,
+      "evaluation": 1280,
+      "endurance": 12
+    },
+    "final_task_count": 102400,
+    "paired_inputs_and_repeats_verified": true,
+    "capacity_violations": 0,
+    "final_residual_claims": 0,
+    "holm_tests": 48,
+    "holm_significant": 6,
+    "holm_significant_vs_original_caas": 0,
+    "endurance": "Virtual ~16-hour timestamp span only; NOT actual process uptime"
+  },
+  "safety": {
+    "real_model_calls": 0,
+    "original_project_write_operations": 0,
+    "original_databases_opened": false,
+    "api_key_access_required": false,
+    "sensitive_pattern_candidates": 0,
+    "scanned_changed_files": 68,
+    "scan_limit": "High-confidence patterns, not a universal proof of absence",
+    "new_dependencies": [],
+    "push_performed": false
+  },
+  "compatibility": "Legacy decision function/class ASTs match 14-A; original A-D simulated task rows match 10-A; all original 696 tests retained.",
+  "known_warning": "Existing Starlette TestClient deprecation warning, also present at baseline"
+}

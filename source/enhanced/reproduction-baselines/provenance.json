@@ -1,0 +1,7 @@
+{
+  "knowledge_commit": "bb8c418baaa7e9dbf210d4aae6895f2e95bf9e3b",
+  "knowledge_sha256": "2ee06de20c31784ae9a3421af0f672ee00651846322a3b9823ac45434db7f76a",
+  "backend_commit": "14f801946a01773b71e78b5c2533103bc705e975",
+  "backend_archive_sha256": "ba342049c347ce9a41f5c886d4fcf2c0381eb5b3e5c7701e112ef279751976db",
+  "note": "Frozen committed code only, no Git internals, environment or databases"
+}

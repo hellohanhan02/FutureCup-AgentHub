@@ -1,0 +1,14 @@
+[
+  {
+    "file": "source/enhanced/scripts/evaluate_rag_14a.py",
+    "purpose": "Read the identical frozen baseline from public files instead of original Git objects",
+    "before_sha256": "d950e462890f43e5591c94e83336e871ee96c51e2c659d19431cd094dea2e9c5",
+    "after_sha256": "67bd11f4b5598427f3f3aa5f84750ce1a23e8684349bd8a037c7cd23f5944cf8"
+  },
+  {
+    "file": "source/enhanced/scripts/bench_selfloop_14c.py",
+    "purpose": "Read the identical frozen baseline from public files instead of original Git objects",
+    "before_sha256": "fb91ada8c26a53e97148e5d0d6440d0d6eafb1235fb09992daa65c1bec694101",
+    "after_sha256": "a9043819b34108210591b7b9cc2a882fc19f90f5621cc74ce61cfd851e995759"
+  }
+]

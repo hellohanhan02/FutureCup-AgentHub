@@ -1,0 +1,35 @@
+[
+  {
+    "step": "stop-owned-stable",
+    "exit_code": 0
+  },
+  {
+    "step": "restart-stable",
+    "exit_code": 0
+  },
+  {
+    "step": "persisted-task-after-service-restart",
+    "task_id": "ws-ea633b5709b441db9f715c23fb1a6121",
+    "state": "succeeded"
+  },
+  {
+    "step": "actual-frontend-markdown-export",
+    "exit_code": 0,
+    "result": {
+      "task_id": "ws-ea633b5709b441db9f715c23fb1a6121",
+      "markdown_chars": 421,
+      "actual_frontend_renderer": true,
+      "citations": 1
+    }
+  },
+  {
+    "step": "sanitized-read-only-history",
+    "run_id": "ec09d758f81641f1a6c0f656c305a713",
+    "state": "succeeded"
+  },
+  {
+    "step": "sanitized-read-only-history",
+    "run_id": "d2c530342bff47908a44a28505306ce7",
+    "state": "succeeded"
+  }
+]

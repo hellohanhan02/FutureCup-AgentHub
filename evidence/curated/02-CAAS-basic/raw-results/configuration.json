@@ -1,0 +1,57 @@
+{
+  "mode": "SIMULATION ONLY; logical milliseconds, not production/LLM latency",
+  "seeds": [
+    2026111201,
+    2026111202,
+    2026111203,
+    2026111204,
+    2026111205,
+    2026111206,
+    2026111207,
+    2026111208,
+    2026111209,
+    2026111210,
+    2026111211,
+    2026111212,
+    2026111213,
+    2026111214,
+    2026111215,
+    2026111216,
+    2026111217,
+    2026111218,
+    2026111219,
+    2026111220
+  ],
+  "tasks_per_trial": 64,
+  "warmup_per_agent_kind": 4,
+  "scenarios": [
+    "A_uniform",
+    "B_heterogeneous",
+    "C_dynamic_fault",
+    "D_bursty"
+  ],
+  "policies": [
+    "fixed",
+    "round_robin",
+    "caas"
+  ],
+  "caas_config": {
+    "match_weight": 0.3,
+    "reliability_weight": 0.25,
+    "load_weight": 0.2,
+    "cost_weight": 0.1,
+    "latency_weight": 0.15,
+    "cost_scale": 1,
+    "latency_scale_ms": 1000,
+    "prior_samples": 5,
+    "aging_points_per_second": 5,
+    "revision": "caas-v1"
+  },
+  "bootstrap_samples": 2000,
+  "execution": "production assess/effective_priority/selection; virtual resources, no Runtime/WorkflowEngine/SQLite",
+  "primary_metrics": [
+    "success_rate",
+    "mean_latency_ms"
+  ],
+  "policy_order": "cyclic rotation per seed; overhead excluded from logical metrics"
+}

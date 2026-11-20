@@ -1,0 +1,1321 @@
+{
+  "groups": [
+    {
+      "scenario": "A_uniform",
+      "strategy": "fixed",
+      "metrics": {
+        "success_rate": {
+          "n": 20,
+          "mean": 0.9421875,
+          "sd": 0.03479114139744257,
+          "ci95": [
+            0.92734375,
+            0.95703125
+          ]
+        },
+        "mean_latency_ms": {
+          "n": 20,
+          "mean": 49.96605951328125,
+          "sd": 0.7099738183690789,
+          "ci95": [
+            49.66375249765625,
+            50.27141155
+          ]
+        },
+        "p95_latency_ms": {
+          "n": 20,
+          "mean": 58.76509505,
+          "sd": 0.5898439916035321,
+          "ci95": [
+            58.5016896,
+            59.0020377
+          ]
+        },
+        "mean_waiting_ms": {
+          "n": 20,
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "throughput_per_second": {
+          "n": 20,
+          "mean": 94.1266189508138,
+          "sd": 0.8331621524055005,
+          "ci95": [
+            93.76489890781481,
+            94.49088500236138
+          ]
+        },
+        "post_fault_success_rate": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        },
+        "fault_agent_recovery_delay_ms": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        }
+      },
+      "scheduling_overhead_ms": {
+        "n": 20,
+        "mean": 0.03517640625,
+        "sd": 0.002479354457288558,
+        "ci95": [
+          0.03419375,
+          0.03627328125
+        ]
+      },
+      "assignment_counts": {
+        "agent-0": 473,
+        "agent-1": 432,
+        "agent-2": 375
+      },
+      "capacity_violations": 0,
+      "maximum_active_per_agent": {
+        "agent-0": 2,
+        "agent-1": 2,
+        "agent-2": 2
+      },
+      "recovery_censored_seeds": 20
+    },
+    {
+      "scenario": "A_uniform",
+      "strategy": "round_robin",
+      "metrics": {
+        "success_rate": {
+          "n": 20,
+          "mean": 0.9390625,
+          "sd": 0.031617900180785335,
+          "ci95": [
+            0.925,
+            0.95234375
+          ]
+        },
+        "mean_latency_ms": {
+          "n": 20,
+          "mean": 49.97350830546875,
+          "sd": 0.5530061967817543,
+          "ci95": [
+            49.7322466265625,
+            50.20893166640625
+          ]
+        },
+        "p95_latency_ms": {
+          "n": 20,
+          "mean": 58.8150464,
+          "sd": 0.5530881567594049,
+          "ci95": [
+            58.5596816,
+            59.04185435
+          ]
+        },
+        "mean_waiting_ms": {
+          "n": 20,
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "throughput_per_second": {
+          "n": 20,
+          "mean": 94.24984137339315,
+          "sd": 0.8227099184764634,
+          "ci95": [
+            93.8970859950317,
+            94.5994674335357
+          ]
+        },
+        "post_fault_success_rate": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        },
+        "fault_agent_recovery_delay_ms": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        }
+      },
+      "scheduling_overhead_ms": {
+        "n": 20,
+        "mean": 0.036990859375,
+        "sd": 0.0025199422170950553,
+        "ci95": [
+          0.0360365625,
+          0.03813640625
+        ]
+      },
+      "assignment_counts": {
+        "agent-0": 440,
+        "agent-1": 420,
+        "agent-2": 420
+      },
+      "capacity_violations": 0,
+      "maximum_active_per_agent": {
+        "agent-0": 2,
+        "agent-1": 2,
+        "agent-2": 2
+      },
+      "recovery_censored_seeds": 20
+    },
+    {
+      "scenario": "A_uniform",
+      "strategy": "caas",
+      "metrics": {
+        "success_rate": {
+          "n": 20,
+          "mean": 0.93671875,
+          "sd": 0.027985307323430308,
+          "ci95": [
+            0.925,
+            0.94921875
+          ]
+        },
+        "mean_latency_ms": {
+          "n": 20,
+          "mean": 50.01457081015625,
+          "sd": 0.634222443495527,
+          "ci95": [
+            49.73444325703125,
+            50.28193243671875
+          ]
+        },
+        "p95_latency_ms": {
+          "n": 20,
+          "mean": 58.8092997,
+          "sd": 0.6110924865643323,
+          "ci95": [
+            58.5413954,
+            59.0562906
+          ]
+        },
+        "mean_waiting_ms": {
+          "n": 20,
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "throughput_per_second": {
+          "n": 20,
+          "mean": 93.85676078224895,
+          "sd": 0.8303274379229781,
+          "ci95": [
+            93.5042304451381,
+            94.2222776186436
+          ]
+        },
+        "post_fault_success_rate": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        },
+        "fault_agent_recovery_delay_ms": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        }
+      },
+      "scheduling_overhead_ms": {
+        "n": 20,
+        "mean": 0.036164609375000004,
+        "sd": 0.0032773089692182426,
+        "ci95": [
+          0.03487796875,
+          0.037722890625
+        ]
+      },
+      "assignment_counts": {
+        "agent-0": 428,
+        "agent-1": 427,
+        "agent-2": 425
+      },
+      "capacity_violations": 0,
+      "maximum_active_per_agent": {
+        "agent-0": 2,
+        "agent-1": 2,
+        "agent-2": 2
+      },
+      "recovery_censored_seeds": 20
+    },
+    {
+      "scenario": "B_heterogeneous",
+      "strategy": "fixed",
+      "metrics": {
+        "success_rate": {
+          "n": 20,
+          "mean": 0.74921875,
+          "sd": 0.06461770007381064,
+          "ci95": [
+            0.7203125,
+            0.77734375
+          ]
+        },
+        "mean_latency_ms": {
+          "n": 20,
+          "mean": 65.72909005156251,
+          "sd": 8.319605659255721,
+          "ci95": [
+            62.443420246875,
+            69.64646082265625
+          ]
+        },
+        "p95_latency_ms": {
+          "n": 20,
+          "mean": 91.75745485,
+          "sd": 9.633568260597372,
+          "ci95": [
+            87.8580689,
+            96.3573058
+          ]
+        },
+        "mean_waiting_ms": {
+          "n": 20,
+          "mean": 7.2170927375,
+          "sd": 5.574086077094725,
+          "ci95": [
+            4.98609892421875,
+            9.661732278125
+          ]
+        },
+        "throughput_per_second": {
+          "n": 20,
+          "mean": 90.65666472572697,
+          "sd": 2.6481559414780116,
+          "ci95": [
+            89.47539898886947,
+            91.78353208793222
+          ]
+        },
+        "post_fault_success_rate": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        },
+        "fault_agent_recovery_delay_ms": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        }
+      },
+      "scheduling_overhead_ms": {
+        "n": 20,
+        "mean": 0.029254943890559843,
+        "sd": 0.003804445327031572,
+        "ci95": [
+          0.027751765901073772,
+          0.030918991792123925
+        ]
+      },
+      "assignment_counts": {
+        "agent-0": 449,
+        "agent-1": 432,
+        "agent-2": 399
+      },
+      "capacity_violations": 0,
+      "maximum_active_per_agent": {
+        "agent-0": 2,
+        "agent-1": 2,
+        "agent-2": 2
+      },
+      "recovery_censored_seeds": 20
+    },
+    {
+      "scenario": "B_heterogeneous",
+      "strategy": "round_robin",
+      "metrics": {
+        "success_rate": {
+          "n": 20,
+          "mean": 0.75703125,
+          "sd": 0.04404126494654877,
+          "ci95": [
+            0.73671875,
+            0.77578125
+          ]
+        },
+        "mean_latency_ms": {
+          "n": 20,
+          "mean": 64.79791129765626,
+          "sd": 5.223692273679427,
+          "ci95": [
+            62.56057962421875,
+            67.03418201171876
+          ]
+        },
+        "p95_latency_ms": {
+          "n": 20,
+          "mean": 91.13767965,
+          "sd": 7.1513647225525245,
+          "ci95": [
+            88.18722195,
+            94.2412639
+          ]
+        },
+        "mean_waiting_ms": {
+          "n": 20,
+          "mean": 6.555971209375,
+          "sd": 3.60079582623166,
+          "ci95": [
+            5.0578317140625,
+            8.15505335078125
+          ]
+        },
+        "throughput_per_second": {
+          "n": 20,
+          "mean": 90.38484137127493,
+          "sd": 2.3172993420599037,
+          "ci95": [
+            89.39851433552235,
+            91.39407019843156
+          ]
+        },
+        "post_fault_success_rate": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        },
+        "fault_agent_recovery_delay_ms": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        }
+      },
+      "scheduling_overhead_ms": {
+        "n": 20,
+        "mean": 0.029204281195027187,
+        "sd": 0.002642081454851232,
+        "ci95": [
+          0.028059547815160027,
+          0.030343721578213825
+        ]
+      },
+      "assignment_counts": {
+        "agent-0": 428,
+        "agent-1": 431,
+        "agent-2": 421
+      },
+      "capacity_violations": 0,
+      "maximum_active_per_agent": {
+        "agent-0": 2,
+        "agent-1": 2,
+        "agent-2": 2
+      },
+      "recovery_censored_seeds": 20
+    },
+    {
+      "scenario": "B_heterogeneous",
+      "strategy": "caas",
+      "metrics": {
+        "success_rate": {
+          "n": 20,
+          "mean": 0.7703125,
+          "sd": 0.06127500161051341,
+          "ci95": [
+            0.7453125,
+            0.79765625
+          ]
+        },
+        "mean_latency_ms": {
+          "n": 20,
+          "mean": 60.67892595859375,
+          "sd": 6.149918014267644,
+          "ci95": [
+            58.2576596125,
+            63.43061993515625
+          ]
+        },
+        "p95_latency_ms": {
+          "n": 20,
+          "mean": 88.1576888,
+          "sd": 7.87005959862735,
+          "ci95": [
+            85.1090083,
+            91.5312195
+          ]
+        },
+        "mean_waiting_ms": {
+          "n": 20,
+          "mean": 4.68521753671875,
+          "sd": 3.9431291488684264,
+          "ci95": [
+            3.122788578125,
+            6.409882665625
+          ]
+        },
+        "throughput_per_second": {
+          "n": 20,
+          "mean": 91.5374414485891,
+          "sd": 2.242485031152596,
+          "ci95": [
+            90.56515764600132,
+            92.5272297861479
+          ]
+        },
+        "post_fault_success_rate": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        },
+        "fault_agent_recovery_delay_ms": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        }
+      },
+      "scheduling_overhead_ms": {
+        "n": 20,
+        "mean": 0.031055455626329852,
+        "sd": 0.003147720763278551,
+        "ci95": [
+          0.02970023195630151,
+          0.03237545399953227
+        ]
+      },
+      "assignment_counts": {
+        "agent-0": 433,
+        "agent-1": 420,
+        "agent-2": 427
+      },
+      "capacity_violations": 0,
+      "maximum_active_per_agent": {
+        "agent-0": 2,
+        "agent-1": 2,
+        "agent-2": 2
+      },
+      "recovery_censored_seeds": 20
+    },
+    {
+      "scenario": "C_dynamic_fault",
+      "strategy": "fixed",
+      "metrics": {
+        "success_rate": {
+          "n": 20,
+          "mean": 0.8921875,
+          "sd": 0.04146400825129136,
+          "ci95": [
+            0.87265625,
+            0.90859375
+          ]
+        },
+        "mean_latency_ms": {
+          "n": 20,
+          "mean": 58.490300865625,
+          "sd": 2.569365828372848,
+          "ci95": [
+            57.48708339375,
+            59.74264686328125
+          ]
+        },
+        "p95_latency_ms": {
+          "n": 20,
+          "mean": 95.34791975,
+          "sd": 8.58284154714543,
+          "ci95": [
+            91.72469775,
+            98.99235085
+          ]
+        },
+        "mean_waiting_ms": {
+          "n": 20,
+          "mean": 5.5601098328125,
+          "sd": 2.1288226866617377,
+          "ci95": [
+            4.7654329,
+            6.5140432359375
+          ]
+        },
+        "throughput_per_second": {
+          "n": 20,
+          "mean": 94.16688978044652,
+          "sd": 0.8141491119026194,
+          "ci95": [
+            93.83576490857666,
+            94.52294468439933
+          ]
+        },
+        "post_fault_success_rate": {
+          "n": 20,
+          "mean": 0.9454545454545454,
+          "sd": 0.07461660742437486,
+          "ci95": [
+            0.9090909090909091,
+            0.9727272727272728
+          ]
+        },
+        "fault_agent_recovery_delay_ms": {
+          "n": 20,
+          "mean": 82.4524064,
+          "sd": 9.690022712557317,
+          "ci95": [
+            78.4765073,
+            86.68352985000001
+          ]
+        }
+      },
+      "scheduling_overhead_ms": {
+        "n": 20,
+        "mean": 0.030494809166653775,
+        "sd": 0.0037133219724846977,
+        "ci95": [
+          0.029044271050546897,
+          0.032099583773397514
+        ]
+      },
+      "assignment_counts": {
+        "agent-0": 450,
+        "agent-1": 438,
+        "agent-2": 392
+      },
+      "capacity_violations": 0,
+      "maximum_active_per_agent": {
+        "agent-0": 2,
+        "agent-1": 2,
+        "agent-2": 2
+      },
+      "recovery_censored_seeds": 0
+    },
+    {
+      "scenario": "C_dynamic_fault",
+      "strategy": "round_robin",
+      "metrics": {
+        "success_rate": {
+          "n": 20,
+          "mean": 0.8875,
+          "sd": 0.029819219561604188,
+          "ci95": [
+            0.87421875,
+            0.89921875
+          ]
+        },
+        "mean_latency_ms": {
+          "n": 20,
+          "mean": 58.33985347890625,
+          "sd": 2.0306982671321916,
+          "ci95": [
+            57.46623715703125,
+            59.181297284375
+          ]
+        },
+        "p95_latency_ms": {
+          "n": 20,
+          "mean": 93.5149591,
+          "sd": 9.85912100597432,
+          "ci95": [
+            89.4781107,
+            97.86393165
+          ]
+        },
+        "mean_waiting_ms": {
+          "n": 20,
+          "mean": 5.2246699484375,
+          "sd": 1.5905909945083385,
+          "ci95": [
+            4.5637987492187495,
+            5.91128309765625
+          ]
+        },
+        "throughput_per_second": {
+          "n": 20,
+          "mean": 93.9822503689465,
+          "sd": 0.9505503503897148,
+          "ci95": [
+            93.57981488673664,
+            94.37261784006371
+          ]
+        },
+        "post_fault_success_rate": {
+          "n": 20,
+          "mean": 0.9409090909090909,
+          "sd": 0.057306513919667595,
+          "ci95": [
+            0.9136363636363636,
+            0.9636363636363636
+          ]
+        },
+        "fault_agent_recovery_delay_ms": {
+          "n": 20,
+          "mean": 81.00072715,
+          "sd": 7.49560017140221,
+          "ci95": [
+            77.88433985,
+            84.38027325
+          ]
+        }
+      },
+      "scheduling_overhead_ms": {
+        "n": 20,
+        "mean": 0.03158299632706734,
+        "sd": 0.003250011797572595,
+        "ci95": [
+          0.030316097830338277,
+          0.03313350794871657
+        ]
+      },
+      "assignment_counts": {
+        "agent-0": 427,
+        "agent-1": 432,
+        "agent-2": 421
+      },
+      "capacity_violations": 0,
+      "maximum_active_per_agent": {
+        "agent-0": 2,
+        "agent-1": 2,
+        "agent-2": 2
+      },
+      "recovery_censored_seeds": 0
+    },
+    {
+      "scenario": "C_dynamic_fault",
+      "strategy": "caas",
+      "metrics": {
+        "success_rate": {
+          "n": 20,
+          "mean": 0.89140625,
+          "sd": 0.035657519206849515,
+          "ci95": [
+            0.8765625,
+            0.90703125
+          ]
+        },
+        "mean_latency_ms": {
+          "n": 20,
+          "mean": 59.060547053125,
+          "sd": 1.7450443927986996,
+          "ci95": [
+            58.2741952484375,
+            59.7862030625
+          ]
+        },
+        "p95_latency_ms": {
+          "n": 20,
+          "mean": 97.01861875,
+          "sd": 8.525408131156981,
+          "ci95": [
+            93.44894765000001,
+            100.6355307
+          ]
+        },
+        "mean_waiting_ms": {
+          "n": 20,
+          "mean": 5.78535055234375,
+          "sd": 1.4004191999826592,
+          "ci95": [
+            5.2135314734375005,
+            6.3961821296875
+          ]
+        },
+        "throughput_per_second": {
+          "n": 20,
+          "mean": 93.83546445911477,
+          "sd": 0.8472473155258254,
+          "ci95": [
+            93.48485524657545,
+            94.20659698799714
+          ]
+        },
+        "post_fault_success_rate": {
+          "n": 20,
+          "mean": 0.95,
+          "sd": 0.06578729878962707,
+          "ci95": [
+            0.9204545454545455,
+            0.975
+          ]
+        },
+        "fault_agent_recovery_delay_ms": {
+          "n": 20,
+          "mean": 83.18548335,
+          "sd": 8.799210067315443,
+          "ci95": [
+            79.36836070000001,
+            87.04492985
+          ]
+        }
+      },
+      "scheduling_overhead_ms": {
+        "n": 20,
+        "mean": 0.030113914275509242,
+        "sd": 0.0020028960813378454,
+        "ci95": [
+          0.029268622514093814,
+          0.03099064152595054
+        ]
+      },
+      "assignment_counts": {
+        "agent-0": 421,
+        "agent-1": 433,
+        "agent-2": 426
+      },
+      "capacity_violations": 0,
+      "maximum_active_per_agent": {
+        "agent-0": 2,
+        "agent-1": 2,
+        "agent-2": 2
+      },
+      "recovery_censored_seeds": 0
+    },
+    {
+      "scenario": "D_bursty",
+      "strategy": "fixed",
+      "metrics": {
+        "success_rate": {
+          "n": 20,
+          "mean": 0.9375,
+          "sd": 0.029559540716466166,
+          "ci95": [
+            0.92421875,
+            0.95078125
+          ]
+        },
+        "mean_latency_ms": {
+          "n": 20,
+          "mean": 201.05549587109374,
+          "sd": 6.846630040322573,
+          "ci95": [
+            198.17942651250002,
+            203.91560646328125
+          ]
+        },
+        "p95_latency_ms": {
+          "n": 20,
+          "mean": 517.51465395,
+          "sd": 43.891514341734954,
+          "ci95": [
+            497.78005175,
+            536.1266848500001
+          ]
+        },
+        "mean_waiting_ms": {
+          "n": 20,
+          "mean": 151.041432253125,
+          "sd": 6.2478826482230785,
+          "ci95": [
+            148.55674774296875,
+            153.592963475
+          ]
+        },
+        "throughput_per_second": {
+          "n": 20,
+          "mean": 78.16162364317869,
+          "sd": 1.1054332480004543,
+          "ci95": [
+            77.6789708103972,
+            78.6362246040473
+          ]
+        },
+        "post_fault_success_rate": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        },
+        "fault_agent_recovery_delay_ms": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        }
+      },
+      "scheduling_overhead_ms": {
+        "n": 20,
+        "mean": 0.02481295848188298,
+        "sd": 0.0013703105752611645,
+        "ci95": [
+          0.02427213808181541,
+          0.02541000254238959
+        ]
+      },
+      "assignment_counts": {
+        "agent-0": 530,
+        "agent-1": 557,
+        "agent-2": 193
+      },
+      "capacity_violations": 0,
+      "maximum_active_per_agent": {
+        "agent-0": 2,
+        "agent-1": 2,
+        "agent-2": 1
+      },
+      "recovery_censored_seeds": 20
+    },
+    {
+      "scenario": "D_bursty",
+      "strategy": "round_robin",
+      "metrics": {
+        "success_rate": {
+          "n": 20,
+          "mean": 0.93671875,
+          "sd": 0.02456184711868346,
+          "ci95": [
+            0.9265625,
+            0.946875
+          ]
+        },
+        "mean_latency_ms": {
+          "n": 20,
+          "mean": 200.13360463046874,
+          "sd": 5.889244336732069,
+          "ci95": [
+            197.6245591703125,
+            202.67670730078126
+          ]
+        },
+        "p95_latency_ms": {
+          "n": 20,
+          "mean": 516.34309285,
+          "sd": 30.606319322531196,
+          "ci95": [
+            504.02316585,
+            530.42236825
+          ]
+        },
+        "mean_waiting_ms": {
+          "n": 20,
+          "mean": 150.12647219765626,
+          "sd": 5.339079233456192,
+          "ci95": [
+            147.94479168046874,
+            152.31127736796876
+          ]
+        },
+        "throughput_per_second": {
+          "n": 20,
+          "mean": 78.21028257281792,
+          "sd": 1.59153814158921,
+          "ci95": [
+            77.51086288602733,
+            78.90931088412184
+          ]
+        },
+        "post_fault_success_rate": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        },
+        "fault_agent_recovery_delay_ms": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        }
+      },
+      "scheduling_overhead_ms": {
+        "n": 20,
+        "mean": 0.02429349901926822,
+        "sd": 0.0014421724799466389,
+        "ci95": [
+          0.023687903974015684,
+          0.024923660499078442
+        ]
+      },
+      "assignment_counts": {
+        "agent-0": 427,
+        "agent-1": 441,
+        "agent-2": 412
+      },
+      "capacity_violations": 0,
+      "maximum_active_per_agent": {
+        "agent-0": 2,
+        "agent-1": 2,
+        "agent-2": 2
+      },
+      "recovery_censored_seeds": 20
+    },
+    {
+      "scenario": "D_bursty",
+      "strategy": "caas",
+      "metrics": {
+        "success_rate": {
+          "n": 20,
+          "mean": 0.9515625,
+          "sd": 0.024259171488651244,
+          "ci95": [
+            0.94140625,
+            0.96171875
+          ]
+        },
+        "mean_latency_ms": {
+          "n": 20,
+          "mean": 199.50556447890625,
+          "sd": 7.259629853589756,
+          "ci95": [
+            196.4374326078125,
+            202.65238355703124
+          ]
+        },
+        "p95_latency_ms": {
+          "n": 20,
+          "mean": 511.5502618,
+          "sd": 41.24641980475506,
+          "ci95": [
+            493.53056895,
+            528.22685255
+          ]
+        },
+        "mean_waiting_ms": {
+          "n": 20,
+          "mean": 149.5090942171875,
+          "sd": 6.544031847316018,
+          "ci95": [
+            146.85183494375,
+            152.26009647578124
+          ]
+        },
+        "throughput_per_second": {
+          "n": 20,
+          "mean": 78.21546558966293,
+          "sd": 1.4934923812823617,
+          "ci95": [
+            77.5980103311008,
+            78.83453718102115
+          ]
+        },
+        "post_fault_success_rate": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        },
+        "fault_agent_recovery_delay_ms": {
+          "n": 0,
+          "mean": null,
+          "sd": null,
+          "ci95": null
+        }
+      },
+      "scheduling_overhead_ms": {
+        "n": 20,
+        "mean": 0.02437358269920952,
+        "sd": 0.001524072546358299,
+        "ci95": [
+          0.023769129824020904,
+          0.0250569368953593
+        ]
+      },
+      "assignment_counts": {
+        "agent-0": 444,
+        "agent-1": 423,
+        "agent-2": 413
+      },
+      "capacity_violations": 0,
+      "maximum_active_per_agent": {
+        "agent-0": 2,
+        "agent-1": 2,
+        "agent-2": 2
+      },
+      "recovery_censored_seeds": 20
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "scenario": "A_uniform",
+      "baseline": "fixed",
+      "metric": "success_rate",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": -0.00546875,
+        "sd": 0.03095045581991526,
+        "ci95": [
+          -0.01796875,
+          0.00703125
+        ]
+      },
+      "non_tied_seeds": 19,
+      "p_exact_sign": 0.359283447265625,
+      "p_holm": 1.0,
+      "significant_05": false
+    },
+    {
+      "scenario": "A_uniform",
+      "baseline": "fixed",
+      "metric": "mean_latency_ms",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": 0.048511296874999846,
+        "sd": 0.642900608420518,
+        "ci95": [
+          -0.19940553281250076,
+          0.3419980476562504
+        ]
+      },
+      "non_tied_seeds": 20,
+      "p_exact_sign": 0.5034446716308594,
+      "p_holm": 1.0,
+      "significant_05": false
+    },
+    {
+      "scenario": "A_uniform",
+      "baseline": "round_robin",
+      "metric": "success_rate",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": -0.00234375,
+        "sd": 0.03256880053198314,
+        "ci95": [
+          -0.01640625,
+          0.0109375
+        ]
+      },
+      "non_tied_seeds": 17,
+      "p_exact_sign": 1.0,
+      "p_holm": 1.0,
+      "significant_05": false
+    },
+    {
+      "scenario": "A_uniform",
+      "baseline": "round_robin",
+      "metric": "mean_latency_ms",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": 0.041062504687500834,
+        "sd": 0.7199590633845981,
+        "ci95": [
+          -0.2504310249999996,
+          0.350615488281251
+        ]
+      },
+      "non_tied_seeds": 20,
+      "p_exact_sign": 1.0,
+      "p_holm": 1.0,
+      "significant_05": false
+    },
+    {
+      "scenario": "B_heterogeneous",
+      "baseline": "fixed",
+      "metric": "success_rate",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": 0.02109375,
+        "sd": 0.07420684634457858,
+        "ci95": [
+          -0.00859375,
+          0.053125
+        ]
+      },
+      "non_tied_seeds": 18,
+      "p_exact_sign": 1.0,
+      "p_holm": 1.0,
+      "significant_05": false
+    },
+    {
+      "scenario": "B_heterogeneous",
+      "baseline": "fixed",
+      "metric": "mean_latency_ms",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": -5.0501640929687515,
+        "sd": 10.971066708135332,
+        "ci95": [
+          -9.881644574218752,
+          -0.7402734234375004
+        ]
+      },
+      "non_tied_seeds": 20,
+      "p_exact_sign": 0.04138946533203125,
+      "p_holm": 0.6622314453125,
+      "significant_05": false
+    },
+    {
+      "scenario": "B_heterogeneous",
+      "baseline": "round_robin",
+      "metric": "success_rate",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": 0.01328125,
+        "sd": 0.049998715032830696,
+        "ci95": [
+          -0.009375,
+          0.03359375
+        ]
+      },
+      "non_tied_seeds": 18,
+      "p_exact_sign": 0.09625244140625,
+      "p_holm": 1.0,
+      "significant_05": false
+    },
+    {
+      "scenario": "B_heterogeneous",
+      "baseline": "round_robin",
+      "metric": "mean_latency_ms",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": -4.1189853390625,
+        "sd": 6.874797851926992,
+        "ci95": [
+          -7.0291940203125005,
+          -1.300254039843748
+        ]
+      },
+      "non_tied_seeds": 20,
+      "p_exact_sign": 0.04138946533203125,
+      "p_holm": 0.6622314453125,
+      "significant_05": false
+    },
+    {
+      "scenario": "C_dynamic_fault",
+      "baseline": "fixed",
+      "metric": "success_rate",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": -0.00078125,
+        "sd": 0.03529532069310247,
+        "ci95": [
+          -0.015625,
+          0.0140625
+        ]
+      },
+      "non_tied_seeds": 17,
+      "p_exact_sign": 1.0,
+      "p_holm": 1.0,
+      "significant_05": false
+    },
+    {
+      "scenario": "C_dynamic_fault",
+      "baseline": "fixed",
+      "metric": "mean_latency_ms",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": 0.5702461875000004,
+        "sd": 1.9878917090617243,
+        "ci95": [
+          -0.3340933929687491,
+          1.3372892718750002
+        ]
+      },
+      "non_tied_seeds": 20,
+      "p_exact_sign": 0.04138946533203125,
+      "p_holm": 0.6622314453125,
+      "significant_05": false
+    },
+    {
+      "scenario": "C_dynamic_fault",
+      "baseline": "round_robin",
+      "metric": "success_rate",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": 0.00390625,
+        "sd": 0.027708446692156982,
+        "ci95": [
+          -0.00859375,
+          0.015625
+        ]
+      },
+      "non_tied_seeds": 17,
+      "p_exact_sign": 0.629058837890625,
+      "p_holm": 1.0,
+      "significant_05": false
+    },
+    {
+      "scenario": "C_dynamic_fault",
+      "baseline": "round_robin",
+      "metric": "mean_latency_ms",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": 0.72069357421875,
+        "sd": 1.7701405466991635,
+        "ci95": [
+          0.0018801125000003083,
+          1.5255844843750015
+        ]
+      },
+      "non_tied_seeds": 20,
+      "p_exact_sign": 0.8238029479980469,
+      "p_holm": 1.0,
+      "significant_05": false
+    },
+    {
+      "scenario": "D_bursty",
+      "baseline": "fixed",
+      "metric": "success_rate",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": 0.0140625,
+        "sd": 0.03756162699309524,
+        "ci95": [
+          -0.003125,
+          0.03046875
+        ]
+      },
+      "non_tied_seeds": 16,
+      "p_exact_sign": 0.210113525390625,
+      "p_holm": 1.0,
+      "significant_05": false
+    },
+    {
+      "scenario": "D_bursty",
+      "baseline": "fixed",
+      "metric": "mean_latency_ms",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": -1.5499313921875015,
+        "sd": 6.016919355701177,
+        "ci95": [
+          -4.123177493749997,
+          0.931587907031249
+        ]
+      },
+      "non_tied_seeds": 20,
+      "p_exact_sign": 0.5034446716308594,
+      "p_holm": 1.0,
+      "significant_05": false
+    },
+    {
+      "scenario": "D_bursty",
+      "baseline": "round_robin",
+      "metric": "success_rate",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": 0.01484375,
+        "sd": 0.029330435821182853,
+        "ci95": [
+          0.00234375,
+          0.02734375
+        ]
+      },
+      "non_tied_seeds": 17,
+      "p_exact_sign": 0.332305908203125,
+      "p_holm": 1.0,
+      "significant_05": false
+    },
+    {
+      "scenario": "D_bursty",
+      "baseline": "round_robin",
+      "metric": "mean_latency_ms",
+      "caas_minus_baseline": {
+        "n": 20,
+        "mean": -0.6280401515624959,
+        "sd": 8.955300675863544,
+        "ci95": [
+          -4.544126529687499,
+          2.9642041875000005
+        ]
+      },
+      "non_tied_seeds": 20,
+      "p_exact_sign": 1.0,
+      "p_holm": 1.0,
+      "significant_05": false
+    }
+  ],
+  "method": "Seed is independent unit; sample SD; percentile paired/unpaired bootstrap mean CI; two-sided exact paired sign test; Holm across 16 primary comparisons. No significance test of wall-clock overhead."
+}

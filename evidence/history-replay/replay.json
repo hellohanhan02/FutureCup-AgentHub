@@ -1,0 +1,3646 @@
+{
+  "reports": {
+    "ec09d758f81641f1a6c0f656c305a713": {
+      "run": {
+        "id": "ec09d758f81641f1a6c0f656c305a713",
+        "definition_ref": {
+          "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-flow",
+          "version": "1"
+        },
+        "state": "succeeded",
+        "policy": {
+          "max_attempts": 1,
+          "max_replans": 0
+        },
+        "parent_run_id": null,
+        "revision": 29
+      },
+      "input": {
+        "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+        "task": "Design a minimal library seat booking service: require authenticated bookings; prevent overlapping bookings for the same seat and time slot."
+      },
+      "nodes": [
+        {
+          "id": "9db220af219940e6a250ec068a40ec05",
+          "node_id": "analyse",
+          "state": "succeeded",
+          "input": {
+            "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+            "task": "Design a minimal library seat booking service: require authenticated bookings; prevent overlapping bookings for the same seat and time slot."
+          },
+          "output": {
+            "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+            "requirements": [
+              {
+                "id": "R1",
+                "text": "Users must authenticate before booking a seat."
+              },
+              {
+                "id": "R2",
+                "text": "A seat cannot have overlapping bookings in the same time slot."
+              }
+            ]
+          },
+          "execution_id": "4a68058207084029a4321c02aedbf738",
+          "child_run_ids": [],
+          "agent_ref": {
+            "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-analyse",
+            "version": "1"
+          },
+          "error_code": null,
+          "started_at": "2026-11-11T16:45:15.930527+00:00",
+          "ended_at": "2026-11-11T16:45:17.896964+00:00",
+          "elapsed_ms": 1991.3150999927893,
+          "simulated": false,
+          "verified": true,
+          "ready_at": "2026-11-11T16:45:15.896844+00:00",
+          "assigned_at": "2026-11-11T16:45:15.952046+00:00",
+          "waiting_ms": 0.9990000000000001,
+          "scheduling_decision_id": "77f5231322574629bced94f8b90ff369",
+          "attempt_ids": [
+            "d0b24b95ef8f4f3b87b93fbfc60343a9"
+          ],
+          "verification_ids": [
+            "fe7aee5bf619437b95dbe80ebed45be3"
+          ],
+          "feedback_ids": [],
+          "current_artifact_ref": {
+            "id": "9db220af219940e6a250ec068a40ec05:artifact",
+            "version": "1"
+          },
+          "fallback_activated": false,
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "resolved_model": "deepseek-flash",
+          "input_tokens": 154,
+          "output_tokens": 69,
+          "usage_complete": true,
+          "estimated_cost": 0.00086,
+          "cost_currency": "CNY",
+          "cost_complete": true,
+          "cost_basis": "configured_estimate_not_invoice",
+          "model_calls": [
+            {
+              "number": 1,
+              "elapsed_ms": 1838.1336000165902,
+              "error_code": null,
+              "provider_request_id": "4bfd9dfe-f2cc-4b0c-a017-2098dbc5f126",
+              "input_tokens": 154,
+              "output_tokens": 69,
+              "usage_reported": true,
+              "estimated_cost": 0.00086,
+              "currency": "CNY",
+              "resolved_model": "deepseek-flash",
+              "retry_index": 0,
+              "http_status_code": null,
+              "http_error_category": null
+            }
+          ]
+        },
+        {
+          "id": "b941e201ee924e879685d8bde416bb30",
+          "node_id": "design",
+          "state": "succeeded",
+          "input": {
+            "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+            "analysis": {
+              "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+              "requirements": [
+                {
+                  "id": "R1",
+                  "text": "Users must authenticate before booking a seat."
+                },
+                {
+                  "id": "R2",
+                  "text": "A seat cannot have overlapping bookings in the same time slot."
+                }
+              ]
+            }
+          },
+          "output": {
+            "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+            "requirements": [
+              {
+                "id": "R1",
+                "text": "Users must authenticate before booking a seat."
+              },
+              {
+                "id": "R2",
+                "text": "A seat cannot have overlapping bookings in the same time slot."
+              }
+            ],
+            "components": [
+              "Authentication Service",
+              "Booking Service",
+              "Seat Availability Checker"
+            ]
+          },
+          "execution_id": "f267a75536694e48a63adcc4be535470",
+          "child_run_ids": [],
+          "agent_ref": {
+            "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-design",
+            "version": "1"
+          },
+          "error_code": null,
+          "started_at": "2026-11-11T16:45:17.944927+00:00",
+          "ended_at": "2026-11-11T16:45:19.580258+00:00",
+          "elapsed_ms": 1661.3893999601714,
+          "simulated": false,
+          "verified": true,
+          "ready_at": "2026-11-11T16:45:17.909279+00:00",
+          "assigned_at": "2026-11-11T16:45:17.963930+00:00",
+          "waiting_ms": 1.003,
+          "scheduling_decision_id": "c4fda3341eb94d3d91d19d56a3e26cee",
+          "attempt_ids": [
+            "72cf54a680fb4384897d1d74d6419680"
+          ],
+          "verification_ids": [
+            "5781242321d24cf19e6dc75666186625"
+          ],
+          "feedback_ids": [],
+          "current_artifact_ref": {
+            "id": "b941e201ee924e879685d8bde416bb30:artifact",
+            "version": "1"
+          },
+          "fallback_activated": false,
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "resolved_model": "deepseek-flash",
+          "input_tokens": 203,
+          "output_tokens": 98,
+          "usage_complete": true,
+          "estimated_cost": 0.00119,
+          "cost_currency": "CNY",
+          "cost_complete": true,
+          "cost_basis": "configured_estimate_not_invoice",
+          "model_calls": [
+            {
+              "number": 1,
+              "elapsed_ms": 1512.5875999801792,
+              "error_code": null,
+              "provider_request_id": "b3f136a5-1d6d-4a32-bc54-8ce466f443a3",
+              "input_tokens": 203,
+              "output_tokens": 98,
+              "usage_reported": true,
+              "estimated_cost": 0.00119,
+              "currency": "CNY",
+              "resolved_model": "deepseek-flash",
+              "retry_index": 0,
+              "http_status_code": null,
+              "http_error_category": null
+            }
+          ]
+        },
+        {
+          "id": "7a7582dc59054b8e8873d8ffc3d94bd6",
+          "node_id": "review",
+          "state": "succeeded",
+          "input": {
+            "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+            "analysis": {
+              "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+              "requirements": [
+                {
+                  "id": "R1",
+                  "text": "Users must authenticate before booking a seat."
+                },
+                {
+                  "id": "R2",
+                  "text": "A seat cannot have overlapping bookings in the same time slot."
+                }
+              ]
+            },
+            "design": {
+              "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+              "requirements": [
+                {
+                  "id": "R1",
+                  "text": "Users must authenticate before booking a seat."
+                },
+                {
+                  "id": "R2",
+                  "text": "A seat cannot have overlapping bookings in the same time slot."
+                }
+              ],
+              "components": [
+                "Authentication Service",
+                "Booking Service",
+                "Seat Availability Checker"
+              ]
+            }
+          },
+          "output": {
+            "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+            "requirements": [
+              {
+                "id": "R1",
+                "text": "Users must authenticate before booking a seat."
+              },
+              {
+                "id": "R2",
+                "text": "A seat cannot have overlapping bookings in the same time slot."
+              }
+            ],
+            "components": [
+              "Authentication Service",
+              "Booking Service",
+              "Seat Availability Checker"
+            ],
+            "issues": [
+              "Concurrency handling for overlapping bookings unaddressed"
+            ],
+            "summary": "Auth and overlap constraints mapped to three services"
+          },
+          "execution_id": "2c2e3b4153b042b5ab0ec97ec1f52e87",
+          "child_run_ids": [],
+          "agent_ref": {
+            "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-review",
+            "version": "1"
+          },
+          "error_code": null,
+          "started_at": "2026-11-11T16:45:19.632692+00:00",
+          "ended_at": "2026-11-11T16:45:21.690515+00:00",
+          "elapsed_ms": 2089.187800011132,
+          "simulated": false,
+          "verified": true,
+          "ready_at": "2026-11-11T16:45:19.590919+00:00",
+          "assigned_at": "2026-11-11T16:45:19.652697+00:00",
+          "waiting_ms": 1.004,
+          "scheduling_decision_id": "9e0e0c977bec4cfe82473b5e5df7bdd6",
+          "attempt_ids": [
+            "12fad2d2de314510b6bb54d2edf222ba"
+          ],
+          "verification_ids": [
+            "7c429a5fef4d4520813138d324d92c1b"
+          ],
+          "feedback_ids": [],
+          "current_artifact_ref": {
+            "id": "7a7582dc59054b8e8873d8ffc3d94bd6:artifact",
+            "version": "1"
+          },
+          "fallback_activated": false,
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "resolved_model": "deepseek-flash",
+          "input_tokens": 318,
+          "output_tokens": 124,
+          "usage_complete": true,
+          "estimated_cost": 0.001628,
+          "cost_currency": "CNY",
+          "cost_complete": true,
+          "cost_basis": "configured_estimate_not_invoice",
+          "model_calls": [
+            {
+              "number": 1,
+              "elapsed_ms": 1891.5191999985836,
+              "error_code": null,
+              "provider_request_id": "6032d7ed-39ed-4188-879e-52d01bd6ea10",
+              "input_tokens": 318,
+              "output_tokens": 124,
+              "usage_reported": true,
+              "estimated_cost": 0.001628,
+              "currency": "CNY",
+              "resolved_model": "deepseek-flash",
+              "retry_index": 0,
+              "http_status_code": null,
+              "http_error_category": null
+            }
+          ]
+        }
+      ],
+      "root_run_id": "ec09d758f81641f1a6c0f656c305a713",
+      "output": {
+        "analysis": {
+          "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+          "requirements": [
+            {
+              "id": "R1",
+              "text": "Users must authenticate before booking a seat."
+            },
+            {
+              "id": "R2",
+              "text": "A seat cannot have overlapping bookings in the same time slot."
+            }
+          ]
+        },
+        "design": {
+          "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+          "requirements": [
+            {
+              "id": "R1",
+              "text": "Users must authenticate before booking a seat."
+            },
+            {
+              "id": "R2",
+              "text": "A seat cannot have overlapping bookings in the same time slot."
+            }
+          ],
+          "components": [
+            "Authentication Service",
+            "Booking Service",
+            "Seat Availability Checker"
+          ]
+        },
+        "review": {
+          "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+          "requirements": [
+            {
+              "id": "R1",
+              "text": "Users must authenticate before booking a seat."
+            },
+            {
+              "id": "R2",
+              "text": "A seat cannot have overlapping bookings in the same time slot."
+            }
+          ],
+          "components": [
+            "Authentication Service",
+            "Booking Service",
+            "Seat Availability Checker"
+          ],
+          "issues": [
+            "Concurrency handling for overlapping bookings unaddressed"
+          ],
+          "summary": "Auth and overlap constraints mapped to three services"
+        }
+      },
+      "events": [
+        {
+          "id": "d7d9d83a6b9f4bcea622a4de4b3fdfa7",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "ec09d758f81641f1a6c0f656c305a713",
+          "sequence": 1,
+          "type": "workflow.created",
+          "occurred_at": "2026-11-11T16:45:15.873833+00:00",
+          "payload": {}
+        },
+        {
+          "id": "45d03321fecc42f086bd6a6af0dd744b",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "ec09d758f81641f1a6c0f656c305a713",
+          "sequence": 2,
+          "type": "workflow.running",
+          "occurred_at": "2026-11-11T16:45:15.887843+00:00",
+          "payload": {
+            "state": "running",
+            "error_code": null
+          }
+        },
+        {
+          "id": "4a1520966ebf40f2b34023a40a4ac086",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "9db220af219940e6a250ec068a40ec05",
+          "sequence": 3,
+          "type": "node.ready",
+          "occurred_at": "2026-11-11T16:45:15.896844+00:00",
+          "payload": {
+            "node_id": "analyse",
+            "state": "ready",
+            "error_code": null,
+            "execution_id": null
+          }
+        },
+        {
+          "id": "d4573957b74e4a50a2771d91172414ca",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "9db220af219940e6a250ec068a40ec05",
+          "sequence": 4,
+          "type": "node.waiting_assignment",
+          "occurred_at": "2026-11-11T16:45:15.906005+00:00",
+          "payload": {
+            "node_id": "analyse",
+            "state": "ready",
+            "error_code": null,
+            "execution_id": null
+          }
+        },
+        {
+          "id": "711d7372b8804c0586557086c74e630a",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "9db220af219940e6a250ec068a40ec05",
+          "sequence": 5,
+          "type": "node.input",
+          "occurred_at": "2026-11-11T16:45:15.915012+00:00",
+          "payload": {
+            "node_id": "analyse",
+            "state": "ready",
+            "error_code": null,
+            "execution_id": null
+          }
+        },
+        {
+          "id": "b5b991a9453b416dbb72cd8254efc35c",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "9db220af219940e6a250ec068a40ec05",
+          "sequence": 6,
+          "type": "node.running",
+          "occurred_at": "2026-11-11T16:45:15.940047+00:00",
+          "payload": {
+            "node_id": "analyse",
+            "state": "running",
+            "error_code": null,
+            "execution_id": null,
+            "attempt_id": "d0b24b95ef8f4f3b87b93fbfc60343a9",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "dbd7795c7ba546c98a21d86da649b0a6",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "9db220af219940e6a250ec068a40ec05",
+          "sequence": 7,
+          "type": "node.running",
+          "occurred_at": "2026-11-11T16:45:15.976047+00:00",
+          "payload": {
+            "node_id": "analyse",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "4a68058207084029a4321c02aedbf738",
+            "attempt_id": "d0b24b95ef8f4f3b87b93fbfc60343a9",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "d99ed123122b44bc9041583cb246a6d6",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "9db220af219940e6a250ec068a40ec05",
+          "sequence": 8,
+          "type": "node.running",
+          "occurred_at": "2026-11-11T16:45:17.815514+00:00",
+          "payload": {
+            "node_id": "analyse",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "4a68058207084029a4321c02aedbf738",
+            "attempt_id": "d0b24b95ef8f4f3b87b93fbfc60343a9",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "e30a87b6d0e845bbaa1078c5021ccdba",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "9db220af219940e6a250ec068a40ec05",
+          "sequence": 9,
+          "type": "node.verifying",
+          "occurred_at": "2026-11-11T16:45:17.844059+00:00",
+          "payload": {
+            "node_id": "analyse",
+            "state": "verifying",
+            "error_code": null,
+            "execution_id": "4a68058207084029a4321c02aedbf738",
+            "attempt_id": "d0b24b95ef8f4f3b87b93fbfc60343a9",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "7ab23c80eb824a979e4cab51b92ec3c5",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "9db220af219940e6a250ec068a40ec05",
+          "sequence": 10,
+          "type": "node.running",
+          "occurred_at": "2026-11-11T16:45:17.881754+00:00",
+          "payload": {
+            "node_id": "analyse",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "4a68058207084029a4321c02aedbf738",
+            "attempt_id": "d0b24b95ef8f4f3b87b93fbfc60343a9",
+            "verified": true,
+            "verification_id": "fe7aee5bf619437b95dbe80ebed45be3",
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "1bd0d3808ef84e61b82f033b5fb70243",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "9db220af219940e6a250ec068a40ec05",
+          "sequence": 11,
+          "type": "node.succeeded",
+          "occurred_at": "2026-11-11T16:45:17.897964+00:00",
+          "payload": {
+            "node_id": "analyse",
+            "state": "succeeded",
+            "error_code": null,
+            "execution_id": "4a68058207084029a4321c02aedbf738",
+            "attempt_id": "d0b24b95ef8f4f3b87b93fbfc60343a9",
+            "verified": true,
+            "verification_id": "fe7aee5bf619437b95dbe80ebed45be3",
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "5a09ac9814b244fc89d09e01c14ec264",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "b941e201ee924e879685d8bde416bb30",
+          "sequence": 12,
+          "type": "node.ready",
+          "occurred_at": "2026-11-11T16:45:17.909855+00:00",
+          "payload": {
+            "node_id": "design",
+            "state": "ready",
+            "error_code": null,
+            "execution_id": null
+          }
+        },
+        {
+          "id": "05abecaa655747238d4094ca264a7c28",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "b941e201ee924e879685d8bde416bb30",
+          "sequence": 13,
+          "type": "node.waiting_assignment",
+          "occurred_at": "2026-11-11T16:45:17.918894+00:00",
+          "payload": {
+            "node_id": "design",
+            "state": "ready",
+            "error_code": null,
+            "execution_id": null
+          }
+        },
+        {
+          "id": "115af5e3bd25449297fb061c0534f250",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "b941e201ee924e879685d8bde416bb30",
+          "sequence": 14,
+          "type": "node.input",
+          "occurred_at": "2026-11-11T16:45:17.928891+00:00",
+          "payload": {
+            "node_id": "design",
+            "state": "ready",
+            "error_code": null,
+            "execution_id": null
+          }
+        },
+        {
+          "id": "987e2bce26194256bbaff6d4ace1f15f",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "b941e201ee924e879685d8bde416bb30",
+          "sequence": 15,
+          "type": "node.running",
+          "occurred_at": "2026-11-11T16:45:17.953926+00:00",
+          "payload": {
+            "node_id": "design",
+            "state": "running",
+            "error_code": null,
+            "execution_id": null,
+            "attempt_id": "72cf54a680fb4384897d1d74d6419680",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "4c2f728a435a4fb3aae76b41e562ab2c",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "b941e201ee924e879685d8bde416bb30",
+          "sequence": 16,
+          "type": "node.running",
+          "occurred_at": "2026-11-11T16:45:17.979936+00:00",
+          "payload": {
+            "node_id": "design",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "f267a75536694e48a63adcc4be535470",
+            "attempt_id": "72cf54a680fb4384897d1d74d6419680",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "802a9c803761428ea48570e4dccf4b72",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "b941e201ee924e879685d8bde416bb30",
+          "sequence": 17,
+          "type": "node.running",
+          "occurred_at": "2026-11-11T16:45:19.494713+00:00",
+          "payload": {
+            "node_id": "design",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "f267a75536694e48a63adcc4be535470",
+            "attempt_id": "72cf54a680fb4384897d1d74d6419680",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "56de9e82525744adaa17e225b046d575",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "b941e201ee924e879685d8bde416bb30",
+          "sequence": 18,
+          "type": "node.verifying",
+          "occurred_at": "2026-11-11T16:45:19.520889+00:00",
+          "payload": {
+            "node_id": "design",
+            "state": "verifying",
+            "error_code": null,
+            "execution_id": "f267a75536694e48a63adcc4be535470",
+            "attempt_id": "72cf54a680fb4384897d1d74d6419680",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "7e6740d938cc4bcca9c6463de6fbcbbb",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "b941e201ee924e879685d8bde416bb30",
+          "sequence": 19,
+          "type": "node.running",
+          "occurred_at": "2026-11-11T16:45:19.560259+00:00",
+          "payload": {
+            "node_id": "design",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "f267a75536694e48a63adcc4be535470",
+            "attempt_id": "72cf54a680fb4384897d1d74d6419680",
+            "verified": true,
+            "verification_id": "5781242321d24cf19e6dc75666186625",
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "8a1a20d65e04404fa060fdc619e8521d",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "b941e201ee924e879685d8bde416bb30",
+          "sequence": 20,
+          "type": "node.succeeded",
+          "occurred_at": "2026-11-11T16:45:19.580258+00:00",
+          "payload": {
+            "node_id": "design",
+            "state": "succeeded",
+            "error_code": null,
+            "execution_id": "f267a75536694e48a63adcc4be535470",
+            "attempt_id": "72cf54a680fb4384897d1d74d6419680",
+            "verified": true,
+            "verification_id": "5781242321d24cf19e6dc75666186625",
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "c4b67241584d4283a83873e84cbb2e93",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "7a7582dc59054b8e8873d8ffc3d94bd6",
+          "sequence": 21,
+          "type": "node.ready",
+          "occurred_at": "2026-11-11T16:45:19.590919+00:00",
+          "payload": {
+            "node_id": "review",
+            "state": "ready",
+            "error_code": null,
+            "execution_id": null
+          }
+        },
+        {
+          "id": "380e21a5ea1b46be8484364086710fa2",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "7a7582dc59054b8e8873d8ffc3d94bd6",
+          "sequence": 22,
+          "type": "node.waiting_assignment",
+          "occurred_at": "2026-11-11T16:45:19.601925+00:00",
+          "payload": {
+            "node_id": "review",
+            "state": "ready",
+            "error_code": null,
+            "execution_id": null
+          }
+        },
+        {
+          "id": "98edaa7285214b299e4febdd290d8d50",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "7a7582dc59054b8e8873d8ffc3d94bd6",
+          "sequence": 23,
+          "type": "node.input",
+          "occurred_at": "2026-11-11T16:45:19.613440+00:00",
+          "payload": {
+            "node_id": "review",
+            "state": "ready",
+            "error_code": null,
+            "execution_id": null
+          }
+        },
+        {
+          "id": "4b83f833e0234be79d6585015be60df4",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "7a7582dc59054b8e8873d8ffc3d94bd6",
+          "sequence": 24,
+          "type": "node.running",
+          "occurred_at": "2026-11-11T16:45:19.640693+00:00",
+          "payload": {
+            "node_id": "review",
+            "state": "running",
+            "error_code": null,
+            "execution_id": null,
+            "attempt_id": "12fad2d2de314510b6bb54d2edf222ba",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "17f7da54cd8e4ffda6dd94fdb1e93bfa",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "7a7582dc59054b8e8873d8ffc3d94bd6",
+          "sequence": 25,
+          "type": "node.running",
+          "occurred_at": "2026-11-11T16:45:19.667750+00:00",
+          "payload": {
+            "node_id": "review",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "2c2e3b4153b042b5ab0ec97ec1f52e87",
+            "attempt_id": "12fad2d2de314510b6bb54d2edf222ba",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "f433e0684db844e6ac3729481a9631b0",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "7a7582dc59054b8e8873d8ffc3d94bd6",
+          "sequence": 26,
+          "type": "node.running",
+          "occurred_at": "2026-11-11T16:45:21.595804+00:00",
+          "payload": {
+            "node_id": "review",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "2c2e3b4153b042b5ab0ec97ec1f52e87",
+            "attempt_id": "12fad2d2de314510b6bb54d2edf222ba",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "5060e1649c974d7ca6c12d31405e0972",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "7a7582dc59054b8e8873d8ffc3d94bd6",
+          "sequence": 27,
+          "type": "node.verifying",
+          "occurred_at": "2026-11-11T16:45:21.633863+00:00",
+          "payload": {
+            "node_id": "review",
+            "state": "verifying",
+            "error_code": null,
+            "execution_id": "2c2e3b4153b042b5ab0ec97ec1f52e87",
+            "attempt_id": "12fad2d2de314510b6bb54d2edf222ba",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "ef8452550cac4b818fa70cf51255528a",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "7a7582dc59054b8e8873d8ffc3d94bd6",
+          "sequence": 28,
+          "type": "node.running",
+          "occurred_at": "2026-11-11T16:45:21.674513+00:00",
+          "payload": {
+            "node_id": "review",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "2c2e3b4153b042b5ab0ec97ec1f52e87",
+            "attempt_id": "12fad2d2de314510b6bb54d2edf222ba",
+            "verified": true,
+            "verification_id": "7c429a5fef4d4520813138d324d92c1b",
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "ed1c614e5d0d4352bba4476b48c2202b",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "7a7582dc59054b8e8873d8ffc3d94bd6",
+          "sequence": 29,
+          "type": "node.succeeded",
+          "occurred_at": "2026-11-11T16:45:21.691515+00:00",
+          "payload": {
+            "node_id": "review",
+            "state": "succeeded",
+            "error_code": null,
+            "execution_id": "2c2e3b4153b042b5ab0ec97ec1f52e87",
+            "attempt_id": "12fad2d2de314510b6bb54d2edf222ba",
+            "verified": true,
+            "verification_id": "7c429a5fef4d4520813138d324d92c1b",
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "8f01c5ec7d5548e5bf4efca10e62cab5",
+          "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+          "aggregate_id": "ec09d758f81641f1a6c0f656c305a713",
+          "sequence": 30,
+          "type": "workflow.succeeded",
+          "occurred_at": "2026-11-11T16:45:21.703515+00:00",
+          "payload": {
+            "state": "succeeded",
+            "error_code": null
+          }
+        }
+      ],
+      "agent_bindings": {},
+      "error_code": null,
+      "started_at": "2026-11-11T16:45:15.887843+00:00",
+      "ended_at": "2026-11-11T16:45:21.703515+00:00",
+      "elapsed_ms": 5815.699899976607,
+      "simulated": false,
+      "verified": true,
+      "resource_usage": {
+        "calls": 3,
+        "model_calls": 3,
+        "tool_calls": 0,
+        "resource_units": 3183,
+        "checks": 6,
+        "attempts": 3,
+        "feedback_loops": 0,
+        "replans": 0,
+        "reported_tokens": 966,
+        "unknown_usage_calls": 0
+      }
+    },
+    "d2c530342bff47908a44a28505306ce7": {
+      "run": {
+        "id": "d2c530342bff47908a44a28505306ce7",
+        "definition_ref": {
+          "id": "ds09c-5399dc175fc74dff870500896d3dde94-flow",
+          "version": "1"
+        },
+        "state": "succeeded",
+        "policy": {
+          "max_attempts": 1,
+          "max_replans": 0
+        },
+        "parent_run_id": null,
+        "revision": 16
+      },
+      "input": {
+        "task": "dependency_schedule",
+        "instructions": "Find any valid complete order satisfying every listed constraint. Durations are positive integer time units, execution is sequential with no idle time, positions start at 1, deadlines limit completion (not start) time. priority_before lists the only priority ordering requirements. immediately_before requires consecutive positions in that direction. min_gap means position(after)-position(before) is at least min_gap. Return only task, order, total; total is the number of task IDs (8), not the sum of durations; no extra fields.",
+        "spec": {
+          "scenario_id": "dependency-schedule-09c-v1",
+          "semantics": {
+            "position_base": 1,
+            "single_machine": true,
+            "idle_allowed": false
+          },
+          "tasks": [
+            {
+              "id": "A",
+              "duration": 2,
+              "priority": 2
+            },
+            {
+              "id": "B",
+              "duration": 1,
+              "priority": 3
+            },
+            {
+              "id": "C",
+              "duration": 3,
+              "priority": 4
+            },
+            {
+              "id": "D",
+              "duration": 2,
+              "priority": 2
+            },
+            {
+              "id": "E",
+              "duration": 1,
+              "priority": 1
+            },
+            {
+              "id": "F",
+              "duration": 2,
+              "priority": 1
+            },
+            {
+              "id": "G",
+              "duration": 1,
+              "priority": 3
+            },
+            {
+              "id": "H",
+              "duration": 1,
+              "priority": 0
+            }
+          ],
+          "constraints": {
+            "dependencies": [
+              [
+                "A",
+                "D"
+              ],
+              [
+                "C",
+                "D"
+              ],
+              [
+                "B",
+                "E"
+              ],
+              [
+                "D",
+                "F"
+              ],
+              [
+                "E",
+                "F"
+              ],
+              [
+                "C",
+                "G"
+              ],
+              [
+                "E",
+                "G"
+              ],
+              [
+                "F",
+                "H"
+              ],
+              [
+                "G",
+                "H"
+              ]
+            ],
+            "priority_before": [
+              [
+                "B",
+                "A"
+              ],
+              [
+                "G",
+                "F"
+              ]
+            ],
+            "immediately_before": [
+              [
+                "E",
+                "D"
+              ]
+            ],
+            "position_windows": [
+              {
+                "task": "C",
+                "min": 2,
+                "max": 3
+              },
+              {
+                "task": "H",
+                "min": 8,
+                "max": 8
+              }
+            ],
+            "completion_deadlines": [
+              {
+                "task": "C",
+                "latest": 4
+              },
+              {
+                "task": "F",
+                "latest": 12
+              },
+              {
+                "task": "H",
+                "latest": 13
+              }
+            ],
+            "min_gaps": [
+              {
+                "before": "D",
+                "after": "F",
+                "min_gap": 2
+              }
+            ]
+          }
+        }
+      },
+      "nodes": [
+        {
+          "id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "node_id": "schedule",
+          "state": "succeeded",
+          "input": {
+            "task": "dependency_schedule",
+            "instructions": "Find any valid complete order satisfying every listed constraint. Durations are positive integer time units, execution is sequential with no idle time, positions start at 1, deadlines limit completion (not start) time. priority_before lists the only priority ordering requirements. immediately_before requires consecutive positions in that direction. min_gap means position(after)-position(before) is at least min_gap. Return only task, order, total; total is the number of task IDs (8), not the sum of durations; no extra fields.",
+            "spec": {
+              "scenario_id": "dependency-schedule-09c-v1",
+              "semantics": {
+                "position_base": 1,
+                "single_machine": true,
+                "idle_allowed": false
+              },
+              "tasks": [
+                {
+                  "id": "A",
+                  "duration": 2,
+                  "priority": 2
+                },
+                {
+                  "id": "B",
+                  "duration": 1,
+                  "priority": 3
+                },
+                {
+                  "id": "C",
+                  "duration": 3,
+                  "priority": 4
+                },
+                {
+                  "id": "D",
+                  "duration": 2,
+                  "priority": 2
+                },
+                {
+                  "id": "E",
+                  "duration": 1,
+                  "priority": 1
+                },
+                {
+                  "id": "F",
+                  "duration": 2,
+                  "priority": 1
+                },
+                {
+                  "id": "G",
+                  "duration": 1,
+                  "priority": 3
+                },
+                {
+                  "id": "H",
+                  "duration": 1,
+                  "priority": 0
+                }
+              ],
+              "constraints": {
+                "dependencies": [
+                  [
+                    "A",
+                    "D"
+                  ],
+                  [
+                    "C",
+                    "D"
+                  ],
+                  [
+                    "B",
+                    "E"
+                  ],
+                  [
+                    "D",
+                    "F"
+                  ],
+                  [
+                    "E",
+                    "F"
+                  ],
+                  [
+                    "C",
+                    "G"
+                  ],
+                  [
+                    "E",
+                    "G"
+                  ],
+                  [
+                    "F",
+                    "H"
+                  ],
+                  [
+                    "G",
+                    "H"
+                  ]
+                ],
+                "priority_before": [
+                  [
+                    "B",
+                    "A"
+                  ],
+                  [
+                    "G",
+                    "F"
+                  ]
+                ],
+                "immediately_before": [
+                  [
+                    "E",
+                    "D"
+                  ]
+                ],
+                "position_windows": [
+                  {
+                    "task": "C",
+                    "min": 2,
+                    "max": 3
+                  },
+                  {
+                    "task": "H",
+                    "min": 8,
+                    "max": 8
+                  }
+                ],
+                "completion_deadlines": [
+                  {
+                    "task": "C",
+                    "latest": 4
+                  },
+                  {
+                    "task": "F",
+                    "latest": 12
+                  },
+                  {
+                    "task": "H",
+                    "latest": 13
+                  }
+                ],
+                "min_gaps": [
+                  {
+                    "before": "D",
+                    "after": "F",
+                    "min_gap": 2
+                  }
+                ]
+              }
+            }
+          },
+          "output": {
+            "task": "dependency_schedule",
+            "order": [
+              "B",
+              "C",
+              "A",
+              "E",
+              "D",
+              "G",
+              "F",
+              "H"
+            ],
+            "total": 8
+          },
+          "execution_id": "48322126661a46d7b0814b5ba2580ec3",
+          "child_run_ids": [],
+          "agent_ref": {
+            "id": "ds09c-5399dc175fc74dff870500896d3dde94-agent",
+            "version": "1"
+          },
+          "error_code": null,
+          "started_at": "2026-11-12T14:03:33.321672+00:00",
+          "ended_at": "2026-11-12T14:03:36.528773+00:00",
+          "elapsed_ms": 3228.097599989269,
+          "simulated": false,
+          "verified": true,
+          "ready_at": "2026-11-12T14:03:33.293673+00:00",
+          "assigned_at": "2026-11-12T14:03:34.935467+00:00",
+          "waiting_ms": 0,
+          "scheduling_decision_id": "34eb87000e3b47878778d7a3bccce20e",
+          "attempt_ids": [
+            "57bb80bea8c74b9abbf8cf284ba3f7cd",
+            "22b6208da2e14cba9176b2ad9c2bc0d8"
+          ],
+          "verification_ids": [
+            "4b85b00b41db4583a2fea4c87d74cf10",
+            "713143f81326470daba2b1fbc8cdbee4"
+          ],
+          "feedback_ids": [
+            "3d2d02ea62aa4b009b8de43dcef55c74"
+          ],
+          "current_artifact_ref": {
+            "id": "a0e76b9538bd4c878fe88b7a24a038a9:artifact",
+            "version": "2"
+          },
+          "fallback_activated": false,
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "resolved_model": "deepseek-flash",
+          "input_tokens": 2057,
+          "output_tokens": 62,
+          "usage_complete": true,
+          "estimated_cost": 0.0046099999999999995,
+          "cost_currency": "CNY",
+          "cost_complete": true,
+          "cost_basis": "configured_estimate_not_invoice",
+          "model_calls": [
+            {
+              "number": 1,
+              "elapsed_ms": 1506.6830000141636,
+              "error_code": null,
+              "provider_request_id": "730ad178-91b2-4c0b-91a0-f329bb5eb227",
+              "input_tokens": 1397,
+              "output_tokens": 31,
+              "usage_reported": true,
+              "estimated_cost": 0.003042,
+              "currency": "CNY",
+              "resolved_model": "deepseek-flash",
+              "retry_index": 0,
+              "http_status_code": null,
+              "http_error_category": null
+            }
+          ]
+        }
+      ],
+      "root_run_id": "d2c530342bff47908a44a28505306ce7",
+      "output": {
+        "schedule": {
+          "task": "dependency_schedule",
+          "order": [
+            "B",
+            "C",
+            "A",
+            "E",
+            "D",
+            "G",
+            "F",
+            "H"
+          ],
+          "total": 8
+        }
+      },
+      "events": [
+        {
+          "id": "3fadf41f9f994bc7aad0698b61be034d",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "d2c530342bff47908a44a28505306ce7",
+          "sequence": 1,
+          "type": "workflow.created",
+          "occurred_at": "2026-11-12T14:03:33.278588+00:00",
+          "payload": {}
+        },
+        {
+          "id": "1c8849ebab8a4516b601ace27c4a7bdb",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "d2c530342bff47908a44a28505306ce7",
+          "sequence": 2,
+          "type": "workflow.running",
+          "occurred_at": "2026-11-12T14:03:33.286673+00:00",
+          "payload": {
+            "state": "running",
+            "error_code": null
+          }
+        },
+        {
+          "id": "2c98928241e043179fc5f1230b242bdb",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 3,
+          "type": "node.ready",
+          "occurred_at": "2026-11-12T14:03:33.294673+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "ready",
+            "error_code": null,
+            "execution_id": null
+          }
+        },
+        {
+          "id": "0f35d36085bf44c89cf8d2d9217296e2",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 4,
+          "type": "node.waiting_assignment",
+          "occurred_at": "2026-11-12T14:03:33.301673+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "ready",
+            "error_code": null,
+            "execution_id": null
+          }
+        },
+        {
+          "id": "6b645acda5814fd4b63fa1268184d3ff",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 5,
+          "type": "node.input",
+          "occurred_at": "2026-11-12T14:03:33.307672+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "ready",
+            "error_code": null,
+            "execution_id": null
+          }
+        },
+        {
+          "id": "ff880995dcef49b2a533f136a8a8fa28",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 6,
+          "type": "node.running",
+          "occurred_at": "2026-11-12T14:03:33.328673+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "running",
+            "error_code": null,
+            "execution_id": null,
+            "attempt_id": "57bb80bea8c74b9abbf8cf284ba3f7cd",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "3ae6fa92c34b48908cdba403dc1680af",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 7,
+          "type": "node.running",
+          "occurred_at": "2026-11-12T14:03:33.353674+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "823ed44ac1444095aa44bf0052b71f56",
+            "attempt_id": "57bb80bea8c74b9abbf8cf284ba3f7cd",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "ba52f28edd9d44c4997241d7449fbef7",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 8,
+          "type": "node.running",
+          "occurred_at": "2026-11-12T14:03:34.841533+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "823ed44ac1444095aa44bf0052b71f56",
+            "attempt_id": "57bb80bea8c74b9abbf8cf284ba3f7cd",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "e9a3b039138d4dba9b7969c032e0bd45",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 9,
+          "type": "node.verifying",
+          "occurred_at": "2026-11-12T14:03:34.864164+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "verifying",
+            "error_code": null,
+            "execution_id": "823ed44ac1444095aa44bf0052b71f56",
+            "attempt_id": "57bb80bea8c74b9abbf8cf284ba3f7cd",
+            "verified": false,
+            "verification_id": null,
+            "feedback_id": null
+          }
+        },
+        {
+          "id": "d3629374f10a4cfd9cc3a766c335c23a",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 10,
+          "type": "node.recovering",
+          "occurred_at": "2026-11-12T14:03:34.896661+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "recovering",
+            "error_code": null,
+            "execution_id": "823ed44ac1444095aa44bf0052b71f56",
+            "attempt_id": "57bb80bea8c74b9abbf8cf284ba3f7cd",
+            "verified": false,
+            "verification_id": "4b85b00b41db4583a2fea4c87d74cf10",
+            "feedback_id": "3d2d02ea62aa4b009b8de43dcef55c74"
+          }
+        },
+        {
+          "id": "6d91229d0f8a4767a6e68cafafbe2cbf",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 11,
+          "type": "node.recovering",
+          "occurred_at": "2026-11-12T14:03:34.927185+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "recovering",
+            "error_code": null,
+            "execution_id": "823ed44ac1444095aa44bf0052b71f56",
+            "attempt_id": "22b6208da2e14cba9176b2ad9c2bc0d8",
+            "verified": false,
+            "verification_id": "4b85b00b41db4583a2fea4c87d74cf10",
+            "feedback_id": "3d2d02ea62aa4b009b8de43dcef55c74"
+          }
+        },
+        {
+          "id": "040c784eb6f845589a74987914b9b640",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 12,
+          "type": "node.running",
+          "occurred_at": "2026-11-12T14:03:34.953251+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "48322126661a46d7b0814b5ba2580ec3",
+            "attempt_id": "22b6208da2e14cba9176b2ad9c2bc0d8",
+            "verified": false,
+            "verification_id": "4b85b00b41db4583a2fea4c87d74cf10",
+            "feedback_id": "3d2d02ea62aa4b009b8de43dcef55c74"
+          }
+        },
+        {
+          "id": "86f511fbb0b64c02a11ebc5caca20e76",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 13,
+          "type": "node.running",
+          "occurred_at": "2026-11-12T14:03:36.459219+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "48322126661a46d7b0814b5ba2580ec3",
+            "attempt_id": "22b6208da2e14cba9176b2ad9c2bc0d8",
+            "verified": false,
+            "verification_id": "4b85b00b41db4583a2fea4c87d74cf10",
+            "feedback_id": "3d2d02ea62aa4b009b8de43dcef55c74"
+          }
+        },
+        {
+          "id": "ca1942ac13f7460d83b96bb743e7a874",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 14,
+          "type": "node.verifying",
+          "occurred_at": "2026-11-12T14:03:36.482261+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "verifying",
+            "error_code": null,
+            "execution_id": "48322126661a46d7b0814b5ba2580ec3",
+            "attempt_id": "22b6208da2e14cba9176b2ad9c2bc0d8",
+            "verified": false,
+            "verification_id": "4b85b00b41db4583a2fea4c87d74cf10",
+            "feedback_id": "3d2d02ea62aa4b009b8de43dcef55c74"
+          }
+        },
+        {
+          "id": "16736d4e3a8c40598c4f5efc99e94210",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 15,
+          "type": "node.running",
+          "occurred_at": "2026-11-12T14:03:36.513782+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "running",
+            "error_code": null,
+            "execution_id": "48322126661a46d7b0814b5ba2580ec3",
+            "attempt_id": "22b6208da2e14cba9176b2ad9c2bc0d8",
+            "verified": true,
+            "verification_id": "713143f81326470daba2b1fbc8cdbee4",
+            "feedback_id": "3d2d02ea62aa4b009b8de43dcef55c74"
+          }
+        },
+        {
+          "id": "eb48c64f8a684a30a99b2d6f5545aa0d",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "sequence": 16,
+          "type": "node.succeeded",
+          "occurred_at": "2026-11-12T14:03:36.529782+00:00",
+          "payload": {
+            "node_id": "schedule",
+            "state": "succeeded",
+            "error_code": null,
+            "execution_id": "48322126661a46d7b0814b5ba2580ec3",
+            "attempt_id": "22b6208da2e14cba9176b2ad9c2bc0d8",
+            "verified": true,
+            "verification_id": "713143f81326470daba2b1fbc8cdbee4",
+            "feedback_id": "3d2d02ea62aa4b009b8de43dcef55c74"
+          }
+        },
+        {
+          "id": "f48497f9888c435484991c4f16034248",
+          "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+          "aggregate_id": "d2c530342bff47908a44a28505306ce7",
+          "sequence": 17,
+          "type": "workflow.succeeded",
+          "occurred_at": "2026-11-12T14:03:36.538715+00:00",
+          "payload": {
+            "state": "succeeded",
+            "error_code": null
+          }
+        }
+      ],
+      "agent_bindings": {},
+      "error_code": null,
+      "started_at": "2026-11-12T14:03:33.286673+00:00",
+      "ended_at": "2026-11-12T14:03:36.538715+00:00",
+      "elapsed_ms": 3252.1222000359558,
+      "simulated": false,
+      "verified": true,
+      "resource_usage": {
+        "calls": 2,
+        "model_calls": 2,
+        "tool_calls": 0,
+        "resource_units": 7886,
+        "checks": 18,
+        "attempts": 2,
+        "feedback_loops": 1,
+        "replans": 0,
+        "reported_tokens": 2119,
+        "unknown_usage_calls": 0
+      }
+    }
+  },
+  "definitions": [
+    {
+      "ref": {
+        "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-flow",
+        "version": "1"
+      },
+      "nodes": [
+        {
+          "id": "analyse",
+          "kind": "task",
+          "config": {
+            "agent_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-analyse",
+            "input": {
+              "request_id": {
+                "$ref": "input.request_id"
+              },
+              "task": {
+                "$ref": "input.task"
+              }
+            },
+            "verification": {
+              "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-analyse-rule",
+              "version": "1"
+            },
+            "limits": {
+              "max_calls": 1,
+              "max_model_calls": 1,
+              "max_output_tokens": 256,
+              "timeout_seconds": 25,
+              "model_timeout_seconds": 15
+            },
+            "recovery": {
+              "max_attempts": 1,
+              "max_feedback_loops": 0,
+              "max_replans": 0,
+              "timeout_seconds": 25,
+              "on_failure": "abort"
+            }
+          }
+        },
+        {
+          "id": "design",
+          "kind": "task",
+          "config": {
+            "agent_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-design",
+            "input": {
+              "request_id": {
+                "$ref": "input.request_id"
+              },
+              "analysis": {
+                "$ref": "nodes.analyse.output"
+              }
+            },
+            "verification": {
+              "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-design-rule",
+              "version": "1"
+            },
+            "limits": {
+              "max_calls": 1,
+              "max_model_calls": 1,
+              "max_output_tokens": 256,
+              "timeout_seconds": 25,
+              "model_timeout_seconds": 15
+            },
+            "recovery": {
+              "max_attempts": 1,
+              "max_feedback_loops": 0,
+              "max_replans": 0,
+              "timeout_seconds": 25,
+              "on_failure": "abort"
+            }
+          }
+        },
+        {
+          "id": "review",
+          "kind": "task",
+          "config": {
+            "agent_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-review",
+            "input": {
+              "request_id": {
+                "$ref": "input.request_id"
+              },
+              "analysis": {
+                "$ref": "nodes.analyse.output"
+              },
+              "design": {
+                "$ref": "nodes.design.output"
+              }
+            },
+            "verification": {
+              "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-review-rule",
+              "version": "1"
+            },
+            "limits": {
+              "max_calls": 1,
+              "max_model_calls": 1,
+              "max_output_tokens": 256,
+              "timeout_seconds": 25,
+              "model_timeout_seconds": 15
+            },
+            "recovery": {
+              "max_attempts": 1,
+              "max_feedback_loops": 0,
+              "max_replans": 0,
+              "timeout_seconds": 25,
+              "on_failure": "abort"
+            }
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": "analyse",
+          "target": "design"
+        },
+        {
+          "source": "design",
+          "target": "review"
+        }
+      ],
+      "input_schema": {},
+      "output_schema": {},
+      "max_subworkflow_depth": 4,
+      "name": "DeepSeek three-role serial collaboration",
+      "output_mapping": {
+        "analysis": {
+          "$ref": "nodes.analyse.output"
+        },
+        "design": {
+          "$ref": "nodes.design.output"
+        },
+        "review": {
+          "$ref": "nodes.review.output"
+        }
+      },
+      "max_concurrency": 1,
+      "timeout_seconds": 90.0,
+      "max_node_executions": 100,
+      "error_policy": "continue",
+      "scheduling_strategy": "caas",
+      "resource_limits": {
+        "max_calls": 3,
+        "max_attempts": 3,
+        "max_feedback_loops": 0,
+        "max_replans": 0
+      }
+    },
+    {
+      "ref": {
+        "id": "ds09c-5399dc175fc74dff870500896d3dde94-flow",
+        "version": "1"
+      },
+      "nodes": [
+        {
+          "id": "schedule",
+          "kind": "task",
+          "config": {
+            "agent_id": "ds09c-5399dc175fc74dff870500896d3dde94-agent",
+            "verification": {
+              "id": "ds09c-5399dc175fc74dff870500896d3dde94-rule",
+              "version": "2"
+            },
+            "limits": {
+              "max_calls": 1,
+              "max_model_calls": 1,
+              "max_output_tokens": 256,
+              "timeout_seconds": 25,
+              "model_timeout_seconds": 15
+            },
+            "recovery": {
+              "max_attempts": 2,
+              "max_feedback_loops": 1,
+              "max_replans": 0,
+              "timeout_seconds": 55,
+              "on_failure": "prompt_retry",
+              "on_uncertain": "abort",
+              "retry_execution_errors": false,
+              "feedback_mode": "errors_only"
+            },
+            "input": {
+              "$ref": "input"
+            }
+          }
+        }
+      ],
+      "edges": [],
+      "input_schema": {
+        "type": "object",
+        "required": [
+          "task",
+          "instructions",
+          "spec"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "task": {
+            "const": "dependency_schedule"
+          },
+          "instructions": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "spec": {
+            "const": {
+              "constraints": {
+                "completion_deadlines": [
+                  {
+                    "latest": 4,
+                    "task": "C"
+                  },
+                  {
+                    "latest": 12,
+                    "task": "F"
+                  },
+                  {
+                    "latest": 13,
+                    "task": "H"
+                  }
+                ],
+                "dependencies": [
+                  [
+                    "A",
+                    "D"
+                  ],
+                  [
+                    "C",
+                    "D"
+                  ],
+                  [
+                    "B",
+                    "E"
+                  ],
+                  [
+                    "D",
+                    "F"
+                  ],
+                  [
+                    "E",
+                    "F"
+                  ],
+                  [
+                    "C",
+                    "G"
+                  ],
+                  [
+                    "E",
+                    "G"
+                  ],
+                  [
+                    "F",
+                    "H"
+                  ],
+                  [
+                    "G",
+                    "H"
+                  ]
+                ],
+                "immediately_before": [
+                  [
+                    "E",
+                    "D"
+                  ]
+                ],
+                "min_gaps": [
+                  {
+                    "after": "F",
+                    "before": "D",
+                    "min_gap": 2
+                  }
+                ],
+                "position_windows": [
+                  {
+                    "max": 3,
+                    "min": 2,
+                    "task": "C"
+                  },
+                  {
+                    "max": 8,
+                    "min": 8,
+                    "task": "H"
+                  }
+                ],
+                "priority_before": [
+                  [
+                    "B",
+                    "A"
+                  ],
+                  [
+                    "G",
+                    "F"
+                  ]
+                ]
+              },
+              "scenario_id": "dependency-schedule-09c-v1",
+              "semantics": {
+                "idle_allowed": false,
+                "position_base": 1,
+                "single_machine": true
+              },
+              "tasks": [
+                {
+                  "duration": 2,
+                  "id": "A",
+                  "priority": 2
+                },
+                {
+                  "duration": 1,
+                  "id": "B",
+                  "priority": 3
+                },
+                {
+                  "duration": 3,
+                  "id": "C",
+                  "priority": 4
+                },
+                {
+                  "duration": 2,
+                  "id": "D",
+                  "priority": 2
+                },
+                {
+                  "duration": 1,
+                  "id": "E",
+                  "priority": 1
+                },
+                {
+                  "duration": 2,
+                  "id": "F",
+                  "priority": 1
+                },
+                {
+                  "duration": 1,
+                  "id": "G",
+                  "priority": 3
+                },
+                {
+                  "duration": 1,
+                  "id": "H",
+                  "priority": 0
+                }
+              ]
+            }
+          }
+        }
+      },
+      "output_schema": {},
+      "max_subworkflow_depth": 4,
+      "name": "DeepSeek eight-task bounded scheduling challenge",
+      "output_mapping": {
+        "schedule": {
+          "$ref": "nodes.schedule.output"
+        }
+      },
+      "max_concurrency": 1,
+      "timeout_seconds": 60.0,
+      "max_node_executions": 100,
+      "error_policy": "continue",
+      "scheduling_strategy": "caas",
+      "resource_limits": {
+        "max_calls": 2,
+        "max_attempts": 2,
+        "max_feedback_loops": 1,
+        "max_replans": 0
+      }
+    }
+  ],
+  "audits": {
+    "9db220af219940e6a250ec068a40ec05": {
+      "attempts": [
+        {
+          "id": "d0b24b95ef8f4f3b87b93fbfc60343a9",
+          "node_id": "9db220af219940e6a250ec068a40ec05",
+          "ordinal": 1,
+          "input_ref": {
+            "id": "9db220af219940e6a250ec068a40ec05:input",
+            "version": "1"
+          },
+          "input_digest": "eaad0eef706128788a0ff2241c4507a7ec215b0253f6fa609a23b3daf4bda54c",
+          "input_value": {
+            "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+            "task": "Design a minimal library seat booking service: require authenticated bookings; prevent overlapping bookings for the same seat and time slot."
+          },
+          "policy_ref": {
+            "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-analyse-rule",
+            "version": "1"
+          },
+          "policy_digest": "64802469920e081bbe3f08be8991d2d48533f8b0655b054dee35b47835e31971",
+          "state": "completed",
+          "revision": 4,
+          "agent_ref": {
+            "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-analyse",
+            "version": "1"
+          },
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "decision_id": "77f5231322574629bced94f8b90ff369",
+          "execution_id": "4a68058207084029a4321c02aedbf738",
+          "artifact": {
+            "ref": {
+              "id": "9db220af219940e6a250ec068a40ec05:artifact",
+              "version": "1"
+            },
+            "digest": "50b66944f6b850e31d73b2deef8f5ef4f6fc83fd31885d8902add476ca03f121",
+            "content": {
+              "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+              "requirements": [
+                {
+                  "id": "R1",
+                  "text": "Users must authenticate before booking a seat."
+                },
+                {
+                  "id": "R2",
+                  "text": "A seat cannot have overlapping bookings in the same time slot."
+                }
+              ]
+            },
+            "simulated": false,
+            "format_error": false,
+            "execution_error": null
+          },
+          "verification_id": "fe7aee5bf619437b95dbe80ebed45be3",
+          "error_code": null,
+          "simulated": false,
+          "tools": null,
+          "started_at": "2026-11-11T16:45:15.932036+00:00",
+          "ended_at": "2026-11-11T16:45:17.866560+00:00",
+          "resources": {
+            "calls": 1,
+            "model_calls": 1,
+            "tool_calls": 0,
+            "resource_units": 831,
+            "checks": 2,
+            "attempts": 1,
+            "feedback_loops": 0,
+            "replans": 0,
+            "reported_tokens": 223,
+            "unknown_usage_calls": 0
+          },
+          "input_tokens": 154,
+          "output_tokens": 69,
+          "usage_complete": true,
+          "resolved_model": "deepseek-flash",
+          "provider_config_ref": {
+            "id": "deepseek",
+            "version": "08b-safe-1"
+          },
+          "estimated_cost": 0.00086,
+          "cost_currency": "CNY",
+          "cost_complete": true,
+          "model_calls": [
+            {
+              "number": 1,
+              "elapsed_ms": 1838.1336000165902,
+              "error_code": null,
+              "provider_request_id": "4bfd9dfe-f2cc-4b0c-a017-2098dbc5f126",
+              "input_tokens": 154,
+              "output_tokens": 69,
+              "usage_reported": true,
+              "estimated_cost": 0.00086,
+              "currency": "CNY",
+              "resolved_model": "deepseek-flash",
+              "retry_index": 0,
+              "http_status_code": null,
+              "http_error_category": null
+            }
+          ]
+        }
+      ],
+      "verifications": [
+        {
+          "record": {
+            "id": "fe7aee5bf619437b95dbe80ebed45be3",
+            "execution_id": "4a68058207084029a4321c02aedbf738",
+            "verifier_ref": {
+              "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-analyse-rule",
+              "version": "1"
+            },
+            "verdict": "pass",
+            "evidence_refs": [
+              "50b66944f6b850e31d73b2deef8f5ef4f6fc83fd31885d8902add476ca03f121"
+            ],
+            "reason_codes": [],
+            "created_at": "2026-11-11T16:45:17.858789+00:00"
+          },
+          "node_id": "9db220af219940e6a250ec068a40ec05",
+          "attempt_id": "d0b24b95ef8f4f3b87b93fbfc60343a9",
+          "artifact_ref": {
+            "id": "9db220af219940e6a250ec068a40ec05:artifact",
+            "version": "1"
+          },
+          "artifact_digest": "50b66944f6b850e31d73b2deef8f5ef4f6fc83fd31885d8902add476ca03f121",
+          "policy_digest": "64802469920e081bbe3f08be8991d2d48533f8b0655b054dee35b47835e31971",
+          "evidence": [
+            {
+              "kind": "json_schema",
+              "status": "PASSED",
+              "reason": "schema_matched",
+              "path": null,
+              "reference": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "serial09a_inputs_and_outputs_matched",
+              "path": null,
+              "reference": "50b66944f6b850e31d73b2deef8f5ef4f6fc83fd31885d8902add476ca03f121"
+            }
+          ],
+          "elapsed_ms": 0.9528000373393297,
+          "checks_used": 2,
+          "simulated_generation": false,
+          "origin": "artifact",
+          "status": "PASSED"
+        }
+      ],
+      "feedback": []
+    },
+    "b941e201ee924e879685d8bde416bb30": {
+      "attempts": [
+        {
+          "id": "72cf54a680fb4384897d1d74d6419680",
+          "node_id": "b941e201ee924e879685d8bde416bb30",
+          "ordinal": 1,
+          "input_ref": {
+            "id": "b941e201ee924e879685d8bde416bb30:input",
+            "version": "1"
+          },
+          "input_digest": "74bc5c8c1bfdb25ee794f7a35b86ed74b2700f54708b9fc035c1352701fcf451",
+          "input_value": {
+            "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+            "analysis": {
+              "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+              "requirements": [
+                {
+                  "id": "R1",
+                  "text": "Users must authenticate before booking a seat."
+                },
+                {
+                  "id": "R2",
+                  "text": "A seat cannot have overlapping bookings in the same time slot."
+                }
+              ]
+            }
+          },
+          "policy_ref": {
+            "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-design-rule",
+            "version": "1"
+          },
+          "policy_digest": "a85961ee3e2690b4da7f134d5ba5a8ae15462af706a655565e6b15c12b57cce1",
+          "state": "completed",
+          "revision": 4,
+          "agent_ref": {
+            "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-design",
+            "version": "1"
+          },
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "decision_id": "c4fda3341eb94d3d91d19d56a3e26cee",
+          "execution_id": "f267a75536694e48a63adcc4be535470",
+          "artifact": {
+            "ref": {
+              "id": "b941e201ee924e879685d8bde416bb30:artifact",
+              "version": "1"
+            },
+            "digest": "381818a34ca4d711f2eeceb87292ea808fdcbc83bbb5ab03024f7d52e876114d",
+            "content": {
+              "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+              "requirements": [
+                {
+                  "id": "R1",
+                  "text": "Users must authenticate before booking a seat."
+                },
+                {
+                  "id": "R2",
+                  "text": "A seat cannot have overlapping bookings in the same time slot."
+                }
+              ],
+              "components": [
+                "Authentication Service",
+                "Booking Service",
+                "Seat Availability Checker"
+              ]
+            },
+            "simulated": false,
+            "format_error": false,
+            "execution_error": null
+          },
+          "verification_id": "5781242321d24cf19e6dc75666186625",
+          "error_code": null,
+          "simulated": false,
+          "tools": null,
+          "started_at": "2026-11-11T16:45:17.945927+00:00",
+          "ended_at": "2026-11-11T16:45:19.544436+00:00",
+          "resources": {
+            "calls": 1,
+            "model_calls": 1,
+            "tool_calls": 0,
+            "resource_units": 958,
+            "checks": 2,
+            "attempts": 1,
+            "feedback_loops": 0,
+            "replans": 0,
+            "reported_tokens": 301,
+            "unknown_usage_calls": 0
+          },
+          "input_tokens": 203,
+          "output_tokens": 98,
+          "usage_complete": true,
+          "resolved_model": "deepseek-flash",
+          "provider_config_ref": {
+            "id": "deepseek",
+            "version": "08b-safe-1"
+          },
+          "estimated_cost": 0.00119,
+          "cost_currency": "CNY",
+          "cost_complete": true,
+          "model_calls": [
+            {
+              "number": 1,
+              "elapsed_ms": 1512.5875999801792,
+              "error_code": null,
+              "provider_request_id": "b3f136a5-1d6d-4a32-bc54-8ce466f443a3",
+              "input_tokens": 203,
+              "output_tokens": 98,
+              "usage_reported": true,
+              "estimated_cost": 0.00119,
+              "currency": "CNY",
+              "resolved_model": "deepseek-flash",
+              "retry_index": 0,
+              "http_status_code": null,
+              "http_error_category": null
+            }
+          ]
+        }
+      ],
+      "verifications": [
+        {
+          "record": {
+            "id": "5781242321d24cf19e6dc75666186625",
+            "execution_id": "f267a75536694e48a63adcc4be535470",
+            "verifier_ref": {
+              "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-design-rule",
+              "version": "1"
+            },
+            "verdict": "pass",
+            "evidence_refs": [
+              "381818a34ca4d711f2eeceb87292ea808fdcbc83bbb5ab03024f7d52e876114d"
+            ],
+            "reason_codes": [],
+            "created_at": "2026-11-11T16:45:19.537418+00:00"
+          },
+          "node_id": "b941e201ee924e879685d8bde416bb30",
+          "attempt_id": "72cf54a680fb4384897d1d74d6419680",
+          "artifact_ref": {
+            "id": "b941e201ee924e879685d8bde416bb30:artifact",
+            "version": "1"
+          },
+          "artifact_digest": "381818a34ca4d711f2eeceb87292ea808fdcbc83bbb5ab03024f7d52e876114d",
+          "policy_digest": "a85961ee3e2690b4da7f134d5ba5a8ae15462af706a655565e6b15c12b57cce1",
+          "evidence": [
+            {
+              "kind": "json_schema",
+              "status": "PASSED",
+              "reason": "schema_matched",
+              "path": null,
+              "reference": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "serial09a_inputs_and_outputs_matched",
+              "path": null,
+              "reference": "381818a34ca4d711f2eeceb87292ea808fdcbc83bbb5ab03024f7d52e876114d"
+            }
+          ],
+          "elapsed_ms": 0.9669000282883644,
+          "checks_used": 2,
+          "simulated_generation": false,
+          "origin": "artifact",
+          "status": "PASSED"
+        }
+      ],
+      "feedback": []
+    },
+    "7a7582dc59054b8e8873d8ffc3d94bd6": {
+      "attempts": [
+        {
+          "id": "12fad2d2de314510b6bb54d2edf222ba",
+          "node_id": "7a7582dc59054b8e8873d8ffc3d94bd6",
+          "ordinal": 1,
+          "input_ref": {
+            "id": "7a7582dc59054b8e8873d8ffc3d94bd6:input",
+            "version": "1"
+          },
+          "input_digest": "28377cf3e2d12fdaf46bcf13dd4bb612450a8d109ae80af2a031769485015edf",
+          "input_value": {
+            "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+            "analysis": {
+              "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+              "requirements": [
+                {
+                  "id": "R1",
+                  "text": "Users must authenticate before booking a seat."
+                },
+                {
+                  "id": "R2",
+                  "text": "A seat cannot have overlapping bookings in the same time slot."
+                }
+              ]
+            },
+            "design": {
+              "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+              "requirements": [
+                {
+                  "id": "R1",
+                  "text": "Users must authenticate before booking a seat."
+                },
+                {
+                  "id": "R2",
+                  "text": "A seat cannot have overlapping bookings in the same time slot."
+                }
+              ],
+              "components": [
+                "Authentication Service",
+                "Booking Service",
+                "Seat Availability Checker"
+              ]
+            }
+          },
+          "policy_ref": {
+            "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-review-rule",
+            "version": "1"
+          },
+          "policy_digest": "83123cbc551479232dee3219143bca0cb87861376f5f81989964cc82b6fb4801",
+          "state": "completed",
+          "revision": 4,
+          "agent_ref": {
+            "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-review",
+            "version": "1"
+          },
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "decision_id": "9e0e0c977bec4cfe82473b5e5df7bdd6",
+          "execution_id": "2c2e3b4153b042b5ab0ec97ec1f52e87",
+          "artifact": {
+            "ref": {
+              "id": "7a7582dc59054b8e8873d8ffc3d94bd6:artifact",
+              "version": "1"
+            },
+            "digest": "e4f7972e2680d108840d0ce8c34324927602e39e025ef57a261e69fe8918fcd8",
+            "content": {
+              "request_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d",
+              "requirements": [
+                {
+                  "id": "R1",
+                  "text": "Users must authenticate before booking a seat."
+                },
+                {
+                  "id": "R2",
+                  "text": "A seat cannot have overlapping bookings in the same time slot."
+                }
+              ],
+              "components": [
+                "Authentication Service",
+                "Booking Service",
+                "Seat Availability Checker"
+              ],
+              "issues": [
+                "Concurrency handling for overlapping bookings unaddressed"
+              ],
+              "summary": "Auth and overlap constraints mapped to three services"
+            },
+            "simulated": false,
+            "format_error": false,
+            "execution_error": null
+          },
+          "verification_id": "7c429a5fef4d4520813138d324d92c1b",
+          "error_code": null,
+          "simulated": false,
+          "tools": null,
+          "started_at": "2026-11-11T16:45:19.633692+00:00",
+          "ended_at": "2026-11-11T16:45:21.659515+00:00",
+          "resources": {
+            "calls": 1,
+            "model_calls": 1,
+            "tool_calls": 0,
+            "resource_units": 1394,
+            "checks": 2,
+            "attempts": 1,
+            "feedback_loops": 0,
+            "replans": 0,
+            "reported_tokens": 442,
+            "unknown_usage_calls": 0
+          },
+          "input_tokens": 318,
+          "output_tokens": 124,
+          "usage_complete": true,
+          "resolved_model": "deepseek-flash",
+          "provider_config_ref": {
+            "id": "deepseek",
+            "version": "08b-safe-1"
+          },
+          "estimated_cost": 0.001628,
+          "cost_currency": "CNY",
+          "cost_complete": true,
+          "model_calls": [
+            {
+              "number": 1,
+              "elapsed_ms": 1891.5191999985836,
+              "error_code": null,
+              "provider_request_id": "6032d7ed-39ed-4188-879e-52d01bd6ea10",
+              "input_tokens": 318,
+              "output_tokens": 124,
+              "usage_reported": true,
+              "estimated_cost": 0.001628,
+              "currency": "CNY",
+              "resolved_model": "deepseek-flash",
+              "retry_index": 0,
+              "http_status_code": null,
+              "http_error_category": null
+            }
+          ]
+        }
+      ],
+      "verifications": [
+        {
+          "record": {
+            "id": "7c429a5fef4d4520813138d324d92c1b",
+            "execution_id": "2c2e3b4153b042b5ab0ec97ec1f52e87",
+            "verifier_ref": {
+              "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-review-rule",
+              "version": "1"
+            },
+            "verdict": "pass",
+            "evidence_refs": [
+              "e4f7972e2680d108840d0ce8c34324927602e39e025ef57a261e69fe8918fcd8"
+            ],
+            "reason_codes": [],
+            "created_at": "2026-11-11T16:45:21.652515+00:00"
+          },
+          "node_id": "7a7582dc59054b8e8873d8ffc3d94bd6",
+          "attempt_id": "12fad2d2de314510b6bb54d2edf222ba",
+          "artifact_ref": {
+            "id": "7a7582dc59054b8e8873d8ffc3d94bd6:artifact",
+            "version": "1"
+          },
+          "artifact_digest": "e4f7972e2680d108840d0ce8c34324927602e39e025ef57a261e69fe8918fcd8",
+          "policy_digest": "83123cbc551479232dee3219143bca0cb87861376f5f81989964cc82b6fb4801",
+          "evidence": [
+            {
+              "kind": "json_schema",
+              "status": "PASSED",
+              "reason": "schema_matched",
+              "path": null,
+              "reference": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "serial09a_inputs_and_outputs_matched",
+              "path": null,
+              "reference": "e4f7972e2680d108840d0ce8c34324927602e39e025ef57a261e69fe8918fcd8"
+            }
+          ],
+          "elapsed_ms": 1.2627000105567276,
+          "checks_used": 2,
+          "simulated_generation": false,
+          "origin": "artifact",
+          "status": "PASSED"
+        }
+      ],
+      "feedback": []
+    },
+    "a0e76b9538bd4c878fe88b7a24a038a9": {
+      "attempts": [
+        {
+          "id": "57bb80bea8c74b9abbf8cf284ba3f7cd",
+          "node_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "ordinal": 1,
+          "input_ref": {
+            "id": "a0e76b9538bd4c878fe88b7a24a038a9:input",
+            "version": "1"
+          },
+          "input_digest": "3a51c5b489c5444852a4523827943b69583f724a8ce193fa3b60f2fbb22149fb",
+          "input_value": {
+            "task": "dependency_schedule",
+            "instructions": "Find any valid complete order satisfying every listed constraint. Durations are positive integer time units, execution is sequential with no idle time, positions start at 1, deadlines limit completion (not start) time. priority_before lists the only priority ordering requirements. immediately_before requires consecutive positions in that direction. min_gap means position(after)-position(before) is at least min_gap. Return only task, order, total; total is the number of task IDs (8), not the sum of durations; no extra fields.",
+            "spec": {
+              "scenario_id": "dependency-schedule-09c-v1",
+              "semantics": {
+                "position_base": 1,
+                "single_machine": true,
+                "idle_allowed": false
+              },
+              "tasks": [
+                {
+                  "id": "A",
+                  "duration": 2,
+                  "priority": 2
+                },
+                {
+                  "id": "B",
+                  "duration": 1,
+                  "priority": 3
+                },
+                {
+                  "id": "C",
+                  "duration": 3,
+                  "priority": 4
+                },
+                {
+                  "id": "D",
+                  "duration": 2,
+                  "priority": 2
+                },
+                {
+                  "id": "E",
+                  "duration": 1,
+                  "priority": 1
+                },
+                {
+                  "id": "F",
+                  "duration": 2,
+                  "priority": 1
+                },
+                {
+                  "id": "G",
+                  "duration": 1,
+                  "priority": 3
+                },
+                {
+                  "id": "H",
+                  "duration": 1,
+                  "priority": 0
+                }
+              ],
+              "constraints": {
+                "dependencies": [
+                  [
+                    "A",
+                    "D"
+                  ],
+                  [
+                    "C",
+                    "D"
+                  ],
+                  [
+                    "B",
+                    "E"
+                  ],
+                  [
+                    "D",
+                    "F"
+                  ],
+                  [
+                    "E",
+                    "F"
+                  ],
+                  [
+                    "C",
+                    "G"
+                  ],
+                  [
+                    "E",
+                    "G"
+                  ],
+                  [
+                    "F",
+                    "H"
+                  ],
+                  [
+                    "G",
+                    "H"
+                  ]
+                ],
+                "priority_before": [
+                  [
+                    "B",
+                    "A"
+                  ],
+                  [
+                    "G",
+                    "F"
+                  ]
+                ],
+                "immediately_before": [
+                  [
+                    "E",
+                    "D"
+                  ]
+                ],
+                "position_windows": [
+                  {
+                    "task": "C",
+                    "min": 2,
+                    "max": 3
+                  },
+                  {
+                    "task": "H",
+                    "min": 8,
+                    "max": 8
+                  }
+                ],
+                "completion_deadlines": [
+                  {
+                    "task": "C",
+                    "latest": 4
+                  },
+                  {
+                    "task": "F",
+                    "latest": 12
+                  },
+                  {
+                    "task": "H",
+                    "latest": 13
+                  }
+                ],
+                "min_gaps": [
+                  {
+                    "before": "D",
+                    "after": "F",
+                    "min_gap": 2
+                  }
+                ]
+              }
+            }
+          },
+          "policy_ref": {
+            "id": "ds09c-5399dc175fc74dff870500896d3dde94-rule",
+            "version": "2"
+          },
+          "policy_digest": "20d87f01cdaebffe6e84ce4e4be0fe0651c4b3d80d655ffcdee181e72be56481",
+          "state": "completed",
+          "revision": 4,
+          "agent_ref": {
+            "id": "ds09c-5399dc175fc74dff870500896d3dde94-agent",
+            "version": "1"
+          },
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "decision_id": "94b5c621f56c4edea9df1f4bf06cad68",
+          "execution_id": "823ed44ac1444095aa44bf0052b71f56",
+          "artifact": {
+            "ref": {
+              "id": "a0e76b9538bd4c878fe88b7a24a038a9:artifact",
+              "version": "1"
+            },
+            "digest": "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+            "content": {
+              "task": "dependency_schedule",
+              "order": [
+                "E",
+                "D",
+                "B",
+                "A",
+                "C",
+                "G",
+                "F",
+                "H"
+              ],
+              "total": 8
+            },
+            "simulated": false,
+            "format_error": false,
+            "execution_error": null
+          },
+          "verification_id": "4b85b00b41db4583a2fea4c87d74cf10",
+          "error_code": null,
+          "simulated": false,
+          "tools": null,
+          "started_at": "2026-11-12T14:03:33.321672+00:00",
+          "ended_at": "2026-11-12T14:03:34.882335+00:00",
+          "resources": {
+            "calls": 1,
+            "model_calls": 1,
+            "tool_calls": 0,
+            "resource_units": 2764,
+            "checks": 9,
+            "attempts": 1,
+            "feedback_loops": 0,
+            "replans": 0,
+            "reported_tokens": 691,
+            "unknown_usage_calls": 0
+          },
+          "input_tokens": 660,
+          "output_tokens": 31,
+          "usage_complete": true,
+          "resolved_model": "deepseek-flash",
+          "provider_config_ref": {
+            "id": "deepseek",
+            "version": "08b-safe-1"
+          },
+          "estimated_cost": 0.001568,
+          "cost_currency": "CNY",
+          "cost_complete": true,
+          "model_calls": [
+            {
+              "number": 1,
+              "elapsed_ms": 1487.9411000292748,
+              "error_code": null,
+              "provider_request_id": "d26335c2-2f47-4236-8102-9df789ef8c93",
+              "input_tokens": 660,
+              "output_tokens": 31,
+              "usage_reported": true,
+              "estimated_cost": 0.001568,
+              "currency": "CNY",
+              "resolved_model": "deepseek-flash",
+              "retry_index": 0,
+              "http_status_code": null,
+              "http_error_category": null
+            }
+          ]
+        },
+        {
+          "id": "22b6208da2e14cba9176b2ad9c2bc0d8",
+          "node_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "ordinal": 2,
+          "input_ref": {
+            "id": "a0e76b9538bd4c878fe88b7a24a038a9:input",
+            "version": "2"
+          },
+          "input_digest": "86053d8de949e713bd01a758dcf249e07b02df78a00184d359a88c0e989e5267",
+          "input_value": {
+            "original_input": {
+              "task": "dependency_schedule",
+              "instructions": "Find any valid complete order satisfying every listed constraint. Durations are positive integer time units, execution is sequential with no idle time, positions start at 1, deadlines limit completion (not start) time. priority_before lists the only priority ordering requirements. immediately_before requires consecutive positions in that direction. min_gap means position(after)-position(before) is at least min_gap. Return only task, order, total; total is the number of task IDs (8), not the sum of durations; no extra fields.",
+              "spec": {
+                "scenario_id": "dependency-schedule-09c-v1",
+                "semantics": {
+                  "position_base": 1,
+                  "single_machine": true,
+                  "idle_allowed": false
+                },
+                "tasks": [
+                  {
+                    "id": "A",
+                    "duration": 2,
+                    "priority": 2
+                  },
+                  {
+                    "id": "B",
+                    "duration": 1,
+                    "priority": 3
+                  },
+                  {
+                    "id": "C",
+                    "duration": 3,
+                    "priority": 4
+                  },
+                  {
+                    "id": "D",
+                    "duration": 2,
+                    "priority": 2
+                  },
+                  {
+                    "id": "E",
+                    "duration": 1,
+                    "priority": 1
+                  },
+                  {
+                    "id": "F",
+                    "duration": 2,
+                    "priority": 1
+                  },
+                  {
+                    "id": "G",
+                    "duration": 1,
+                    "priority": 3
+                  },
+                  {
+                    "id": "H",
+                    "duration": 1,
+                    "priority": 0
+                  }
+                ],
+                "constraints": {
+                  "dependencies": [
+                    [
+                      "A",
+                      "D"
+                    ],
+                    [
+                      "C",
+                      "D"
+                    ],
+                    [
+                      "B",
+                      "E"
+                    ],
+                    [
+                      "D",
+                      "F"
+                    ],
+                    [
+                      "E",
+                      "F"
+                    ],
+                    [
+                      "C",
+                      "G"
+                    ],
+                    [
+                      "E",
+                      "G"
+                    ],
+                    [
+                      "F",
+                      "H"
+                    ],
+                    [
+                      "G",
+                      "H"
+                    ]
+                  ],
+                  "priority_before": [
+                    [
+                      "B",
+                      "A"
+                    ],
+                    [
+                      "G",
+                      "F"
+                    ]
+                  ],
+                  "immediately_before": [
+                    [
+                      "E",
+                      "D"
+                    ]
+                  ],
+                  "position_windows": [
+                    {
+                      "task": "C",
+                      "min": 2,
+                      "max": 3
+                    },
+                    {
+                      "task": "H",
+                      "min": 8,
+                      "max": 8
+                    }
+                  ],
+                  "completion_deadlines": [
+                    {
+                      "task": "C",
+                      "latest": 4
+                    },
+                    {
+                      "task": "F",
+                      "latest": 12
+                    },
+                    {
+                      "task": "H",
+                      "latest": 13
+                    }
+                  ],
+                  "min_gaps": [
+                    {
+                      "before": "D",
+                      "after": "F",
+                      "min_gap": 2
+                    }
+                  ]
+                }
+              }
+            },
+            "recovery": {
+              "category": "ASSERTION_FAILED",
+              "reason_codes": [
+                "order09c_dependencies_violation",
+                "order09c_windows_violation",
+                "order09c_completion_violation"
+              ],
+              "instruction": "Repair the result to satisfy the unchanged verification policy.",
+              "policy_ref": {
+                "id": "ds09c-5399dc175fc74dff870500896d3dde94-rule",
+                "version": "2"
+              },
+              "previous_attempt_id": "57bb80bea8c74b9abbf8cf284ba3f7cd",
+              "previous_artifact": {
+                "ref": {
+                  "id": "a0e76b9538bd4c878fe88b7a24a038a9:artifact",
+                  "version": "1"
+                },
+                "digest": "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+                "content": {
+                  "task": "dependency_schedule",
+                  "order": [
+                    "E",
+                    "D",
+                    "B",
+                    "A",
+                    "C",
+                    "G",
+                    "F",
+                    "H"
+                  ],
+                  "total": 8
+                },
+                "format_error": false,
+                "execution_error": null
+              },
+              "verification": {
+                "id": "4b85b00b41db4583a2fea4c87d74cf10",
+                "verdict": "fail",
+                "origin": "artifact",
+                "evidence": [
+                  {
+                    "reason": "order09c_dependencies_violation",
+                    "path": "order",
+                    "rule": "order09c_dependencies",
+                    "details": {
+                      "repair_hint": "Move each listed prerequisite before its dependent without dropping tasks.",
+                      "violations": [
+                        {
+                          "before": "A",
+                          "after": "D",
+                          "before_position": 4,
+                          "after_position": 2
+                        },
+                        {
+                          "before": "C",
+                          "after": "D",
+                          "before_position": 5,
+                          "after_position": 2
+                        },
+                        {
+                          "before": "B",
+                          "after": "E",
+                          "before_position": 3,
+                          "after_position": 1
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "reason": "order09c_windows_violation",
+                    "path": "order",
+                    "rule": "order09c_windows",
+                    "details": {
+                      "repair_hint": "Move each violating task into its inclusive one-based position window.",
+                      "violations": [
+                        {
+                          "task": "C",
+                          "min": 2,
+                          "max": 3,
+                          "actual_position": 5
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "reason": "order09c_completion_violation",
+                    "path": "order",
+                    "rule": "order09c_completion",
+                    "details": {
+                      "repair_hint": "Move the constrained task earlier and recompute cumulative completion, preserving all other constraints.",
+                      "violations": [
+                        {
+                          "task": "C",
+                          "latest": 4,
+                          "actual_completion": 9
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "artifact_digest": "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+                "source_evidence_count": 9,
+                "not_evaluated_count": 0
+              },
+              "feedback": {
+                "id": "3d2d02ea62aa4b009b8de43dcef55c74",
+                "action": "prompt_retry",
+                "category": "ASSERTION_FAILED"
+              }
+            }
+          },
+          "policy_ref": {
+            "id": "ds09c-5399dc175fc74dff870500896d3dde94-rule",
+            "version": "2"
+          },
+          "policy_digest": "20d87f01cdaebffe6e84ce4e4be0fe0651c4b3d80d655ffcdee181e72be56481",
+          "state": "completed",
+          "revision": 4,
+          "agent_ref": {
+            "id": "ds09c-5399dc175fc74dff870500896d3dde94-agent",
+            "version": "1"
+          },
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "decision_id": "34eb87000e3b47878778d7a3bccce20e",
+          "execution_id": "48322126661a46d7b0814b5ba2580ec3",
+          "artifact": {
+            "ref": {
+              "id": "a0e76b9538bd4c878fe88b7a24a038a9:artifact",
+              "version": "2"
+            },
+            "digest": "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+            "content": {
+              "task": "dependency_schedule",
+              "order": [
+                "B",
+                "C",
+                "A",
+                "E",
+                "D",
+                "G",
+                "F",
+                "H"
+              ],
+              "total": 8
+            },
+            "simulated": false,
+            "format_error": false,
+            "execution_error": null
+          },
+          "verification_id": "713143f81326470daba2b1fbc8cdbee4",
+          "error_code": null,
+          "simulated": false,
+          "tools": null,
+          "started_at": "2026-11-12T14:03:34.918769+00:00",
+          "ended_at": "2026-11-12T14:03:36.499780+00:00",
+          "resources": {
+            "calls": 1,
+            "model_calls": 1,
+            "tool_calls": 0,
+            "resource_units": 5122,
+            "checks": 9,
+            "attempts": 1,
+            "feedback_loops": 0,
+            "replans": 0,
+            "reported_tokens": 1428,
+            "unknown_usage_calls": 0
+          },
+          "input_tokens": 1397,
+          "output_tokens": 31,
+          "usage_complete": true,
+          "resolved_model": "deepseek-flash",
+          "provider_config_ref": {
+            "id": "deepseek",
+            "version": "08b-safe-1"
+          },
+          "estimated_cost": 0.003042,
+          "cost_currency": "CNY",
+          "cost_complete": true,
+          "model_calls": [
+            {
+              "number": 1,
+              "elapsed_ms": 1506.6830000141636,
+              "error_code": null,
+              "provider_request_id": "730ad178-91b2-4c0b-91a0-f329bb5eb227",
+              "input_tokens": 1397,
+              "output_tokens": 31,
+              "usage_reported": true,
+              "estimated_cost": 0.003042,
+              "currency": "CNY",
+              "resolved_model": "deepseek-flash",
+              "retry_index": 0,
+              "http_status_code": null,
+              "http_error_category": null
+            }
+          ]
+        }
+      ],
+      "verifications": [
+        {
+          "record": {
+            "id": "4b85b00b41db4583a2fea4c87d74cf10",
+            "execution_id": "823ed44ac1444095aa44bf0052b71f56",
+            "verifier_ref": {
+              "id": "ds09c-5399dc175fc74dff870500896d3dde94-rule",
+              "version": "2"
+            },
+            "verdict": "fail",
+            "evidence_refs": [
+              "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7"
+            ],
+            "reason_codes": [
+              "order09c_dependencies_violation",
+              "order09c_windows_violation",
+              "order09c_completion_violation"
+            ],
+            "created_at": "2026-11-12T14:03:34.874335+00:00"
+          },
+          "node_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "attempt_id": "57bb80bea8c74b9abbf8cf284ba3f7cd",
+          "artifact_ref": {
+            "id": "a0e76b9538bd4c878fe88b7a24a038a9:artifact",
+            "version": "1"
+          },
+          "artifact_digest": "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+          "policy_digest": "20d87f01cdaebffe6e84ce4e4be0fe0651c4b3d80d655ffcdee181e72be56481",
+          "evidence": [
+            {
+              "kind": "json_schema",
+              "status": "PASSED",
+              "reason": "schema_matched",
+              "path": null,
+              "reference": null,
+              "rule": null,
+              "schema_path": null,
+              "details": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "order09c_instance_matched",
+              "path": "spec",
+              "reference": "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "rule": "order09c_instance",
+              "schema_path": null,
+              "details": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "order09c_membership_matched",
+              "path": "order",
+              "reference": "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "rule": "order09c_membership",
+              "schema_path": null,
+              "details": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "FAILED",
+              "reason": "order09c_dependencies_violation",
+              "path": "order",
+              "reference": "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "rule": "order09c_dependencies",
+              "schema_path": null,
+              "details": {
+                "repair_hint": "Move each listed prerequisite before its dependent without dropping tasks.",
+                "violations": [
+                  {
+                    "before": "A",
+                    "after": "D",
+                    "before_position": 4,
+                    "after_position": 2
+                  },
+                  {
+                    "before": "C",
+                    "after": "D",
+                    "before_position": 5,
+                    "after_position": 2
+                  },
+                  {
+                    "before": "B",
+                    "after": "E",
+                    "before_position": 3,
+                    "after_position": 1
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "order09c_priority_matched",
+              "path": "order",
+              "reference": "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "rule": "order09c_priority",
+              "schema_path": null,
+              "details": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "order09c_adjacency_matched",
+              "path": "order",
+              "reference": "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "rule": "order09c_adjacency",
+              "schema_path": null,
+              "details": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "FAILED",
+              "reason": "order09c_windows_violation",
+              "path": "order",
+              "reference": "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "rule": "order09c_windows",
+              "schema_path": null,
+              "details": {
+                "repair_hint": "Move each violating task into its inclusive one-based position window.",
+                "violations": [
+                  {
+                    "task": "C",
+                    "min": 2,
+                    "max": 3,
+                    "actual_position": 5
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "external_tests",
+              "status": "FAILED",
+              "reason": "order09c_completion_violation",
+              "path": "order",
+              "reference": "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "rule": "order09c_completion",
+              "schema_path": null,
+              "details": {
+                "repair_hint": "Move the constrained task earlier and recompute cumulative completion, preserving all other constraints.",
+                "violations": [
+                  {
+                    "task": "C",
+                    "latest": 4,
+                    "actual_completion": 9
+                  }
+                ]
+              }
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "order09c_gap_matched",
+              "path": "order",
+              "reference": "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+              "rule": "order09c_gap",
+              "schema_path": null,
+              "details": null
+            }
+          ],
+          "elapsed_ms": 0.882800028193742,
+          "checks_used": 9,
+          "simulated_generation": false,
+          "origin": "artifact",
+          "status": "FAILED"
+        },
+        {
+          "record": {
+            "id": "713143f81326470daba2b1fbc8cdbee4",
+            "execution_id": "48322126661a46d7b0814b5ba2580ec3",
+            "verifier_ref": {
+              "id": "ds09c-5399dc175fc74dff870500896d3dde94-rule",
+              "version": "2"
+            },
+            "verdict": "pass",
+            "evidence_refs": [
+              "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883"
+            ],
+            "reason_codes": [],
+            "created_at": "2026-11-12T14:03:36.492774+00:00"
+          },
+          "node_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "attempt_id": "22b6208da2e14cba9176b2ad9c2bc0d8",
+          "artifact_ref": {
+            "id": "a0e76b9538bd4c878fe88b7a24a038a9:artifact",
+            "version": "2"
+          },
+          "artifact_digest": "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+          "policy_digest": "20d87f01cdaebffe6e84ce4e4be0fe0651c4b3d80d655ffcdee181e72be56481",
+          "evidence": [
+            {
+              "kind": "json_schema",
+              "status": "PASSED",
+              "reason": "schema_matched",
+              "path": null,
+              "reference": null,
+              "rule": null,
+              "schema_path": null,
+              "details": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "order09c_instance_matched",
+              "path": "spec",
+              "reference": "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "rule": "order09c_instance",
+              "schema_path": null,
+              "details": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "order09c_membership_matched",
+              "path": "order",
+              "reference": "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "rule": "order09c_membership",
+              "schema_path": null,
+              "details": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "order09c_dependencies_matched",
+              "path": "order",
+              "reference": "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "rule": "order09c_dependencies",
+              "schema_path": null,
+              "details": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "order09c_priority_matched",
+              "path": "order",
+              "reference": "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "rule": "order09c_priority",
+              "schema_path": null,
+              "details": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "order09c_adjacency_matched",
+              "path": "order",
+              "reference": "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "rule": "order09c_adjacency",
+              "schema_path": null,
+              "details": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "order09c_windows_matched",
+              "path": "order",
+              "reference": "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "rule": "order09c_windows",
+              "schema_path": null,
+              "details": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "order09c_completion_matched",
+              "path": "order",
+              "reference": "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "rule": "order09c_completion",
+              "schema_path": null,
+              "details": null
+            },
+            {
+              "kind": "external_tests",
+              "status": "PASSED",
+              "reason": "order09c_gap_matched",
+              "path": "order",
+              "reference": "f546f0a43301fc6b8157468e696017fe5c37530f053fd86501e1335119ee3883",
+              "rule": "order09c_gap",
+              "schema_path": null,
+              "details": null
+            }
+          ],
+          "elapsed_ms": 0.7587000145576894,
+          "checks_used": 9,
+          "simulated_generation": false,
+          "origin": "artifact",
+          "status": "PASSED"
+        }
+      ],
+      "feedback": [
+        {
+          "record": {
+            "id": "3d2d02ea62aa4b009b8de43dcef55c74",
+            "task_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+            "verification_id": "4b85b00b41db4583a2fea4c87d74cf10",
+            "action": "retry",
+            "reason": "ASSERTION_FAILED",
+            "strategy_patch": {
+              "repair_action": "prompt_retry"
+            },
+            "created_at": "2026-11-12T14:03:34.889313+00:00"
+          },
+          "node_id": "a0e76b9538bd4c878fe88b7a24a038a9",
+          "attempt_id": "57bb80bea8c74b9abbf8cf284ba3f7cd",
+          "artifact_ref": {
+            "id": "a0e76b9538bd4c878fe88b7a24a038a9:artifact",
+            "version": "1"
+          },
+          "artifact_digest": "7ae42a435e0692f253983fc942c16223ffa4d58aa27967dea3a99586da36f0d7",
+          "category": "ASSERTION_FAILED",
+          "origin": "artifact",
+          "repair_action": "prompt_retry",
+          "evidence_refs": [
+            "4b85b00b41db4583a2fea4c87d74cf10"
+          ],
+          "budget_cost": {
+            "feedback_loops": 1,
+            "replans": 0
+          }
+        }
+      ]
+    }
+  },
+  "decisions": [
+    {
+      "id": "77f5231322574629bced94f8b90ff369",
+      "task_id": "d0b24b95ef8f4f3b87b93fbfc60343a9",
+      "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+      "node_id": "analyse",
+      "strategy": "caas",
+      "algorithm_revision": "caas-v1",
+      "priority": 50,
+      "effective_priority": 50.104995,
+      "waiting_ms": 0.9990000000000001,
+      "candidates": [
+        {
+          "agent_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-analyse",
+          "agent_version": "1",
+          "eligible": true,
+          "reasons": [],
+          "components": {
+            "match": 0.5,
+            "reliability": 0.5,
+            "load": 1.0,
+            "cost": 0.5,
+            "latency": 0.5
+          },
+          "score": 0.6,
+          "profile": {
+            "agent_ref": {
+              "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-analyse",
+              "version": "1"
+            },
+            "tools": [],
+            "estimated_cost": null,
+            "profile_version": "1:observed_real:0:0:True:True:1:True:True"
+          }
+        }
+      ],
+      "selected": {
+        "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-analyse",
+        "version": "1"
+      },
+      "outcome": "claimed",
+      "elapsed_ms": 1.1690999963320792,
+      "created_at": "2026-11-11T16:45:15.952046+00:00",
+      "configuration": {
+        "match_weight": 0.3,
+        "reliability_weight": 0.25,
+        "load_weight": 0.2,
+        "cost_weight": 0.1,
+        "latency_weight": 0.15,
+        "cost_scale": 1,
+        "latency_scale_ms": 1000,
+        "prior_samples": 5,
+        "aging_points_per_second": 5,
+        "revision": "caas-v1"
+      }
+    },
+    {
+      "id": "c4fda3341eb94d3d91d19d56a3e26cee",
+      "task_id": "72cf54a680fb4384897d1d74d6419680",
+      "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+      "node_id": "design",
+      "strategy": "caas",
+      "algorithm_revision": "caas-v1",
+      "priority": 50,
+      "effective_priority": 50.105015,
+      "waiting_ms": 1.003,
+      "candidates": [
+        {
+          "agent_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-design",
+          "agent_version": "1",
+          "eligible": true,
+          "reasons": [],
+          "components": {
+            "match": 0.5,
+            "reliability": 0.5,
+            "load": 1.0,
+            "cost": 0.5,
+            "latency": 0.5
+          },
+          "score": 0.6,
+          "profile": {
+            "agent_ref": {
+              "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-design",
+              "version": "1"
+            },
+            "tools": [],
+            "estimated_cost": null,
+            "profile_version": "1:observed_real:0:2:True:True:1:True:True"
+          }
+        }
+      ],
+      "selected": {
+        "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-design",
+        "version": "1"
+      },
+      "outcome": "claimed",
+      "elapsed_ms": 0.7439999608322978,
+      "created_at": "2026-11-11T16:45:17.963930+00:00",
+      "configuration": {
+        "match_weight": 0.3,
+        "reliability_weight": 0.25,
+        "load_weight": 0.2,
+        "cost_weight": 0.1,
+        "latency_weight": 0.15,
+        "cost_scale": 1,
+        "latency_scale_ms": 1000,
+        "prior_samples": 5,
+        "aging_points_per_second": 5,
+        "revision": "caas-v1"
+      }
+    },
+    {
+      "id": "9e0e0c977bec4cfe82473b5e5df7bdd6",
+      "task_id": "12fad2d2de314510b6bb54d2edf222ba",
+      "workflow_run_id": "ec09d758f81641f1a6c0f656c305a713",
+      "node_id": "review",
+      "strategy": "caas",
+      "algorithm_revision": "caas-v1",
+      "priority": 50,
+      "effective_priority": 50.00502,
+      "waiting_ms": 1.004,
+      "candidates": [
+        {
+          "agent_id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-review",
+          "agent_version": "1",
+          "eligible": true,
+          "reasons": [],
+          "components": {
+            "match": 0.5,
+            "reliability": 0.5,
+            "load": 1.0,
+            "cost": 0.5,
+            "latency": 0.5
+          },
+          "score": 0.6,
+          "profile": {
+            "agent_ref": {
+              "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-review",
+              "version": "1"
+            },
+            "tools": [],
+            "estimated_cost": null,
+            "profile_version": "1:observed_real:0:4:True:True:1:True:True"
+          }
+        }
+      ],
+      "selected": {
+        "id": "ds09a-9fadbe34b829405caf289f8e3c63e11d-review",
+        "version": "1"
+      },
+      "outcome": "claimed",
+      "elapsed_ms": 0.800300040282309,
+      "created_at": "2026-11-11T16:45:19.652697+00:00",
+      "configuration": {
+        "match_weight": 0.3,
+        "reliability_weight": 0.25,
+        "load_weight": 0.2,
+        "cost_weight": 0.1,
+        "latency_weight": 0.15,
+        "cost_scale": 1,
+        "latency_scale_ms": 1000,
+        "prior_samples": 5,
+        "aging_points_per_second": 5,
+        "revision": "caas-v1"
+      }
+    },
+    {
+      "id": "94b5c621f56c4edea9df1f4bf06cad68",
+      "task_id": "57bb80bea8c74b9abbf8cf284ba3f7cd",
+      "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+      "node_id": "schedule",
+      "strategy": "caas",
+      "algorithm_revision": "caas-v1",
+      "priority": 50,
+      "effective_priority": 50.005,
+      "waiting_ms": 1.0,
+      "candidates": [
+        {
+          "agent_id": "ds09c-5399dc175fc74dff870500896d3dde94-agent",
+          "agent_version": "1",
+          "eligible": true,
+          "reasons": [],
+          "components": {
+            "match": 0.5,
+            "reliability": 0.5,
+            "load": 1.0,
+            "cost": 0.5,
+            "latency": 0.5
+          },
+          "score": 0.6,
+          "profile": {
+            "agent_ref": {
+              "id": "ds09c-5399dc175fc74dff870500896d3dde94-agent",
+              "version": "1"
+            },
+            "tools": [],
+            "estimated_cost": null,
+            "profile_version": "1:observed_real:0:0:True:True:1:True:True"
+          }
+        }
+      ],
+      "selected": {
+        "id": "ds09c-5399dc175fc74dff870500896d3dde94-agent",
+        "version": "1"
+      },
+      "outcome": "claimed",
+      "elapsed_ms": 0.5419999943114817,
+      "created_at": "2026-11-12T14:03:33.337673+00:00",
+      "configuration": {
+        "match_weight": 0.3,
+        "reliability_weight": 0.25,
+        "load_weight": 0.2,
+        "cost_weight": 0.1,
+        "latency_weight": 0.15,
+        "cost_scale": 1,
+        "latency_scale_ms": 1000,
+        "prior_samples": 5,
+        "aging_points_per_second": 5,
+        "revision": "caas-v1"
+      }
+    },
+    {
+      "id": "34eb87000e3b47878778d7a3bccce20e",
+      "task_id": "22b6208da2e14cba9176b2ad9c2bc0d8",
+      "workflow_run_id": "d2c530342bff47908a44a28505306ce7",
+      "node_id": "schedule",
+      "strategy": "caas",
+      "algorithm_revision": "caas-v1",
+      "priority": 50,
+      "effective_priority": 50.0,
+      "waiting_ms": 0,
+      "candidates": [
+        {
+          "agent_id": "ds09c-5399dc175fc74dff870500896d3dde94-agent",
+          "agent_version": "1",
+          "eligible": true,
+          "reasons": [],
+          "components": {
+            "match": 0.5,
+            "reliability": 0.5833333333333334,
+            "load": 1.0,
+            "cost": 0.5,
+            "latency": 0.48044582297599653
+          },
+          "score": 0.6179002067797329,
+          "profile": {
+            "agent_ref": {
+              "id": "ds09c-5399dc175fc74dff870500896d3dde94-agent",
+              "version": "1"
+            },
+            "tools": [],
+            "estimated_cost": null,
+            "profile_version": "1:observed_real:1:2:True:True:1:True:True"
+          }
+        }
+      ],
+      "selected": {
+        "id": "ds09c-5399dc175fc74dff870500896d3dde94-agent",
+        "version": "1"
+      },
+      "outcome": "claimed",
+      "elapsed_ms": 0.5224999622441828,
+      "created_at": "2026-11-12T14:03:34.935467+00:00",
+      "configuration": {
+        "match_weight": 0.3,
+        "reliability_weight": 0.25,
+        "load_weight": 0.2,
+        "cost_weight": 0.1,
+        "latency_weight": 0.15,
+        "cost_scale": 1,
+        "latency_scale_ms": 1000,
+        "prior_samples": 5,
+        "aging_points_per_second": 5,
+        "revision": "caas-v1"
+      }
+    }
+  ]
+}

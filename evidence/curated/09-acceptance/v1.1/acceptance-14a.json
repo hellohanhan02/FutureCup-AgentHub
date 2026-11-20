@@ -1,0 +1,193 @@
+{
+  "recorded_at_utc": "2026-11-17T16:32:24.994266+00:00",
+  "base_commit": "bb8c418baaa7e9dbf210d4aae6895f2e95bf9e3b",
+  "branch": "feature/v1.1-rag",
+  "original_read_only_check": {
+    "head_and_tag_unchanged": true,
+    "only_authorized_untracked_files": 3,
+    "authorized_materials_not_copied": true,
+    "original_database_write_operations": 0
+  },
+  "clone": {
+    "path": "D:\\competition\\FutureCup-v1.1",
+    "independent_objects": true,
+    "remotes": [],
+    "baseline_history_commits": 7,
+    "existing_user_identity_reused_locally": true
+  },
+  "backend": {
+    "tests": 696,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "frontend": {
+    "tests": 57,
+    "test_files": 9,
+    "typecheck": "PASS",
+    "production_build": "PASS",
+    "source_changes": false
+  },
+  "checks": {
+    "python_compile": "PASS",
+    "pip_check": "PASS",
+    "npm_cached_audit_vulnerabilities": 0,
+    "powershell_launcher_parse": "PASS",
+    "git_diff_check": "PASS",
+    "ignored_sensitive_path_classes": 7
+  },
+  "live_mock_http": {
+    "backend_health": {
+      "http_status": 200
+    },
+    "frontend": {
+      "http_status": 200
+    },
+    "vite_proxy": {
+      "http_status": 200
+    },
+    "knowledge_catalog": {
+      "http_status": 200
+    },
+    "provider_safety": {
+      "http_status": 200,
+      "real_calls_enabled": false,
+      "executable_providers": [
+        "mock"
+      ],
+      "network_probe_performed": false,
+      "credential_variables_cleared_in_child": true
+    }
+  },
+  "environment": {
+    "python": "3.11.9",
+    "venv": "D:\\competition\\FutureCup-v1.1\\.venv",
+    "node": "v24.11.0",
+    "npm": "11.6.1",
+    "python_packages": {
+      "fastapi": "0.163.1",
+      "starlette": "1.10.0",
+      "httpx": "0.28.1",
+      "uvicorn": "0.54.0",
+      "jsonschema": "4.26.0",
+      "pypdf": "7.1.0",
+      "pytest": "8.4.2",
+      "pip": "24.0",
+      "setuptools": "65.5.0"
+    }
+  },
+  "offline_evaluation": {
+    "cases": 11,
+    "repeats_per_version": 20,
+    "retained_measurements_per_run": 440,
+    "initial_and_final_runs_preserved": true,
+    "deterministic_outcomes": true,
+    "summary": {
+      "v1.0.0": {
+        "key_rule_recall": {
+          "mean": 0.575,
+          "stdev": 0.29760349325231367,
+          "min": 0.25,
+          "max": 1.0
+        },
+        "necessary_knowledge_coverage": {
+          "mean": 0.575,
+          "stdev": 0.29760349325231367,
+          "min": 0.25,
+          "max": 1.0
+        },
+        "extractive_mock_citation_validity": {
+          "mean": 1.0,
+          "stdev": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "extractive_mock_unsupported_ratio": {
+          "mean": 0.0,
+          "stdev": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "latency_ms": {
+          "mean": 1.9061536348255521,
+          "stdev": 0.6898069760694077,
+          "min": 0.6730000022798777,
+          "max": 5.279299919493496
+        },
+        "injected_token_budget_upper_proxy": {
+          "mean": 1986.1818181818182,
+          "stdev": 613.2056376174403,
+          "min": 98,
+          "max": 2245
+        },
+        "retrieval_calls": {
+          "mean": 1,
+          "stdev": 0.0,
+          "min": 1,
+          "max": 1
+        }
+      },
+      "v1.1": {
+        "key_rule_recall": {
+          "mean": 0.8,
+          "stdev": 0.2455636527210174,
+          "min": 0.5,
+          "max": 1.0
+        },
+        "necessary_knowledge_coverage": {
+          "mean": 0.8,
+          "stdev": 0.2455636527210174,
+          "min": 0.5,
+          "max": 1.0
+        },
+        "extractive_mock_citation_validity": {
+          "mean": 1.0,
+          "stdev": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "extractive_mock_unsupported_ratio": {
+          "mean": 0.0,
+          "stdev": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "latency_ms": {
+          "mean": 3.3337295505175875,
+          "stdev": 2.376506697320079,
+          "min": 0.8572000078856945,
+          "max": 28.40379998087883
+        },
+        "injected_token_budget_upper_proxy": {
+          "mean": 2394.6363636363635,
+          "stdev": 1081.6830512350566,
+          "min": 252,
+          "max": 3704
+        },
+        "retrieval_calls": {
+          "mean": 4.090909090909091,
+          "stdev": 2.6844570534957524,
+          "min": 1,
+          "max": 8
+        }
+      }
+    }
+  },
+  "safety": {
+    "real_model_calls": 0,
+    "original_private_data_copied": false,
+    "new_launcher_clears_known_credential_variables_without_reading": true,
+    "high_confidence_source_pattern_scan_candidates": 0,
+    "scan_scope_files": 271,
+    "scan_limit": "Pattern scan is not proof against all secrets",
+    "remote_push": false
+  },
+  "known_limitations": [
+    "Lexical/normative evidence coverage is not semantic completeness",
+    "One key rule per topic; default top-4 injection cap",
+    "Verbatim reflection can reject good paraphrases",
+    "Only narrow numeric-duration contradictions checked",
+    "Real-model document coverage and hallucination metrics unmeasured",
+    "Existing Starlette TestClient deprecation warning retained"
+  ]
+}

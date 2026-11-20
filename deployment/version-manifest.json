@@ -1,0 +1,13 @@
+{
+  "stable": {
+    "commit": "bb8c418baaa7e9dbf210d4aae6895f2e95bf9e3b",
+    "ref": "v1.0.0",
+    "source_project": "FutureCup",
+    "tag_object": "2825991e8786aa3880254e493d776fae27a494d8"
+  },
+  "enhanced": {
+    "commit": "dd862fa787fe705a56e3f87f8816428e060423fb",
+    "ref": "HEAD",
+    "source_project": "FutureCup-v1.1"
+  }
+}

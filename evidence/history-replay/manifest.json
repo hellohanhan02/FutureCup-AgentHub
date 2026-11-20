@@ -1,0 +1,9 @@
+{
+  "replay.json": "ab9246116d60f38f3ff4190a758ede30037affd7eadaa4c55186189cf77a564b",
+  "public/summary.json": "e9fe57cf53e6b2c04eec541f00323a5b5fe9ff4fda1adb5aa770aac48dcfe003",
+  "private/source-manifest.json": "cb2d68fc30f1e5abc4a227339f5c6240b78182a294af119571947f68e73249f9",
+  "benchmark.json": "0df6f43f6c1fad1ca12a8991d3fce82a1c713b0d33dcb5ef7a913a441b183a43",
+  "success-rate.svg": "7eef1f44c4ef7b458d316139116850571ac8b91dc7a4c69c34b0e498cb3ff966",
+  "mean-latency.svg": "fd8712e3154265b0c5670ccbac22e2a20c73f4e85cd2c9f35a1d904f532c4d31",
+  "p95-latency.svg": "e5434eef33ba872547f08fdc6698ecd13350587a5baccae4347b9c523eac8328"
+}

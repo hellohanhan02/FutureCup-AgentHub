@@ -1,0 +1,33 @@
+{
+  "scope": "FRESH_INDEPENDENT_SUBMISSION_ACCEPTANCE",
+  "python": "3.11.9",
+  "node": "24.11.0",
+  "npm": "11.6.1",
+  "isolated_venv": true,
+  "original_project_dependencies_used": false,
+  "original_private_databases_used": false,
+  "installation": "PASS",
+  "pip_check": "PASS",
+  "stable_mock_checks": 12,
+  "dynamic_mock_planning": "PASS",
+  "provider_protocol_checks": {
+    "stable": 10,
+    "enhanced": 10
+  },
+  "enhanced_mock_recovery": "PASS",
+  "read_only_replay": "PASS",
+  "restart_and_actual_markdown_export": "PASS",
+  "browser": "NOT_ACCEPTED: browser access host unavailable",
+  "real_vendor_calls": 0,
+  "real_launch_script": "Static configuration/syntax only; no real key entered",
+  "remaining": [
+    "Manual browser click/download confirmation",
+    "Project license and 118 local license-text record gaps",
+    "User must create remote repository, authorize upload and verify reviewer access"
+  ],
+  "notes": [
+    "Broken local py launcher registration was identified before installation began; an explicit system Python 3.11.9 was used",
+    "Acceptance harness lowercase-status and created-state assumptions were corrected; completed workflow records were reused, core code was not changed",
+    "No full test suite or large experiments were rerun"
+  ]
+}

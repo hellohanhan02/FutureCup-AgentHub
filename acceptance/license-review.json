@@ -1,0 +1,82 @@
+{
+  "records_total": 470,
+  "previous_missing_local_text_records": 122,
+  "resolved_from_fresh_exact_packages": 4,
+  "remaining_missing_records": 118,
+  "resolved": [
+    {
+      "record": {
+        "version": "v1.0.0",
+        "ecosystem": "npm-installed",
+        "name": "is-potential-custom-element-name",
+        "package_version": "1.0.1",
+        "declared_license": "MIT",
+        "license_files": "0",
+        "metadata_source": "D:\\competition\\FutureCup\\frontend\\node_modules\\is-potential-custom-element-name\\package.json"
+      },
+      "license_texts": [
+        {
+          "path": "evidence/third-party-licenses/fresh-license-supplements/v1.0.0/is-potential-custom-element-name/LICENSE-MIT.txt",
+          "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a"
+        }
+      ],
+      "source": "Exact-name/version package freshly installed from npm lockfile"
+    },
+    {
+      "record": {
+        "version": "v1.0.0",
+        "ecosystem": "npm-installed",
+        "name": "punycode",
+        "package_version": "2.3.1",
+        "declared_license": "MIT",
+        "license_files": "0",
+        "metadata_source": "D:\\competition\\FutureCup\\frontend\\node_modules\\punycode\\package.json"
+      },
+      "license_texts": [
+        {
+          "path": "evidence/third-party-licenses/fresh-license-supplements/v1.0.0/punycode/LICENSE-MIT.txt",
+          "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a"
+        }
+      ],
+      "source": "Exact-name/version package freshly installed from npm lockfile"
+    },
+    {
+      "record": {
+        "version": "v1.1",
+        "ecosystem": "npm-installed",
+        "name": "is-potential-custom-element-name",
+        "package_version": "1.0.1",
+        "declared_license": "MIT",
+        "license_files": "0",
+        "metadata_source": "D:\\competition\\FutureCup-v1.1\\frontend\\node_modules\\is-potential-custom-element-name\\package.json"
+      },
+      "license_texts": [
+        {
+          "path": "evidence/third-party-licenses/fresh-license-supplements/v1.1/is-potential-custom-element-name/LICENSE-MIT.txt",
+          "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a"
+        }
+      ],
+      "source": "Exact-name/version package freshly installed from npm lockfile"
+    },
+    {
+      "record": {
+        "version": "v1.1",
+        "ecosystem": "npm-installed",
+        "name": "punycode",
+        "package_version": "2.3.1",
+        "declared_license": "MIT",
+        "license_files": "0",
+        "metadata_source": "D:\\competition\\FutureCup-v1.1\\frontend\\node_modules\\punycode\\package.json"
+      },
+      "license_texts": [
+        {
+          "path": "evidence/third-party-licenses/fresh-license-supplements/v1.1/punycode/LICENSE-MIT.txt",
+          "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a"
+        }
+      ],
+      "source": "Exact-name/version package freshly installed from npm lockfile"
+    }
+  ],
+  "project_license": "NOT DECIDED; no license grant added",
+  "limitations": "Records are across versions and optional platform packages, not distinct libraries. No text was fabricated or substituted from another copyright holder."
+}
